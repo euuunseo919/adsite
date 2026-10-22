@@ -167,7 +167,7 @@
   font-size: 12px;
 }
 
-.text-button {
+.text-button:not(.button--reset) {
   display: inline-flex;
   align-items: center;
   gap: 7px;
@@ -181,11 +181,11 @@
   transition: color var(--transition-fast);
 }
 
-.text-button:hover {
+.text-button:not(.button--reset):hover {
   color: var(--color-primary);
 }
 
-.text-button svg {
+.text-button:not(.button--reset) svg {
   width: 15px;
   height: 15px;
 }

@@ -215,11 +215,6 @@
   margin-top: 12px;
 }
 
-.generated-card__actions .text-button {
-  min-height: 40px;
-  padding-inline: 5px;
-}
-
 .clamp-copy-status {
   margin-left: auto;
   color: var(--color-success);

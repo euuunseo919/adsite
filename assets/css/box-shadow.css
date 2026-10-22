@@ -6,7 +6,9 @@
   margin-bottom: 24px;
 }
 
+.shadow-section-heading > .button--reset,
 .shadow-section-heading > .text-button,
+.shadow-code-section > .section-heading > .button--reset,
 .shadow-code-section > .section-heading > .text-button {
   flex: 0 0 auto;
   margin-bottom: 5px;

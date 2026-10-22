@@ -35,9 +35,9 @@
   opacity: 0.48;
 }
 
-.animation-workspace .text-button,
-.animation-timeline-section .text-button,
-.animation-code-section .text-button {
+.animation-workspace .text-button:not(.button--reset),
+.animation-timeline-section .text-button:not(.button--reset),
+.animation-code-section .text-button:not(.button--reset) {
   min-height: 38px;
   padding: 5px 9px;
   border: 0;
@@ -50,9 +50,9 @@
   cursor: pointer;
 }
 
-.animation-workspace .text-button:hover,
-.animation-timeline-section .text-button:hover,
-.animation-code-section .text-button:hover {
+.animation-workspace .text-button:not(.button--reset):hover,
+.animation-timeline-section .text-button:not(.button--reset):hover,
+.animation-code-section .text-button:not(.button--reset):hover {
   background: var(--color-primary-soft);
 }
 
@@ -1197,7 +1197,8 @@
     font-size: 0.75rem;
   }
 
-  .animation-code-actions .text-button {
+  .animation-code-actions .text-button,
+  .animation-code-actions .button--reset {
     justify-self: start;
   }
 

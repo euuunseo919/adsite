@@ -14,17 +14,6 @@
 
 .grid-reset-button {
   flex: 0 0 auto;
-  min-height: 44px;
-  padding: 0 12px;
-  border: 1px solid var(--color-border);
-  border-radius: 10px;
-  background: white;
-  white-space: nowrap;
-}
-
-.grid-reset-button:hover {
-  border-color: #bfdbfe;
-  background: var(--color-primary-soft);
 }
 
 .grid-workspace {
@@ -821,9 +810,8 @@
   }
 
   .grid-reset-button {
-    gap: 4px;
-    padding-inline: 8px;
-    font-size: 11px;
+    min-height: 38px;
+    padding-inline: 9px;
   }
 
   .grid-settings,

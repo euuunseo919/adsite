@@ -76,7 +76,7 @@
           <label class="clip-checkbox"><input type="checkbox" id="clip-show-grid" checked><span>Show grid</span></label>
           <label class="clip-checkbox"><input type="checkbox" id="clip-show-points" checked><span>Show points</span></label>
           <div class="field-group clip-snap-field"><label for="clip-snap">Snap to grid</label><select id="clip-snap"><option value="0">Off</option><option value="5">5%</option><option value="10">10%</option></select></div>
-          <button class="text-button" id="clip-reset-shape" type="button">Reset shape</button>
+          <button class="button--reset text-button" id="clip-reset-shape" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 2.64-6.36L3 8m0-5v5h5"/></svg>Reset shape</button>
         </div>
 
         <section class="clip-live-preview" aria-labelledby="clip-live-title">
@@ -97,7 +97,7 @@
     </section>
 
     <section class="clip-code-section container" aria-labelledby="clip-code-title">
-      <div class="section-heading clip-code-heading"><div><span class="eyebrow">READY-TO-USE CODE</span><h2 id="clip-code-title">Generated CSS</h2><p>Preview backgrounds stay separate from the generated clip-path declaration.</p></div><div class="clip-code-actions"><label class="clip-checkbox clip-include-option"><input type="checkbox" id="clip-include-preview"><span>Include preview styles</span></label><button class="button button--secondary" id="copy-clip-value" type="button">Copy Value</button><button class="button button--copy" id="copy-clip-css" type="button">Copy CSS</button><button class="text-button" id="clip-reset-all" type="button">Reset</button></div></div>
+      <div class="section-heading clip-code-heading"><div><span class="eyebrow">READY-TO-USE CODE</span><h2 id="clip-code-title">Generated CSS</h2><p>Preview backgrounds stay separate from the generated clip-path declaration.</p></div><div class="clip-code-actions"><label class="clip-checkbox clip-include-option"><input type="checkbox" id="clip-include-preview"><span>Include preview styles</span></label><button class="button button--secondary" id="copy-clip-value" type="button">Copy Value</button><button class="button button--copy" id="copy-clip-css" type="button">Copy CSS</button><button class="button--reset text-button" id="clip-reset-all" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 2.64-6.36L3 8m0-5v5h5"/></svg>Reset</button></div></div>
       <div class="clip-code-window"><pre><code id="clip-generated-css" aria-live="polite" aria-atomic="true"></code></pre></div>
       <p class="clip-copy-status" id="clip-copy-status" role="status" aria-live="polite"></p>
     </section>

@@ -28,7 +28,7 @@
 
     <section class="color-workspace container" aria-label="Color converter and live preview">
       <section class="color-editor card" aria-labelledby="color-editor-title">
-        <div class="color-panel-heading"><div><span class="eyebrow">COLOR CONVERTER</span><h2 id="color-editor-title">Edit color values</h2></div><button class="button button--secondary color-reset-top" type="button" data-color-action="reset">Reset</button></div>
+        <div class="color-panel-heading"><div><span class="eyebrow">COLOR CONVERTER</span><h2 id="color-editor-title">Edit color values</h2></div><button class="button--reset color-reset-top" type="button" data-color-action="reset"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 2.64-6.36L3 8m0-5v5h5"/></svg>Reset</button></div>
         <div class="color-hex-field field-group">
           <label for="color-hex">HEX color</label>
           <div class="color-hex-row">
@@ -82,7 +82,7 @@
         </div>
         <div class="color-preview-footer"><span class="color-transparency-note">Checkerboard shows transparency</span><button class="button button--copy" type="button" data-copy="css">Copy Color</button></div>
         <div class="color-adjustments">
-          <div class="color-adjustments-heading"><div><span class="eyebrow">COLOR ADJUSTMENTS</span><h3>Fine-tune color</h3></div><button class="text-button color-adjustment-reset" type="button" data-color-action="reset">Reset color</button></div>
+          <div class="color-adjustments-heading"><div><span class="eyebrow">COLOR ADJUSTMENTS</span><h3>Fine-tune color</h3></div><button class="button--reset color-adjustment-reset" type="button" data-color-action="reset"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 2.64-6.36L3 8m0-5v5h5"/></svg>Reset color</button></div>
           <div class="adjustment-row"><label for="adjust-hue">Hue <output id="adjust-hue-value">221°</output></label><input class="color-range" id="adjust-hue" type="range" min="0" max="360" value="221"></div>
           <div class="adjustment-row"><label for="adjust-saturation">Saturation <output id="adjust-saturation-value">83%</output></label><input class="color-range" id="adjust-saturation" type="range" min="0" max="100" value="83"></div>
           <div class="adjustment-row"><label for="adjust-lightness">Lightness <output id="adjust-lightness-value">53%</output></label><input class="color-range" id="adjust-lightness" type="range" min="0" max="100" value="53"></div>

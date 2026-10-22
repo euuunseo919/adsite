@@ -291,6 +291,68 @@ select:focus-visible,
   stroke-width: 1.8;
 }
 
+/* ==========================================================================
+   Standard Reset Button Component (Reference: CSS Flexbox Generator)
+   ========================================================================== */
+
+.button--reset {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  min-height: 42px;
+  gap: 8px;
+  padding: 0 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 650;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  flex: 0 0 auto;
+  transition: color var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast), transform var(--transition-fast);
+}
+
+.button--reset:hover {
+  border-color: var(--color-primary);
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+
+.button--reset:active {
+  transform: translateY(1px);
+}
+
+.button--reset svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
+}
+
+@media (max-width: 600px) {
+  .section-heading .button--reset,
+  .color-panel-heading .button--reset,
+  .color-adjustments-heading .button--reset {
+    min-height: 38px;
+    padding-inline: 9px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button--reset {
+    transition: none;
+  }
+}
+
 .field-group {
   display: grid;
   min-width: 0;
