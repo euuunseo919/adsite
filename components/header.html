@@ -1,0 +1,46 @@
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="index.html" aria-label="Unitwise home">
+      <span class="brand__mark" aria-hidden="true">u</span>
+      <span>unitwise</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="primary-navigation" aria-label="Main navigation">
+      <a class="site-nav__link" data-nav-page="home" href="index.html">Home</a>
+      <div class="site-nav__dropdown">
+        <button class="site-nav__link site-nav__dropdown-toggle" type="button" aria-expanded="false" aria-controls="tools-menu">
+          <span>Tools</span>
+          <svg class="site-nav__dropdown-icon" viewBox="0 0 12 12" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M2.5 4.5L6 8L9.5 4.5"/>
+          </svg>
+        </button>
+        <div class="site-nav__dropdown-menu" id="tools-menu" aria-label="CSS tools" hidden>
+          <div class="site-nav__dropdown-group" role="group" aria-labelledby="tools-converters">
+            <p class="site-nav__dropdown-category" id="tools-converters">Converters</p>
+            <a class="site-nav__link" data-nav-page="converter" href="index.html#converter">PX ↔ REM / EM Converter</a>
+            <a class="site-nav__link" data-nav-page="color-converter" href="color-converter.html">HEX / RGB / HSL Converter</a>
+          </div>
+          <div class="site-nav__dropdown-group" role="group" aria-labelledby="tools-layout">
+            <p class="site-nav__dropdown-category" id="tools-layout">Layout</p>
+            <a class="site-nav__link" data-nav-page="grid" href="grid.html">CSS Grid Generator</a>
+            <a class="site-nav__link" data-nav-page="flexbox" href="flexbox.html">CSS Flexbox Generator</a>
+          </div>
+          <div class="site-nav__dropdown-group" role="group" aria-labelledby="tools-visual-effects">
+            <p class="site-nav__dropdown-category" id="tools-visual-effects">Visual Effects</p>
+            <a class="site-nav__link" data-nav-page="box-shadow" href="box-shadow.html">CSS Box Shadow Generator</a>
+            <a class="site-nav__link" data-nav-page="gradient" href="gradient.html">CSS Gradient Generator</a>
+            <a class="site-nav__link" data-nav-page="clip-path" href="clip-path.html">CSS Clip-path Generator</a>
+            <a class="site-nav__link" data-nav-page="animation" href="animation.html">CSS Animation Generator</a>
+          </div>
+          <div class="site-nav__dropdown-group" role="group" aria-labelledby="tools-responsive">
+            <p class="site-nav__dropdown-category" id="tools-responsive">Responsive</p>
+            <a class="site-nav__link" data-nav-page="clamp" href="clamp.html">CSS Clamp Generator</a>
+            <a class="site-nav__link" data-nav-page="media-query" href="media-query.html">CSS Media Query Generator</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>

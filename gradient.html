@@ -1,0 +1,191 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Create and customize CSS linear, radial, and conic gradients with live previews and copyable CSS.">
+  <meta name="theme-color" content="#f8fafc">
+  <title>CSS Gradient Generator | Unitwise</title>
+  <link rel="stylesheet" href="assets/css/normalize.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/commons.css?v=2">
+  <link rel="stylesheet" href="assets/css/gradient.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="assets/js/common.js?v=2"></script>
+  <script src="assets/js/gradient.js"></script>
+</head>
+<body data-page="gradient">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div id="header"></div>
+
+  <main id="main-content">
+    <section class="hero container" aria-labelledby="hero-title">
+      <span class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>CSS COLOR TOOL</span>
+      <h1 id="hero-title">CSS Gradient Generator</h1>
+      <p class="hero__lead">Create beautiful CSS gradients visually.</p>
+      <p class="hero__description">Customize colors, angles, color stops, and gradient types to generate clean CSS gradients instantly.</p>
+    </section>
+
+    <section class="gradient-generator container" aria-labelledby="gradient-generator-title">
+      <div class="section-heading gradient-section-heading">
+        <div><span class="eyebrow">GRADIENT GENERATOR</span><h2 id="gradient-generator-title">Build your gradient</h2><p>Choose a gradient type and tune every color stop in real time.</p></div>
+        <div class="gradient-random-actions"><button class="button button--secondary" id="randomize-colors" type="button">Randomize colors</button><button class="button button--copy" id="randomize-all" type="button">Randomize all</button></div>
+      </div>
+
+      <div class="gradient-workspace">
+        <section class="gradient-settings card" aria-labelledby="gradient-settings-title">
+          <div class="gradient-panel-heading"><div><span class="eyebrow">GRADIENT SETTINGS</span><h3 id="gradient-settings-title">Customize</h3></div><span class="gradient-live-badge"><i aria-hidden="true"></i> Live</span></div>
+          <div class="gradient-type-field field-group">
+            <label for="gradient-type">Gradient type</label>
+            <select id="gradient-type">
+              <option value="linear" selected>Linear gradient</option>
+              <option value="radial">Radial gradient</option>
+              <option value="conic">Conic gradient</option>
+            </select>
+          </div>
+
+          <fieldset class="gradient-type-settings" id="linear-settings">
+            <legend>Linear gradient</legend>
+            <div class="gradient-control-heading"><label for="linear-angle">Angle</label><div class="gradient-number-input"><input id="linear-angle" type="number" min="0" max="360" step="1" value="90"><span>deg</span></div></div>
+            <input class="gradient-range" id="linear-angle-range" type="range" min="0" max="360" step="1" value="90" aria-label="Linear gradient angle slider">
+            <div class="gradient-direction-heading"><span>Quick direction</span><span id="linear-direction-name">To Right</span></div>
+            <div class="gradient-direction-grid" role="group" aria-label="Gradient direction">
+              <button type="button" data-angle="0" aria-label="To top">↑</button>
+              <button type="button" data-angle="45" aria-label="To top right">↗</button>
+              <button type="button" data-angle="90" aria-label="To right" class="is-active">→</button>
+              <button type="button" data-angle="135" aria-label="To bottom right">↘</button>
+              <button type="button" data-angle="180" aria-label="To bottom">↓</button>
+              <button type="button" data-angle="225" aria-label="To bottom left">↙</button>
+              <button type="button" data-angle="270" aria-label="To left">←</button>
+              <button type="button" data-angle="315" aria-label="To top left">↖</button>
+            </div>
+          </fieldset>
+
+          <fieldset class="gradient-type-settings" id="radial-settings" hidden>
+            <legend>Radial gradient</legend>
+            <div class="gradient-select-grid">
+              <div class="field-group"><label for="radial-shape">Shape</label><select id="radial-shape"><option value="circle">circle</option><option value="ellipse">ellipse</option></select></div>
+              <div class="field-group"><label for="radial-size">Size</label><select id="radial-size"><option value="closest-side">closest-side</option><option value="closest-corner">closest-corner</option><option value="farthest-side">farthest-side</option><option value="farthest-corner" selected>farthest-corner</option></select></div>
+            </div>
+            <div class="field-group gradient-position-field"><label for="radial-position">Position</label><select id="radial-position"><option value="center" selected>Center</option><option value="top">Top</option><option value="bottom">Bottom</option><option value="left">Left</option><option value="right">Right</option><option value="custom">Custom position</option></select></div>
+            <div class="gradient-position-controls" id="radial-custom-position" hidden>
+              <div class="gradient-control-heading"><label for="radial-x">Center X</label><div class="gradient-number-input"><input id="radial-x" type="number" min="0" max="100" value="50"><span>%</span></div></div><input class="gradient-range" id="radial-x-range" type="range" min="0" max="100" value="50" aria-label="Radial center X slider">
+              <div class="gradient-control-heading"><label for="radial-y">Center Y</label><div class="gradient-number-input"><input id="radial-y" type="number" min="0" max="100" value="50"><span>%</span></div></div><input class="gradient-range" id="radial-y-range" type="range" min="0" max="100" value="50" aria-label="Radial center Y slider">
+            </div>
+          </fieldset>
+
+          <fieldset class="gradient-type-settings" id="conic-settings" hidden>
+            <legend>Conic gradient</legend>
+            <div class="gradient-control-heading"><label for="conic-angle">Start angle</label><div class="gradient-number-input"><input id="conic-angle" type="number" min="0" max="360" value="0"><span>deg</span></div></div>
+            <input class="gradient-range" id="conic-angle-range" type="range" min="0" max="360" value="0" aria-label="Conic start angle slider">
+            <div class="gradient-position-controls">
+              <div class="gradient-control-heading"><label for="conic-x">Center X</label><div class="gradient-number-input"><input id="conic-x" type="number" min="0" max="100" value="50"><span>%</span></div></div><input class="gradient-range" id="conic-x-range" type="range" min="0" max="100" value="50" aria-label="Conic center X slider">
+              <div class="gradient-control-heading"><label for="conic-y">Center Y</label><div class="gradient-number-input"><input id="conic-y" type="number" min="0" max="100" value="50"><span>%</span></div></div><input class="gradient-range" id="conic-y-range" type="range" min="0" max="100" value="50" aria-label="Conic center Y slider">
+            </div>
+          </fieldset>
+
+          <section class="gradient-stops-section" aria-labelledby="gradient-stops-title">
+            <div class="gradient-stops-heading"><div><h4 id="gradient-stops-title">Color stops <span id="gradient-stop-count">2</span></h4><p>Drag a handle or set its exact position.</p></div><button class="button button--secondary gradient-add-stop" id="add-gradient-stop" type="button"><span aria-hidden="true">+</span> Add stop</button></div>
+            <div class="gradient-bar-editor">
+              <div class="gradient-bar-track" id="gradient-bar-track" role="group" aria-label="Gradient color stop positions"></div>
+              <div class="gradient-bar" id="gradient-bar" aria-hidden="true"></div>
+            </div>
+            <p class="gradient-validation" id="gradient-validation" role="alert" aria-live="polite"></p>
+            <div class="gradient-stop-list" id="gradient-stop-list" aria-label="Gradient color stops"></div>
+          </section>
+
+          <fieldset class="gradient-preview-options">
+            <legend>Preview options</legend>
+            <div class="gradient-preview-option-grid">
+              <div class="field-group"><label for="preview-shape">Preview shape</label><select id="preview-shape"><option value="rounded" selected>Rounded rectangle</option><option value="rectangle">Rectangle</option><option value="circle">Circle</option></select></div>
+              <div class="field-group"><label for="preview-size">Preview size</label><select id="preview-size"><option value="small">Small</option><option value="medium">Medium</option><option value="large" selected>Large</option></select></div>
+              <div class="field-group"><label for="preview-text-color">Text color</label><select id="preview-text-color"><option value="white" selected>White</option><option value="dark">Dark</option></select></div>
+            </div>
+            <div class="gradient-preview-toggles">
+              <label class="gradient-checkbox-label" for="preview-show-text"><input id="preview-show-text" type="checkbox" checked><span aria-hidden="true"></span>Show text preview</label>
+              <label class="gradient-checkbox-label" for="preview-checkerboard"><input id="preview-checkerboard" type="checkbox"><span aria-hidden="true"></span>Checkerboard transparency <em>Useful for gradients with alpha colors</em></label>
+              <p class="gradient-transparency-note">HEX color stops are opaque. The checkerboard is a reference for gradients that use alpha colors.</p>
+            </div>
+          </fieldset>
+        </section>
+
+        <section class="gradient-preview-panel card" aria-labelledby="gradient-preview-title">
+          <div class="gradient-panel-heading"><div><span class="eyebrow">LIVE PREVIEW</span><h3 id="gradient-preview-title">See your gradient</h3></div><span class="gradient-preview-type" id="gradient-preview-type">Linear · 90°</span></div>
+          <p class="gradient-preview-hint">Preview-only shape and text settings are not included in the generated gradient value.</p>
+          <div class="gradient-preview-stage" id="gradient-preview-stage">
+            <div class="gradient-preview-surface gradient-size-large gradient-shape-rounded" id="gradient-preview-surface" role="img" aria-label="Live CSS gradient preview">
+              <span class="gradient-preview-text gradient-text-white" id="gradient-preview-text">Gradient Preview</span>
+            </div>
+          </div>
+          <div class="gradient-preview-footer"><span id="gradient-preview-summary">2 color stops · Linear</span><span><i aria-hidden="true"></i> CSS background</span></div>
+        </section>
+      </div>
+    </section>
+
+    <section class="gradient-code-section container" aria-labelledby="gradient-code-title">
+      <div class="section-heading">
+        <div><span class="eyebrow">READY-TO-USE CODE</span><h2 id="gradient-code-title">Generated CSS</h2><p>Copy the complete rule or just the gradient function value.</p></div>
+        <button class="text-button" id="reset-gradient-code" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 2.64-6.36L3 8m0-5v5h5"/></svg>Reset</button>
+      </div>
+      <div class="gradient-code-card card">
+        <div class="gradient-code-toolbar"><span class="gradient-code-label"><i></i>CSS</span><div class="gradient-copy-actions"><button class="button button--secondary" id="copy-gradient-value" type="button">Copy value</button><button class="button button--copy" id="copy-gradient-css" type="button">Copy CSS</button></div></div>
+        <div class="gradient-code-window"><pre><code id="gradient-css-code" aria-live="polite" aria-atomic="true"></code></pre></div>
+        <p class="gradient-copy-status" id="gradient-copy-status" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="gradient-presets-section" aria-labelledby="gradient-presets-title">
+      <div class="container">
+        <div class="section-heading section-heading--center"><span class="eyebrow">QUICK START</span><h2 id="gradient-presets-title">Gradient presets</h2><p>Choose a color story and make it your own.</p></div>
+        <div class="gradient-presets" id="gradient-presets"></div>
+      </div>
+    </section>
+
+    <section class="gradient-guide-section container" aria-labelledby="gradient-guide-title">
+      <div class="section-heading section-heading--center"><span class="eyebrow">THE BASICS</span><h2 id="gradient-guide-title">A guide to CSS gradients</h2><p>Explore gradient types, directions, and the color stops that define them.</p></div>
+      <div class="gradient-guide-grid">
+        <article class="gradient-guide-card card"><span>01</span><h3>What is CSS Gradient?</h3><p>A CSS gradient is an image generated by the browser, blending two or more colors without an image file.</p><div class="gradient-guide-swatch guide-swatch-linear"></div><pre><code>background: linear-gradient(
+  90deg, #2563EB, #9333EA
+);</code></pre></article>
+        <article class="gradient-guide-card card"><span>02</span><h3>Linear Gradient</h3><p>Colors transition along a straight line. The angle or direction controls where the color flow travels.</p><div class="gradient-guide-swatch guide-swatch-linear"></div><pre><code>linear-gradient(
+  to right, #2563EB, #9333EA
+)</code></pre></article>
+        <article class="gradient-guide-card card"><span>03</span><h3>Radial Gradient</h3><p>Colors radiate from a starting point outward in a circle or ellipse.</p><div class="gradient-guide-swatch guide-swatch-radial"></div><pre><code>radial-gradient(
+  circle, #2563EB, #9333EA
+)</code></pre></article>
+        <article class="gradient-guide-card card"><span>04</span><h3>Conic Gradient</h3><p>Color stops rotate around a center point, making pie-chart and color-wheel effects possible.</p><div class="gradient-guide-swatch guide-swatch-conic"></div><pre><code>conic-gradient(
+  from 0deg, #2563EB, #9333EA
+)</code></pre></article>
+        <article class="gradient-guide-card card"><span>05</span><h3>Color Stops</h3><p>A stop pairs a color with an optional position. Stops may share positions to create a hard transition.</p><div class="gradient-guide-swatch guide-swatch-stops"></div><pre><code>linear-gradient(
+  90deg, #2563EB 0%,
+  #9333EA 100%
+)</code></pre></article>
+        <article class="gradient-guide-card card"><span>06</span><h3>Gradient Direction</h3><p>Linear-gradient angles start at 0° pointing up and increase clockwise. Direction keywords describe the destination edge.</p><div class="gradient-guide-swatch guide-swatch-direction"></div><pre><code>linear-gradient(
+  135deg, #2563EB, #9333EA
+)</code></pre></article>
+        <article class="gradient-guide-card card gradient-guide-card--wide"><span>07</span><h3>Multiple Color Stops</h3><p>Add as many colors as needed to create bands or smooth transitions. The CSS order follows each stop’s position, including when positions match.</p><div class="gradient-guide-swatch guide-swatch-multi"></div><pre><code>linear-gradient(
+  90deg, #2563EB 0%,
+  #06B6D4 50%, #9333EA 100%
+)</code></pre></article>
+      </div>
+    </section>
+
+    <section class="faq-section gradient-faq container" aria-labelledby="gradient-faq-title">
+      <div class="section-heading section-heading--center"><span class="eyebrow">FAQ</span><h2 id="gradient-faq-title">Frequently asked questions</h2><p>Quick answers to common CSS gradient questions.</p></div>
+      <div class="faq-list">
+        <article class="faq-item"><h3><button class="faq-question" id="gradient-faq-q1" type="button" aria-expanded="false" aria-controls="gradient-faq-a1"><span>What is a CSS gradient?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="gradient-faq-a1" role="region" aria-labelledby="gradient-faq-q1" hidden><p>A CSS gradient is a browser-generated image that smoothly blends two or more colors and can be used anywhere an image is accepted.</p></div></article>
+        <article class="faq-item"><h3><button class="faq-question" id="gradient-faq-q2" type="button" aria-expanded="false" aria-controls="gradient-faq-a2"><span>What is the difference between linear and radial gradients?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="gradient-faq-a2" role="region" aria-labelledby="gradient-faq-q2" hidden><p>A linear gradient blends colors along a line. A radial gradient blends outward from a center point in a circular or elliptical shape.</p></div></article>
+        <article class="faq-item"><h3><button class="faq-question" id="gradient-faq-q3" type="button" aria-expanded="false" aria-controls="gradient-faq-a3"><span>How do I change the direction of a CSS gradient?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="gradient-faq-a3" role="region" aria-labelledby="gradient-faq-q3" hidden><p>Set an angle such as 90deg or use a direction such as to right in linear-gradient(). In this tool, the angle control and direction buttons are synchronized.</p></div></article>
+        <article class="faq-item"><h3><button class="faq-question" id="gradient-faq-q4" type="button" aria-expanded="false" aria-controls="gradient-faq-a4"><span>Can I use more than two colors in a gradient?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="gradient-faq-a4" role="region" aria-labelledby="gradient-faq-q4" hidden><p>Yes. CSS gradients support multiple color stops. This generator supports two to ten stops.</p></div></article>
+        <article class="faq-item"><h3><button class="faq-question" id="gradient-faq-q5" type="button" aria-expanded="false" aria-controls="gradient-faq-a5"><span>How do I make a smooth color transition?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="gradient-faq-a5" role="region" aria-labelledby="gradient-faq-q5" hidden><p>Space stops across the gradient and avoid abrupt jumps between neighboring colors. Using translucent colors can also soften the visual blend.</p></div></article>
+        <article class="faq-item"><h3><button class="faq-question" id="gradient-faq-q6" type="button" aria-expanded="false" aria-controls="gradient-faq-a6"><span>What is a conic gradient?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="gradient-faq-a6" role="region" aria-labelledby="gradient-faq-q6" hidden><p>A conic gradient transitions between colors as if they rotate around a center point. It can be useful for color wheels and circular charts.</p></div></article>
+        <article class="faq-item"><h3><button class="faq-question" id="gradient-faq-q7" type="button" aria-expanded="false" aria-controls="gradient-faq-a7"><span>Can I use CSS gradients as backgrounds?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="gradient-faq-a7" role="region" aria-labelledby="gradient-faq-q7" hidden><p>Yes. Gradients are CSS images and can be used in background or other properties that accept image values.</p></div></article>
+        <article class="faq-item"><h3><button class="faq-question" id="gradient-faq-q8" type="button" aria-expanded="false" aria-controls="gradient-faq-a8"><span>How do I create a hard color stop?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="gradient-faq-a8" role="region" aria-labelledby="gradient-faq-q8" hidden><p>Place two different color stops at the same position. The shared stop position creates a sharp edge instead of a smooth transition.</p></div></article>
+      </div>
+    </section>
+  </main>
+  <div id="footer"></div>
+</body>
+</html>
+

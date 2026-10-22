@@ -1,0 +1,229 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Build and preview CSS Flexbox layouts visually, then copy the generated CSS and HTML for your project.">
+  <meta name="theme-color" content="#f8fafc">
+  <title>CSS Flexbox Generator | Unitwise</title>
+  <link rel="stylesheet" href="assets/css/normalize.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/commons.css?v=2">
+  <link rel="stylesheet" href="assets/css/flexbox.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="assets/js/common.js?v=2"></script>
+  <script src="assets/js/flexbox.js"></script>
+</head>
+<body data-page="flexbox">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div id="header"></div>
+
+  <main id="main-content">
+    <section class="hero container" id="top" aria-labelledby="hero-title">
+      <span class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>CSS LAYOUT TOOL</span>
+      <h1 id="hero-title">CSS Flexbox Generator</h1>
+      <p class="hero__lead">Build flexible CSS layouts visually.</p>
+      <p class="hero__description">Customize direction, alignment, spacing, and item properties to generate clean Flexbox CSS instantly.</p>
+    </section>
+
+    <section class="flexbox-generator container" aria-labelledby="generator-title">
+      <div class="section-heading flexbox-section-heading">
+        <div>
+          <span class="eyebrow">FLEXBOX GENERATOR</span>
+          <h2 id="generator-title">Shape your layout</h2>
+          <p>Adjust the container, then select an item to fine-tune its flex properties.</p>
+        </div>
+        <button class="text-button flexbox-reset-button" id="reset-flexbox" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 2.64-6.36L3 8m0-5v5h5"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <div class="flexbox-workspace">
+        <section class="flexbox-settings card" aria-labelledby="settings-title">
+          <div class="flexbox-panel-heading">
+            <div><span class="eyebrow">CONTAINER SETTINGS</span><h3 id="settings-title">Flex properties</h3></div>
+            <span class="flexbox-live-badge"><span aria-hidden="true"></span> Live</span>
+          </div>
+
+          <div class="flexbox-setting-group">
+            <div class="flexbox-group-heading"><h4>Container</h4><span>Layout flow</span></div>
+            <div class="flexbox-select-grid">
+              <div class="field-group"><label for="flex-display">Display</label><select id="flex-display"><option value="flex" selected>flex</option><option value="inline-flex">inline-flex</option></select></div>
+              <div class="field-group"><label for="flex-direction">Flex direction</label><select id="flex-direction"><option value="row" selected>row</option><option value="row-reverse">row-reverse</option><option value="column">column</option><option value="column-reverse">column-reverse</option></select></div>
+              <div class="field-group"><label for="flex-wrap">Flex wrap</label><select id="flex-wrap"><option value="nowrap" selected>nowrap</option><option value="wrap">wrap</option><option value="wrap-reverse">wrap-reverse</option></select></div>
+              <div class="field-group"><label for="flex-justify-content">Justify content</label><select id="flex-justify-content"><option value="flex-start" selected>flex-start</option><option value="flex-end">flex-end</option><option value="center">center</option><option value="space-between">space-between</option><option value="space-around">space-around</option><option value="space-evenly">space-evenly</option></select></div>
+              <div class="field-group"><label for="flex-align-items">Align items</label><select id="flex-align-items"><option value="stretch" selected>stretch</option><option value="flex-start">flex-start</option><option value="flex-end">flex-end</option><option value="center">center</option><option value="baseline">baseline</option></select></div>
+              <div class="field-group"><label for="flex-align-content">Align content</label><select id="flex-align-content"><option value="stretch" selected>stretch</option><option value="flex-start">flex-start</option><option value="flex-end">flex-end</option><option value="center">center</option><option value="space-between">space-between</option><option value="space-around">space-around</option><option value="space-evenly">space-evenly</option></select></div>
+            </div>
+            <p class="flexbox-setting-hint">Align content only affects wrapped flex lines when there is extra space on the cross axis.</p>
+          </div>
+
+          <div class="flexbox-setting-group">
+            <div class="flexbox-group-heading"><h4>Spacing</h4><span>0–100px</span></div>
+            <div class="flexbox-gap-mode">
+              <span>Gap controls</span>
+              <label class="toggle-control" for="separate-gaps"><input id="separate-gaps" type="checkbox"><span class="toggle-control__track" aria-hidden="true"></span><span>Separate row / column</span></label>
+            </div>
+            <div class="flexbox-gap-controls" id="shared-gap-controls">
+              <div class="flexbox-number-control"><label for="flex-gap">Gap</label><div class="flexbox-number-input"><input id="flex-gap" type="number" min="0" max="100" step="1" value="16"><span>px</span></div></div>
+              <input class="flexbox-range" id="flex-gap-range" type="range" min="0" max="100" step="1" value="16" aria-label="Gap slider">
+            </div>
+            <div class="flexbox-gap-controls" id="separate-gap-controls" hidden>
+              <div class="flexbox-gap-control">
+                <div class="flexbox-number-control"><label for="flex-row-gap">Row gap</label><div class="flexbox-number-input"><input id="flex-row-gap" type="number" min="0" max="100" step="1" value="16"><span>px</span></div></div>
+                <input class="flexbox-range" id="flex-row-gap-range" type="range" min="0" max="100" step="1" value="16" aria-label="Row gap slider">
+              </div>
+              <div class="flexbox-gap-control">
+                <div class="flexbox-number-control"><label for="flex-column-gap">Column gap</label><div class="flexbox-number-input"><input id="flex-column-gap" type="number" min="0" max="100" step="1" value="16"><span>px</span></div></div>
+                <input class="flexbox-range" id="flex-column-gap-range" type="range" min="0" max="100" step="1" value="16" aria-label="Column gap slider">
+              </div>
+            </div>
+            <div class="flexbox-number-control flexbox-height-control"><label for="flex-container-height">Preview min-height</label><div class="flexbox-number-input"><input id="flex-container-height" type="number" min="150" max="600" step="10" value="300"><span>px</span></div></div>
+            <input class="flexbox-range" id="flex-container-height-range" type="range" min="150" max="600" step="10" value="300" aria-label="Preview min-height slider">
+            <p class="flexbox-setting-error" id="flexbox-setting-error" role="alert"></p>
+          </div>
+
+          <div class="flexbox-setting-group flexbox-items-group">
+            <div class="flexbox-group-heading"><h4>Flex items <span class="flexbox-item-count" id="flexbox-item-count">4 items</span></h4></div>
+            <div class="flexbox-item-actions">
+              <button class="button button--secondary" id="add-flex-item" type="button"><span aria-hidden="true">+</span> Add item</button>
+              <button class="button button--secondary" id="remove-flex-item" type="button"><span aria-hidden="true">−</span> Remove item</button>
+            </div>
+          </div>
+
+          <fieldset class="flexbox-item-editor" id="flexbox-item-editor" hidden>
+            <legend id="flexbox-item-editor-title">Edit item</legend>
+            <p class="flexbox-item-editor__hint">Order changes visual order only. The generated HTML keeps the original DOM order.</p>
+            <div class="flexbox-editor-grid">
+              <div class="field-group"><label for="item-grow">Flex grow <span>0–10</span></label><input id="item-grow" type="number" min="0" max="10" step="1" value="0"></div>
+              <div class="field-group"><label for="item-shrink">Flex shrink <span>0–10</span></label><input id="item-shrink" type="number" min="0" max="10" step="1" value="1"></div>
+              <div class="field-group flexbox-basis-field">
+                <label for="item-basis-value">Flex basis</label>
+                <div class="flexbox-basis-controls"><input id="item-basis-value" type="number" min="0" max="2000" step="any" value="" placeholder="auto" aria-label="Flex basis value"><select id="item-basis-unit" aria-label="Flex basis unit"><option value="auto" selected>auto</option><option value="px">px</option><option value="%">%</option><option value="rem">rem</option></select></div>
+              </div>
+              <div class="field-group"><label for="item-align-self">Align self</label><select id="item-align-self"><option value="auto" selected>auto</option><option value="stretch">stretch</option><option value="flex-start">flex-start</option><option value="flex-end">flex-end</option><option value="center">center</option><option value="baseline">baseline</option></select></div>
+              <div class="field-group"><label for="item-order">Order <span>-10 to 10</span></label><input id="item-order" type="number" min="-10" max="10" step="1" value="0"></div>
+            </div>
+            <p class="flexbox-item-editor__error" id="flexbox-item-editor-error" role="alert"></p>
+          </fieldset>
+        </section>
+
+        <section class="flexbox-preview-panel card" aria-labelledby="preview-title">
+          <div class="flexbox-panel-heading">
+            <div><span class="eyebrow">LIVE PREVIEW</span><h3 id="preview-title">Your flex layout</h3></div>
+            <span class="flexbox-preview-summary" id="flexbox-preview-summary">flex · row · nowrap</span>
+          </div>
+          <p class="flexbox-preview-hint">Select an item to edit it. Preview items have a minimum size to make wrapping and alignment easier to see.</p>
+          <div class="flexbox-preview-stage" id="flexbox-preview-stage">
+            <span class="flexbox-inline-context" aria-hidden="true">Inline flex context</span>
+            <div class="flexbox-preview" id="flexbox-preview" aria-label="Live Flexbox layout preview"></div>
+            <span class="flexbox-inline-context flexbox-inline-context--after" aria-hidden="true">Sibling content</span>
+          </div>
+          <div class="flexbox-preview-footer"><span id="flexbox-line-hint">Wrap items to explore cross-axis line alignment.</span><span class="flexbox-preview-legend"><i></i> Flex item</span></div>
+        </section>
+      </div>
+    </section>
+
+    <section class="flexbox-code-section container" aria-labelledby="code-section-title">
+      <div class="section-heading">
+        <div><span class="eyebrow">READY-TO-USE CODE</span><h2 id="code-section-title">Generated CSS &amp; HTML</h2><p>Copy your layout code and use it in your project.</p></div>
+        <button class="text-button flexbox-reset-button" id="reset-flexbox-code" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 2.64-6.36L3 8m0-5v5h5"/></svg>
+          Reset
+        </button>
+      </div>
+      <div class="flexbox-code-card card">
+        <div class="flexbox-code-toolbar">
+          <div class="flexbox-tabs" role="tablist" aria-label="Generated code type">
+            <button class="flexbox-tab is-active" id="css-tab" type="button" role="tab" aria-selected="true" aria-controls="css-panel" tabindex="0">CSS</button>
+            <button class="flexbox-tab" id="html-tab" type="button" role="tab" aria-selected="false" aria-controls="html-panel" tabindex="-1">HTML</button>
+          </div>
+          <div class="flexbox-copy-actions">
+            <button class="button button--secondary" id="copy-flex-css" type="button">Copy CSS</button>
+            <button class="button button--secondary" id="copy-flex-html" type="button">Copy HTML</button>
+            <button class="button button--copy" id="copy-flex-all" type="button">Copy all</button>
+          </div>
+        </div>
+        <div class="flexbox-code-window" id="css-panel" role="tabpanel" aria-labelledby="css-tab">
+          <pre><code id="flex-css-code"></code></pre>
+        </div>
+        <div class="flexbox-code-window" id="html-panel" role="tabpanel" aria-labelledby="html-tab" hidden>
+          <pre><code id="flex-html-code"></code></pre>
+        </div>
+        <p class="flexbox-copy-status" id="flexbox-copy-status" role="status" aria-live="polite"></p>
+      </div>
+      <p class="flexbox-code-note">Item cards in the preview use visual-only demo styles. Generated code includes the layout properties needed to recreate the flex behavior.</p>
+    </section>
+
+    <section class="flexbox-presets-section" aria-labelledby="presets-title">
+      <div class="container">
+        <div class="section-heading section-heading--center"><span class="eyebrow">QUICK START</span><h2 id="presets-title">Flexbox layout presets</h2><p>Apply a layout pattern, then customize every setting.</p></div>
+        <div class="flexbox-presets">
+          <button class="flexbox-preset" type="button" data-preset="horizontal-center"><span class="flex-preset-icon flex-preset-icon--center"><i></i><i></i><i></i></span><span><strong>Horizontal center</strong><small>Center items on both axes</small></span><span class="flex-preset-arrow" aria-hidden="true">↗</span></button>
+          <button class="flexbox-preset" type="button" data-preset="space-between"><span class="flex-preset-icon flex-preset-icon--between"><i></i><i></i><i></i></span><span><strong>Space between</strong><small>Distribute items edge to edge</small></span><span class="flex-preset-arrow" aria-hidden="true">↗</span></button>
+          <button class="flexbox-preset" type="button" data-preset="vertical-stack"><span class="flex-preset-icon flex-preset-icon--stack"><i></i><i></i><i></i></span><span><strong>Vertical stack</strong><small>Flow items in a column</small></span><span class="flex-preset-arrow" aria-hidden="true">↗</span></button>
+          <button class="flexbox-preset" type="button" data-preset="navigation"><span class="flex-preset-icon flex-preset-icon--nav"><i></i><i></i><i></i></span><span><strong>Navigation bar</strong><small>Brand and links on one line</small></span><span class="flex-preset-arrow" aria-hidden="true">↗</span></button>
+          <button class="flexbox-preset" type="button" data-preset="card-layout"><span class="flex-preset-icon flex-preset-icon--cards"><i></i><i></i><i></i><i></i></span><span><strong>Card layout</strong><small>Cards wrap onto new lines</small></span><span class="flex-preset-arrow" aria-hidden="true">↗</span></button>
+          <button class="flexbox-preset" type="button" data-preset="equal-columns"><span class="flex-preset-icon flex-preset-icon--equal"><i></i><i></i><i></i></span><span><strong>Equal columns</strong><small>Share available space equally</small></span><span class="flex-preset-arrow" aria-hidden="true">↗</span></button>
+          <button class="flexbox-preset" type="button" data-preset="sidebar"><span class="flex-preset-icon flex-preset-icon--sidebar"><i></i><i></i></span><span><strong>Sidebar layout</strong><small>Fixed sidebar and fluid content</small></span><span class="flex-preset-arrow" aria-hidden="true">↗</span></button>
+          <button class="flexbox-preset" type="button" data-preset="responsive-wrap"><span class="flex-preset-icon flex-preset-icon--wrap"><i></i><i></i><i></i><i></i></span><span><strong>Responsive wrap</strong><small>Flow onto lines as space changes</small></span><span class="flex-preset-arrow" aria-hidden="true">↗</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="flexbox-guide-section container" aria-labelledby="flexbox-guide-title">
+      <div class="section-heading section-heading--center"><span class="eyebrow">THE BASICS</span><h2 id="flexbox-guide-title">A guide to Flexbox</h2><p>Understand the properties behind your responsive layout.</p></div>
+      <article class="axis-guide card">
+        <div><span class="eyebrow">TWO AXES, ONE DIMENSION</span><h3>Main axis vs cross axis</h3><p>The main axis follows <code>flex-direction</code>. The cross axis runs perpendicular to it. Justify content distributes items along the main axis; align items positions them across the cross axis.</p></div>
+        <div class="axis-diagram" aria-label="Flexbox row direction: main axis runs horizontally, cross axis runs vertically">
+          <span class="axis-diagram__label">CROSS AXIS</span><span class="axis-diagram__vertical" aria-hidden="true"></span>
+          <div class="axis-diagram__items" aria-hidden="true"><i></i><i></i><i></i></div>
+          <span class="axis-diagram__main">MAIN AXIS <span aria-hidden="true">→</span></span>
+        </div>
+      </article>
+      <div class="flexbox-guide-grid">
+        <article class="flexbox-guide-card card"><span class="flexbox-guide-number">01</span><h3>What is CSS Flexbox?</h3><p>Flexbox is a one-dimensional layout model that distributes and aligns items along a row or column.</p><pre><code>.toolbar {
+  display: flex;
+}</code></pre></article>
+        <article class="flexbox-guide-card card"><span class="flexbox-guide-number">02</span><h3>Flex Direction</h3><p>Choose the main axis and item flow with row, row-reverse, column, or column-reverse.</p><pre><code>.stack {
+  flex-direction: column;
+}</code></pre></article>
+        <article class="flexbox-guide-card card"><span class="flexbox-guide-number">03</span><h3>Justify Content</h3><p>Distribute free space between items along the main axis.</p><pre><code>.toolbar {
+  justify-content: space-between;
+}</code></pre></article>
+        <article class="flexbox-guide-card card"><span class="flexbox-guide-number">04</span><h3>Align Items</h3><p>Align items across the cross axis within each flex line.</p><pre><code>.toolbar {
+  align-items: center;
+}</code></pre></article>
+        <article class="flexbox-guide-card card"><span class="flexbox-guide-number">05</span><h3>Flex Wrap</h3><p>Allow items to move onto additional flex lines when they no longer fit.</p><pre><code>.cards {
+  flex-wrap: wrap;
+  gap: 16px;
+}</code></pre></article>
+        <article class="flexbox-guide-card card"><span class="flexbox-guide-number">06</span><h3>Grow, Shrink &amp; Basis</h3><p>Control how an item grows, shrinks, and determines its initial main size.</p><pre><code>.item {
+  flex: 1 1 200px;
+}</code></pre></article>
+        <article class="flexbox-guide-card card flexbox-guide-card--wide"><span class="flexbox-guide-number">07</span><h3>Flexbox vs CSS Grid</h3><p>Flexbox is best when content flows along one axis. CSS Grid coordinates rows and columns together, making it a better fit for two-dimensional page layouts.</p><pre><code>.page {
+  display: grid;
+  grid-template-columns: 16rem 1fr;
+}</code></pre></article>
+      </div>
+    </section>
+
+    <section class="faq-section flexbox-faq container" aria-labelledby="faq-title">
+      <div class="section-heading section-heading--center"><span class="eyebrow">FAQ</span><h2 id="faq-title">Frequently asked questions</h2><p>Quick answers to common Flexbox questions.</p></div>
+      <div class="faq-list">
+        <article class="faq-item"><h3><button class="faq-question" id="flex-faq-question-1" type="button" aria-expanded="false" aria-controls="flex-faq-answer-1"><span>What is CSS Flexbox used for?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="flex-faq-answer-1" role="region" aria-labelledby="flex-faq-question-1" hidden><p>Flexbox arranges and aligns items along a row or column. It is particularly useful for navigation, toolbars, component layouts, and other one-dimensional patterns.</p></div></article>
+        <article class="faq-item"><h3><button class="faq-question" id="flex-faq-question-2" type="button" aria-expanded="false" aria-controls="flex-faq-answer-2"><span>What is the difference between justify-content and align-items?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="flex-faq-answer-2" role="region" aria-labelledby="flex-faq-question-2" hidden><p>Justify content distributes items along the main axis. Align items positions items along the cross axis inside each flex line.</p></div></article>
+        <article class="faq-item"><h3><button class="faq-question" id="flex-faq-question-3" type="button" aria-expanded="false" aria-controls="flex-faq-answer-3"><span>How do I center an element using Flexbox?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="flex-faq-answer-3" role="region" aria-labelledby="flex-faq-question-3" hidden><p>Set the parent to display: flex, then use justify-content: center and align-items: center to center an item along both axes.</p></div></article>
+        <article class="faq-item"><h3><button class="faq-question" id="flex-faq-question-4" type="button" aria-expanded="false" aria-controls="flex-faq-answer-4"><span>What is the difference between flex-grow and flex-shrink?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="flex-faq-answer-4" role="region" aria-labelledby="flex-faq-question-4" hidden><p>Flex grow distributes positive free space to items. Flex shrink determines how items give up space when the flex line is too small.</p></div></article>
+        <article class="faq-item"><h3><button class="faq-question" id="flex-faq-question-5" type="button" aria-expanded="false" aria-controls="flex-faq-answer-5"><span>When should I use Flexbox instead of CSS Grid?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="flex-faq-answer-5" role="region" aria-labelledby="flex-faq-question-5" hidden><p>Use Flexbox for one-dimensional layouts where content flows along one axis. Choose Grid when you need to coordinate rows and columns across a two-dimensional layout.</p></div></article>
+        <article class="faq-item"><h3><button class="faq-question" id="flex-faq-question-6" type="button" aria-expanded="false" aria-controls="flex-faq-answer-6"><span>How does flex-wrap work?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="flex-faq-answer-6" role="region" aria-labelledby="flex-faq-question-6" hidden><p>Flex wrap allows items that do not fit on one line to continue onto another. Wrap-reverse reverses the cross-axis direction of those lines.</p></div></article>
+        <article class="faq-item"><h3><button class="faq-question" id="flex-faq-question-7" type="button" aria-expanded="false" aria-controls="flex-faq-answer-7"><span>Can I use Flexbox for responsive layouts?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="flex-faq-answer-7" role="region" aria-labelledby="flex-faq-question-7" hidden><p>Yes. Combine wrapping, flexible basis values, and gaps to adapt to available space. Media queries can add further changes when the layout needs a breakpoint.</p></div></article>
+      </div>
+    </section>
+  </main>
+  <div id="footer"></div>
+</body>
+</html>
+

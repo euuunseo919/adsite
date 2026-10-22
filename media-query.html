@@ -1,0 +1,157 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Build and test responsive CSS media queries with breakpoint controls, device previews, and generated CSS.">
+  <meta name="theme-color" content="#f8fafc">
+  <title>CSS Media Query Generator | Unitwise</title>
+  <link rel="stylesheet" href="assets/css/normalize.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/commons.css?v=2">
+  <link rel="stylesheet" href="assets/css/media-query.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="assets/js/common.js?v=2"></script>
+  <script src="assets/js/media-query.js"></script>
+</head>
+<body data-page="media-query">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div id="header"></div>
+  <main id="main-content">
+    <section class="hero container" aria-labelledby="hero-title">
+      <span class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>RESPONSIVE CSS TOOL</span>
+      <h1 id="hero-title">CSS Media Query Generator</h1>
+      <p class="hero__lead">Generate responsive CSS media queries instantly.</p>
+      <p class="hero__description">Customize breakpoints, screen conditions, and responsive rules to create clean CSS media queries for any device.</p>
+    </section>
+
+    <section class="mq-workspace container" aria-label="Media query settings and responsive preview">
+      <section class="mq-settings card" aria-labelledby="mq-settings-title">
+        <div class="mq-panel-heading"><div><span class="eyebrow">QUERY BUILDER</span><h2 id="mq-settings-title">Media Query Settings</h2></div><span class="mq-live-badge"><i aria-hidden="true"></i> Live</span></div>
+        <div class="mq-field-grid">
+          <div class="field-group"><label for="media-type">Media type</label><select id="media-type"><option value="all">all</option><option value="screen" selected>screen</option><option value="print">print</option></select></div>
+          <div class="field-group"><label for="mq-orientation">Orientation</label><select id="mq-orientation"><option value="any">Any</option><option value="portrait">Portrait</option><option value="landscape">Landscape</option></select></div>
+          <div class="field-group"><label for="mq-hover">Hover capability</label><select id="mq-hover"><option value="any">Any</option><option value="hover">Hover</option><option value="none">None</option></select></div>
+          <div class="field-group"><label for="mq-pointer">Pointer capability</label><select id="mq-pointer"><option value="any">Any</option><option value="fine">Fine</option><option value="coarse">Coarse</option><option value="none">None</option></select></div>
+          <div class="field-group"><label for="mq-motion">Reduced motion</label><select id="mq-motion"><option value="any">Any</option><option value="reduce">Reduce</option><option value="no-preference">No Preference</option></select></div>
+          <div class="field-group"><label for="mq-scheme">Color scheme</label><select id="mq-scheme"><option value="any">Any</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
+        </div>
+        <fieldset class="mq-breakpoint-settings">
+          <legend>Breakpoint settings <span>— each condition is optional</span></legend>
+          <div class="mq-breakpoint-grid">
+            <div class="mq-breakpoint-control"><label class="mq-condition-toggle"><input id="min-width-enabled" type="checkbox" checked><span>Min width</span></label><div class="mq-measure-input"><input id="min-width" type="number" min="0" max="5000" value="768" aria-describedby="mq-validation"><span>px</span></div></div>
+            <div class="mq-breakpoint-control"><label class="mq-condition-toggle"><input id="max-width-enabled" type="checkbox" checked><span>Max width</span></label><div class="mq-measure-input"><input id="max-width" type="number" min="0" max="5000" value="1199" aria-describedby="mq-validation"><span>px</span></div></div>
+            <div class="mq-breakpoint-control"><label class="mq-condition-toggle"><input id="min-height-enabled" type="checkbox"><span>Min height</span></label><div class="mq-measure-input"><input id="min-height" type="number" min="0" max="5000" value="600" aria-describedby="mq-validation"><span>px</span></div></div>
+            <div class="mq-breakpoint-control"><label class="mq-condition-toggle"><input id="max-height-enabled" type="checkbox"><span>Max height</span></label><div class="mq-measure-input"><input id="max-height" type="number" min="0" max="5000" value="900" aria-describedby="mq-validation"><span>px</span></div></div>
+          </div>
+          <p class="mq-validation" id="mq-validation" role="alert" aria-live="polite"></p>
+        </fieldset>
+        <section class="mq-environment" aria-labelledby="mq-environment-title">
+          <div><h3 id="mq-environment-title">Simulation controls</h3><p>Device capabilities and preferences cannot be inferred from viewport size.</p></div>
+          <div class="mq-simulation-grid">
+            <div class="field-group"><label for="simulate-hover">Hover</label><select id="simulate-hover"><option value="unknown">Not simulated</option><option value="hover">Hover</option><option value="none">None</option></select></div>
+            <div class="field-group"><label for="simulate-pointer">Pointer</label><select id="simulate-pointer"><option value="unknown">Not simulated</option><option value="fine">Fine</option><option value="coarse">Coarse</option><option value="none">None</option></select></div>
+            <div class="field-group"><label for="simulate-motion">Motion</label><select id="simulate-motion"><option value="unknown">Not simulated</option><option value="reduce">Reduce</option><option value="no-preference">No preference</option></select></div>
+            <div class="field-group"><label for="simulate-scheme">Color scheme</label><select id="simulate-scheme"><option value="unknown">Not simulated</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
+          </div>
+        </section>
+      </section>
+
+      <section class="mq-preview-panel card" aria-labelledby="mq-preview-title">
+        <div class="mq-panel-heading"><div><span class="eyebrow">RESPONSIVE PREVIEW</span><h2 id="mq-preview-title">Test your query</h2></div><span id="mq-match-status" class="mq-match-status" role="status" aria-live="polite">Query Matches</span></div>
+        <div class="mq-device-controls">
+          <div class="field-group"><label for="device-preset">Device preset <small>test viewport example</small></label><select id="device-preset"><option value="custom">Custom size</option><option value="mobile-small">Mobile Small · 320 × 568</option><option value="mobile">Mobile · 375 × 812</option><option value="mobile-large">Mobile Large · 430 × 932</option><option value="tablet">Tablet · 768 × 1024</option><option value="laptop">Laptop · 1366 × 768</option><option value="desktop">Desktop · 1440 × 900</option></select></div>
+          <button class="button button--secondary mq-orientation-button" id="swap-orientation" type="button" aria-label="Swap viewport width and height">↔ Swap orientation</button>
+        </div>
+        <div class="mq-dimension-controls">
+          <div class="mq-dimension"><label for="viewport-width">Viewport width <output id="viewport-width-value">1024px</output></label><div class="mq-dimension-input"><input id="viewport-width" type="number" min="240" max="1920" value="1024" aria-describedby="mq-preview-validation"><span>px</span></div><input class="mq-range" id="viewport-width-range" type="range" min="240" max="1920" value="1024" aria-label="Viewport width slider"></div>
+          <div class="mq-dimension"><label for="viewport-height">Viewport height <output id="viewport-height-value">768px</output></label><div class="mq-dimension-input"><input id="viewport-height" type="number" min="320" max="1200" value="768" aria-describedby="mq-preview-validation"><span>px</span></div><input class="mq-range" id="viewport-height-range" type="range" min="320" max="1200" value="768" aria-label="Viewport height slider"></div>
+        </div>
+        <p class="mq-validation" id="mq-preview-validation" role="alert" aria-live="polite"></p>
+        <div class="mq-preview-note" id="mq-preview-note">Viewport and orientation conditions are simulated. Environment features use only the explicit simulation controls above.</div>
+        <div class="mq-preview-outer" id="mq-preview-outer" aria-label="Scaled responsive website preview">
+          <div class="mq-preview-frame" id="mq-preview-frame">
+            <header class="mq-demo-header"><strong>Studio</strong><nav aria-label="Preview navigation"><span>Work</span><span>About</span><span>Contact</span></nav><button type="button" aria-label="Preview menu">☰</button></header>
+            <div class="mq-demo-layout"><aside class="mq-demo-sidebar"><b>Explore</b><span>Overview</span><span>Projects</span><span>Resources</span></aside><div class="mq-demo-main"><div class="mq-demo-hero"><span>DESIGN THAT WORKS</span><h3>Build for every screen.</h3><p>A responsive layout preview.</p></div><div class="mq-demo-cards"><article><i></i><b>Thoughtful design</b><span>Flexible layouts</span></article><article><i></i><b>Simple systems</b><span>Clear structure</span></article><article><i></i><b>Better outcomes</b><span>Made to adapt</span></article></div></div></div>
+            <footer class="mq-demo-footer">© Studio · Preview content</footer>
+          </div>
+        </div>
+        <p class="mq-print-notice" id="mq-print-notice" hidden>Print media cannot be evaluated by a screen viewport simulation.</p>
+        <section class="mq-breakpoint-visual" aria-labelledby="mq-range-title">
+          <div class="mq-visual-heading"><h3 id="mq-range-title">Width range visualization</h3><span>Width condition only</span></div>
+          <div class="mq-range-bar" id="mq-range-bar" role="img" aria-label="Width condition visualization">
+            <span class="mq-range-active" id="mq-range-active"></span><span class="mq-range-current" id="mq-range-current"></span><span class="mq-range-min-label" id="mq-range-min-label">768px</span><span class="mq-range-max-label" id="mq-range-max-label">1199px</span>
+          </div>
+          <div class="mq-range-scale"><span>0px</span><span>1920px</span></div>
+          <p>Open ends indicate disabled width bounds. This bar visualizes width only; the match result also evaluates other conditions.</p>
+        </section>
+      </section>
+    </section>
+
+    <section class="mq-summary-section container" aria-labelledby="mq-summary-title">
+      <div class="section-heading"><div><span class="eyebrow">CONDITION BUILDER</span><h2 id="mq-summary-title">Your conditions</h2><p>Active media features combine with <code>and</code>.</p></div></div>
+      <div class="mq-condition-summary card" id="mq-condition-summary" aria-live="polite"></div>
+      <p class="mq-summary-status" id="mq-summary-status">Query Matches</p>
+    </section>
+
+    <section class="mq-code-section container" aria-labelledby="mq-code-title">
+      <div class="section-heading mq-code-heading"><div><span class="eyebrow">READY-TO-USE CODE</span><h2 id="mq-code-title">Generated CSS</h2><p>Edit the rule body; it is output only and never executed in the preview.</p></div><div class="mq-code-actions"><button class="button button--secondary" id="copy-query" type="button">Copy Query</button><button class="button button--copy" id="copy-css" type="button">Copy CSS</button><button class="text-button" id="reset-media-query" type="button">Reset</button></div></div>
+      <div class="mq-rule-editor card"><label for="css-rule-editor">CSS rule editor</label><textarea id="css-rule-editor" spellcheck="false" aria-describedby="css-rule-hint">.container {
+  padding: 24px;
+}</textarea><p id="css-rule-hint">Enter CSS declarations or rules to include inside the media block. This text is not injected into the preview.</p></div>
+      <div class="mq-code-window"><pre><code id="generated-css" aria-live="polite" aria-atomic="true"></code></pre></div>
+      <p class="mq-copy-status" id="mq-copy-status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="mq-presets-section container" aria-labelledby="mq-presets-title">
+      <div class="section-heading section-heading--center"><span class="eyebrow">QUICK START</span><h2 id="mq-presets-title">Breakpoint presets</h2><p>These are useful example ranges, not universal framework standards.</p></div>
+      <div class="mq-presets-grid" id="mq-presets"></div>
+    </section>
+
+    <section class="mq-guide-section" aria-labelledby="mq-guide-title">
+      <div class="container"><div class="section-heading section-heading--center"><span class="eyebrow">THE BASICS</span><h2 id="mq-guide-title">A guide to CSS media queries</h2><p>Learn how to target viewport ranges and user preferences responsibly.</p></div>
+        <div class="mq-guide-grid">
+          <article class="mq-guide-card card"><span>01</span><h3>What is a CSS Media Query?</h3><p>Media queries conditionally apply styles based on media type, viewport dimensions, and user or device capabilities.</p><pre><code>@media screen and (min-width: 48rem) {
+  .layout { display: grid; }
+}</code></pre></article>
+          <article class="mq-guide-card card"><span>02</span><h3>Mobile First vs Desktop First</h3><p>Mobile-first styles establish a base then add larger layouts; desktop-first approaches constrain styles below a maximum width.</p><pre><code>@media (min-width: 768px) { }
+@media (max-width: 767px) { }</code></pre></article>
+          <article class="mq-guide-card card"><span>03</span><h3>Understanding Breakpoints</h3><p>Choose breakpoints where your content needs a layout change, and test between common device sizes.</p><pre><code>@media (min-width: 48rem) {
+  .navigation { gap: 1rem; }
+}</code></pre></article>
+          <article class="mq-guide-card card"><span>04</span><h3>Width vs Height Queries</h3><p>Width targets the available inline viewport size. Height can help with constrained or short viewports, but should be used sparingly.</p><pre><code>@media (max-height: 600px) {
+  .hero { min-height: auto; }
+}</code></pre></article>
+          <article class="mq-guide-card card"><span>05</span><h3>Orientation Queries</h3><p>Orientation is determined by the viewport's width-to-height relationship, not by a device's name or category.</p><pre><code>@media (orientation: landscape) {
+  .gallery { grid-auto-flow: column; }
+}</code></pre></article>
+          <article class="mq-guide-card card"><span>06</span><h3>User Preference Queries</h3><p>Respect preferences such as dark mode and reduced motion rather than inferring them from screen size.</p><pre><code>@media (prefers-reduced-motion: reduce) {
+  *, *::before { scroll-behavior: auto; }
+}</code></pre></article>
+          <article class="mq-guide-card card mq-guide-card--wide"><span>07</span><h3>Media Queries vs Container Queries</h3><p>Media queries respond to viewport or environment features. Container queries adapt a component to its containing block and are often better for reusable components.</p><pre><code>.card-list { container-type: inline-size; }
+@container (min-width: 500px) {
+  .card { grid-template-columns: 1fr 1fr; }
+}</code></pre></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section mq-faq container" aria-labelledby="mq-faq-title">
+      <div class="section-heading section-heading--center"><span class="eyebrow">FAQ</span><h2 id="mq-faq-title">Frequently asked questions</h2><p>Quick answers to common responsive CSS questions.</p></div>
+      <div class="faq-list">
+        <article class="faq-item"><h3><button class="faq-question" id="mq-faq-q1" type="button" aria-expanded="false" aria-controls="mq-faq-a1"><span>What is a CSS media query?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="mq-faq-a1" role="region" aria-labelledby="mq-faq-q1" hidden><p>A media query conditionally applies CSS when the document matches a media type and one or more media features.</p></div></article>
+        <article class="faq-item"><h3><button class="faq-question" id="mq-faq-q2" type="button" aria-expanded="false" aria-controls="mq-faq-a2"><span>How do I write a media query in CSS?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="mq-faq-a2" role="region" aria-labelledby="mq-faq-q2" hidden><p>Use an @media rule followed by a media type or feature condition, then place the styles inside braces, for example @media (min-width: 768px) { ... }.</p></div></article>
+        <article class="faq-item"><h3><button class="faq-question" id="mq-faq-q3" type="button" aria-expanded="false" aria-controls="mq-faq-a3"><span>What is the difference between min-width and max-width?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="mq-faq-a3" role="region" aria-labelledby="mq-faq-q3" hidden><p>min-width matches when the viewport is at least the specified width; max-width matches when it is no wider than the specified width. Both include their boundary values.</p></div></article>
+        <article class="faq-item"><h3><button class="faq-question" id="mq-faq-q4" type="button" aria-expanded="false" aria-controls="mq-faq-a4"><span>What are common responsive breakpoints?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="mq-faq-a4" role="region" aria-labelledby="mq-faq-q4" hidden><p>There is no universal set. Choose breakpoints where your content or layout needs to change and verify the design across a range of widths.</p></div></article>
+        <article class="faq-item"><h3><button class="faq-question" id="mq-faq-q5" type="button" aria-expanded="false" aria-controls="mq-faq-a5"><span>Should I use mobile-first or desktop-first CSS?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="mq-faq-a5" role="region" aria-labelledby="mq-faq-q5" hidden><p>Both can work. Mobile-first commonly starts with base styles and progressively enhances with min-width queries, which often keeps small-screen rules straightforward.</p></div></article>
+        <article class="faq-item"><h3><button class="faq-question" id="mq-faq-q6" type="button" aria-expanded="false" aria-controls="mq-faq-a6"><span>How do orientation media queries work?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="mq-faq-a6" role="region" aria-labelledby="mq-faq-q6" hidden><p>portrait matches when the viewport height is greater than or equal to its width; landscape matches when its width is greater than its height.</p></div></article>
+        <article class="faq-item"><h3><button class="faq-question" id="mq-faq-q7" type="button" aria-expanded="false" aria-controls="mq-faq-a7"><span>Can I combine multiple media conditions?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="mq-faq-a7" role="region" aria-labelledby="mq-faq-q7" hidden><p>Yes. Join conditions with and when all should match, or use comma-separated queries when any one may match.</p></div></article>
+        <article class="faq-item"><h3><button class="faq-question" id="mq-faq-q8" type="button" aria-expanded="false" aria-controls="mq-faq-a8"><span>What is the difference between media queries and container queries?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="mq-faq-a8" role="region" aria-labelledby="mq-faq-q8" hidden><p>Media queries react to viewport and environment features. Container queries react to the size or style of a designated ancestor container.</p></div></article>
+      </div>
+    </section>
+  </main>
+  <div id="footer"></div>
+</body>
+</html>
+

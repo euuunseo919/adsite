@@ -1,0 +1,187 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Convert CSS values between PX, REM, and EM instantly with an accurate, responsive unit converter.">
+  <meta name="theme-color" content="#f8fafc">
+  <title>PX ↔ REM / EM Converter | Unitwise</title>
+  <link rel="stylesheet" href="assets/css/normalize.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/commons.css?v=2">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="assets/js/common.js?v=2"></script>
+  <script src="assets/js/converter.js"></script>
+</head>
+<body data-page="converter">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div id="header"></div>
+
+  <main id="main-content">
+    <section class="hero container" id="top" aria-labelledby="hero-title">
+      <span class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>CSS UNIT TOOLKIT</span>
+      <h1 id="hero-title">PX <span aria-hidden="true">↔</span> REM / EM<br class="hero__break"> Converter</h1>
+      <p class="hero__lead">Convert CSS units instantly with a simple and accurate calculator.</p>
+      <p class="hero__description">Easily convert between PX, REM, and EM units for responsive web design.</p>
+    </section>
+
+    <section class="converter-section container" id="converter" aria-labelledby="converter-title">
+      <div class="converter-card">
+        <div class="section-heading converter-card__heading">
+          <div>
+            <span class="eyebrow">UNIT CONVERTER</span>
+            <h2 id="converter-title">Make your conversion</h2>
+            <p>Adjust the values below to get an instant result.</p>
+          </div>
+          <span class="converter-card__badge"><span aria-hidden="true">✦</span> Live calculation</span>
+        </div>
+
+        <div class="converter-fields">
+          <div class="field-group">
+            <label for="input-value">Value</label>
+            <div class="input-with-select">
+              <input id="input-value" name="input-value" type="number" value="16" step="any" inputmode="decimal" autocomplete="off">
+              <select id="input-unit" name="input-unit" aria-label="Input unit">
+                <option value="px" selected>PX</option>
+                <option value="rem">REM</option>
+                <option value="em">EM</option>
+              </select>
+            </div>
+          </div>
+
+          <button class="swap-button" id="swap-units" type="button" aria-label="Swap input and output units" title="Swap units">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h13m0 0-3-3m3 3-3 3M17 17H4m0 0 3 3m-3-3 3-3"/></svg>
+          </button>
+
+          <div class="field-group">
+            <label for="output-unit">Convert to</label>
+            <select class="field-select" id="output-unit" name="output-unit">
+              <option value="px">PX</option>
+              <option value="rem" selected>REM</option>
+              <option value="em">EM</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="base-settings" aria-label="Conversion base sizes">
+          <div class="field-group base-settings__field">
+            <label for="root-size">Root font size <span>(for REM)</span></label>
+            <div class="input-with-suffix">
+              <input id="root-size" name="root-size" type="number" value="16" min="0.01" step="any" inputmode="decimal" autocomplete="off">
+              <span>px</span>
+            </div>
+          </div>
+          <div class="field-group base-settings__field">
+            <label for="em-size">EM base size <span>(for EM)</span></label>
+            <div class="input-with-suffix">
+              <input id="em-size" name="em-size" type="number" value="16" min="0.01" step="any" inputmode="decimal" autocomplete="off">
+              <span>px</span>
+            </div>
+          </div>
+          <p class="base-settings__hint">REM uses the root size; EM uses the parent element's font size.</p>
+        </div>
+
+        <div class="result-panel" aria-live="polite" aria-atomic="true">
+          <div>
+            <span class="result-panel__label">RESULT</span>
+            <output class="result-panel__value" id="conversion-result" for="input-value root-size em-size">1 <span>rem</span></output>
+          </div>
+          <button class="button button--copy" id="copy-result" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"/></svg>
+            <span>Copy result</span>
+          </button>
+        </div>
+        <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+        <div class="converter-card__footer">
+          <span>Conversion is rounded to a maximum of 4 decimal places.</span>
+          <button class="text-button" id="reset-converter" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 2.64-6.36L3 8m0-5v5h5"/></svg>
+            Reset values
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="quick-table-section container" aria-labelledby="quick-table-title">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">QUICK REFERENCE</span>
+          <h2 id="quick-table-title">Common PX to REM conversions</h2>
+          <p>Based on your current root font size of <span id="table-root-size">16</span>px.</p>
+        </div>
+        <span class="table-root-badge">1rem = <strong id="table-rem-value">16px</strong></span>
+      </div>
+      <div class="table-scroll" tabindex="0" aria-label="Scrollable PX to REM conversion table">
+        <table class="conversion-table">
+          <thead><tr><th scope="col">Pixels</th><th scope="col">REM</th><th scope="col">Pixels</th><th scope="col">REM</th></tr></thead>
+          <tbody id="conversion-table-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="guide-section" id="units-guide" aria-labelledby="guide-title">
+      <div class="container">
+        <div class="section-heading section-heading--center">
+          <span class="eyebrow">THE BASICS</span>
+          <h2 id="guide-title">Get to know your CSS units</h2>
+          <p>Choose the right unit for accessible, flexible layouts.</p>
+        </div>
+        <div class="guide-grid">
+          <article class="guide-card">
+            <div class="guide-card__top"><span class="unit-icon unit-icon--px">PX</span><span class="guide-card__tag">Fixed</span></div>
+            <h3>Pixels <span>(px)</span></h3>
+            <p class="guide-card__definition">A fixed-size unit representing one CSS pixel. It does not scale with a parent or root font size.</p>
+            <dl><div><dt>Based on</dt><dd>CSS pixel</dd></div><div><dt>Use for</dt><dd>Fine borders, details</dd></div></dl>
+            <code class="code-sample">border-width: 1px;</code>
+          </article>
+          <article class="guide-card">
+            <div class="guide-card__top"><span class="unit-icon unit-icon--rem">rem</span><span class="guide-card__tag">Root relative</span></div>
+            <h3>Root EMs <span>(rem)</span></h3>
+            <p class="guide-card__definition">A scalable unit relative to the font size set on the root element, usually <code>html</code>.</p>
+            <dl><div><dt>Based on</dt><dd>Root font size</dd></div><div><dt>Use for</dt><dd>Type, spacing, layout</dd></div></dl>
+            <code class="code-sample">font-size: 1.5rem;</code>
+          </article>
+          <article class="guide-card">
+            <div class="guide-card__top"><span class="unit-icon unit-icon--em">em</span><span class="guide-card__tag">Parent relative</span></div>
+            <h3>EMs <span>(em)</span></h3>
+            <p class="guide-card__definition">A relative unit based on the computed font size of the element's parent.</p>
+            <dl><div><dt>Based on</dt><dd>Parent font size</dd></div><div><dt>Use for</dt><dd>Component-level sizing</dd></div></dl>
+            <code class="code-sample">padding: 1em;</code>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section container" aria-labelledby="faq-title">
+      <div class="section-heading section-heading--center">
+        <span class="eyebrow">FAQ</span>
+        <h2 id="faq-title">Frequently asked questions</h2>
+        <p>Quick answers to common CSS unit questions.</p>
+      </div>
+      <div class="faq-list">
+        <article class="faq-item">
+          <h3><button class="faq-question" id="faq-question-1" type="button" aria-expanded="false" aria-controls="faq-answer-1"><span>What is the difference between REM and EM?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="faq-answer-1" role="region" aria-labelledby="faq-question-1" hidden><p>REM is relative to the root (html) font size, while EM is relative to the computed font size of its parent element. REM is predictable across a page; EM is useful for sizing within a component.</p></div>
+        </article>
+        <article class="faq-item">
+          <h3><button class="faq-question" id="faq-question-2" type="button" aria-expanded="false" aria-controls="faq-answer-2"><span>How do I convert PX to REM?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="faq-answer-2" role="region" aria-labelledby="faq-question-2" hidden><p>Divide the pixel value by the root font size. For example, with a 16px root size, 24px ÷ 16 = 1.5rem.</p></div>
+        </article>
+        <article class="faq-item">
+          <h3><button class="faq-question" id="faq-question-3" type="button" aria-expanded="false" aria-controls="faq-answer-3"><span>Is 1 REM always 16px?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="faq-answer-3" role="region" aria-labelledby="faq-question-3" hidden><p>No. 1rem equals the root font size. Browsers commonly default to 16px, but users or stylesheets can change that value.</p></div>
+        </article>
+        <article class="faq-item">
+          <h3><button class="faq-question" id="faq-question-4" type="button" aria-expanded="false" aria-controls="faq-answer-4"><span>When should I use REM instead of PX?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="faq-answer-4" role="region" aria-labelledby="faq-question-4" hidden><p>Use REM for typography, spacing, and layout values that should scale with a user's root font-size preference. PX can still be useful for small details such as a thin border.</p></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+</body>
+</html>
+
