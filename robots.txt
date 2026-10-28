@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://euuunseo919.github.io/adsite/sitemap.xml
+Sitemap: https://adsite-ashen.vercel.app/sitemap.xml

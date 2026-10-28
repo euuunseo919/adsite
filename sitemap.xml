@@ -2,70 +2,70 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Main / PX to REM Converter -->
   <url>
-    <loc>https://euuunseo919.github.io/adsite/</loc>
-    <lastmod>2026-10-23</lastmod>
+    <loc>https://adsite-ashen.vercel.app/</loc>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- Color Converter -->
   <url>
-    <loc>https://euuunseo919.github.io/adsite/color-converter.html</loc>
-    <lastmod>2026-10-23</lastmod>
+    <loc>https://adsite-ashen.vercel.app/color-converter.html</loc>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Layout Tools -->
   <url>
-    <loc>https://euuunseo919.github.io/adsite/grid.html</loc>
-    <lastmod>2026-10-23</lastmod>
+    <loc>https://adsite-ashen.vercel.app/grid.html</loc>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://euuunseo919.github.io/adsite/flexbox.html</loc>
-    <lastmod>2026-10-23</lastmod>
+    <loc>https://adsite-ashen.vercel.app/flexbox.html</loc>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Visual Effects -->
   <url>
-    <loc>https://euuunseo919.github.io/adsite/box-shadow.html</loc>
-    <lastmod>2026-10-23</lastmod>
+    <loc>https://adsite-ashen.vercel.app/box-shadow.html</loc>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://euuunseo919.github.io/adsite/gradient.html</loc>
-    <lastmod>2026-10-23</lastmod>
+    <loc>https://adsite-ashen.vercel.app/gradient.html</loc>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://euuunseo919.github.io/adsite/clip-path.html</loc>
-    <lastmod>2026-10-23</lastmod>
+    <loc>https://adsite-ashen.vercel.app/clip-path.html</loc>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://euuunseo919.github.io/adsite/animation.html</loc>
-    <lastmod>2026-10-23</lastmod>
+    <loc>https://adsite-ashen.vercel.app/animation.html</loc>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Responsive Design Tools -->
   <url>
-    <loc>https://euuunseo919.github.io/adsite/clamp.html</loc>
-    <lastmod>2026-10-23</lastmod>
+    <loc>https://adsite-ashen.vercel.app/clamp.html</loc>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://euuunseo919.github.io/adsite/media-query.html</loc>
-    <lastmod>2026-10-23</lastmod>
+    <loc>https://adsite-ashen.vercel.app/media-query.html</loc>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
