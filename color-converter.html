@@ -1,20 +1,44 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Convert colors between HEX, RGB, and HSL, explore shades, and check WCAG contrast for accessible designs.">
+  <meta name="description"
+    content="Convert colors between HEX, RGB, and HSL, explore shades, and check WCAG contrast for accessible designs.">
   <meta name="theme-color" content="#f8fafc">
   <title>HEX / RGB / HSL Converter | Unitwise</title>
+  <link rel="canonical" href="https://adsite-ashen.vercel.app/color-converter.html">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://adsite-ashen.vercel.app/color-converter.html">
+  <meta property="og:title" content="HEX / RGB / HSL Converter | Unitwise">
+  <meta property="og:description"
+    content="Convert colors between HEX, RGB, and HSL, explore shades, and check WCAG contrast for accessible designs.">
+  <meta property="og:site_name" content="Unitwise">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://adsite-ashen.vercel.app/color-converter.html">
+  <meta name="twitter:title" content="HEX / RGB / HSL Converter | Unitwise">
+  <meta name="twitter:description"
+    content="Convert colors between HEX, RGB, and HSL, explore shades, and check WCAG contrast for accessible designs.">
+
   <link rel="stylesheet" href="assets/css/normalize.css">
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/commons.css?v=2">
   <link rel="stylesheet" href="assets/css/color-converter.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="assets/js/common.js?v=2"></script>
   <script src="assets/js/color-converter.js"></script>
+
+  <meta name="google-site-verification" content="XZpFfX3nSkuJwJqcZBJIZyjZYTVvXYMlZHfaFTL9WIM" />
+  <meta name="naver-site-verification" content="78222065720b46b00c994ca2ac2a4b5945cfe280" />
 </head>
+
 <body data-page="color-converter">
   <a class="skip-link" href="#main-content">Skip to content</a>
   <div id="header"></div>
@@ -23,17 +47,26 @@
       <span class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>COLOR UTILITY</span>
       <h1 id="hero-title">HEX / RGB / HSL Converter</h1>
       <p class="hero__lead">Convert colors between HEX, RGB, and HSL instantly.</p>
-      <p class="hero__description">Explore colors, adjust values, and generate accurate CSS color codes for your next web design project.</p>
+      <p class="hero__description">Explore colors, adjust values, and generate accurate CSS color codes for your next
+        web design project.</p>
     </section>
 
     <section class="color-workspace container" aria-label="Color converter and live preview">
       <section class="color-editor card" aria-labelledby="color-editor-title">
-        <div class="color-panel-heading"><div><span class="eyebrow">COLOR CONVERTER</span><h2 id="color-editor-title">Edit color values</h2></div><button class="button--reset color-reset-top" type="button" data-color-action="reset"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 2.64-6.36L3 8m0-5v5h5"/></svg>Reset</button></div>
+        <div class="color-panel-heading">
+          <div><span class="eyebrow">COLOR CONVERTER</span>
+            <h2 id="color-editor-title">Edit color values</h2>
+          </div><button class="button--reset color-reset-top" type="button" data-color-action="reset"><svg
+              viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 12a9 9 0 1 0 2.64-6.36L3 8m0-5v5h5" />
+            </svg>Reset</button>
+        </div>
         <div class="color-hex-field field-group">
           <label for="color-hex">HEX color</label>
           <div class="color-hex-row">
             <input id="color-hex-picker" type="color" value="#2563eb" aria-label="Choose a color">
-            <input class="color-hex-text" id="color-hex" type="text" value="#2563EB" maxlength="9" spellcheck="false" autocomplete="off" aria-describedby="color-error" aria-invalid="false">
+            <input class="color-hex-text" id="color-hex" type="text" value="#2563EB" maxlength="9" spellcheck="false"
+              autocomplete="off" aria-describedby="color-error" aria-invalid="false">
             <button class="button button--secondary color-copy-hex" type="button" data-copy="hex">Copy HEX</button>
           </div>
           <p class="color-error" id="color-error" role="alert" aria-live="polite"></p>
@@ -42,19 +75,53 @@
 
         <div class="color-format-grid" id="color-format-grid">
           <fieldset class="color-format-card">
-            <legend><span class="color-format-mark color-format-mark--rgb">RGB</span><span>Red, Green, Blue</span></legend>
-            <div class="color-channel"><label for="rgb-r">Red</label><div class="color-number-wrap"><input id="rgb-r" type="number" min="0" max="255" step="1" value="37"><span>R</span></div><input class="color-range" id="rgb-r-range" type="range" min="0" max="255" value="37" aria-label="Red channel slider"></div>
-            <div class="color-channel"><label for="rgb-g">Green</label><div class="color-number-wrap"><input id="rgb-g" type="number" min="0" max="255" step="1" value="99"><span>G</span></div><input class="color-range" id="rgb-g-range" type="range" min="0" max="255" value="99" aria-label="Green channel slider"></div>
-            <div class="color-channel"><label for="rgb-b">Blue</label><div class="color-number-wrap"><input id="rgb-b" type="number" min="0" max="255" step="1" value="235"><span>B</span></div><input class="color-range" id="rgb-b-range" type="range" min="0" max="255" value="235" aria-label="Blue channel slider"></div>
-            <div class="color-channel"><label for="rgb-a">Alpha</label><div class="color-number-wrap"><input id="rgb-a" type="number" min="0" max="1" step="0.01" value="1"><span>α</span></div><input class="color-range" id="rgb-a-range" type="range" min="0" max="1" step="0.01" value="1" aria-label="RGB alpha slider"></div>
+            <legend><span class="color-format-mark color-format-mark--rgb">RGB</span><span>Red, Green, Blue</span>
+            </legend>
+            <div class="color-channel"><label for="rgb-r">Red</label>
+              <div class="color-number-wrap"><input id="rgb-r" type="number" min="0" max="255" step="1"
+                  value="37"><span>R</span></div><input class="color-range" id="rgb-r-range" type="range" min="0"
+                max="255" value="37" aria-label="Red channel slider">
+            </div>
+            <div class="color-channel"><label for="rgb-g">Green</label>
+              <div class="color-number-wrap"><input id="rgb-g" type="number" min="0" max="255" step="1"
+                  value="99"><span>G</span></div><input class="color-range" id="rgb-g-range" type="range" min="0"
+                max="255" value="99" aria-label="Green channel slider">
+            </div>
+            <div class="color-channel"><label for="rgb-b">Blue</label>
+              <div class="color-number-wrap"><input id="rgb-b" type="number" min="0" max="255" step="1"
+                  value="235"><span>B</span></div><input class="color-range" id="rgb-b-range" type="range" min="0"
+                max="255" value="235" aria-label="Blue channel slider">
+            </div>
+            <div class="color-channel"><label for="rgb-a">Alpha</label>
+              <div class="color-number-wrap"><input id="rgb-a" type="number" min="0" max="1" step="0.01"
+                  value="1"><span>α</span></div><input class="color-range" id="rgb-a-range" type="range" min="0" max="1"
+                step="0.01" value="1" aria-label="RGB alpha slider">
+            </div>
             <output class="color-format-output" id="rgb-output" aria-live="polite">rgb(37, 99, 235)</output>
           </fieldset>
           <fieldset class="color-format-card">
-            <legend><span class="color-format-mark color-format-mark--hsl">HSL</span><span>Hue, Saturation, Lightness</span></legend>
-            <div class="color-channel"><label for="hsl-h">Hue</label><div class="color-number-wrap"><input id="hsl-h" type="number" min="0" max="360" step="1" value="221"><span>°</span></div><input class="color-range" id="hsl-h-range" type="range" min="0" max="360" value="221" aria-label="Hue slider"></div>
-            <div class="color-channel"><label for="hsl-s">Saturation</label><div class="color-number-wrap"><input id="hsl-s" type="number" min="0" max="100" step="1" value="83"><span>%</span></div><input class="color-range" id="hsl-s-range" type="range" min="0" max="100" value="83" aria-label="Saturation slider"></div>
-            <div class="color-channel"><label for="hsl-l">Lightness</label><div class="color-number-wrap"><input id="hsl-l" type="number" min="0" max="100" step="1" value="53"><span>%</span></div><input class="color-range" id="hsl-l-range" type="range" min="0" max="100" value="53" aria-label="Lightness slider"></div>
-            <div class="color-channel"><label for="hsl-a">Alpha</label><div class="color-number-wrap"><input id="hsl-a" type="number" min="0" max="1" step="0.01" value="1"><span>α</span></div><input class="color-range" id="hsl-a-range" type="range" min="0" max="1" step="0.01" value="1" aria-label="HSL alpha slider"></div>
+            <legend><span class="color-format-mark color-format-mark--hsl">HSL</span><span>Hue, Saturation,
+                Lightness</span></legend>
+            <div class="color-channel"><label for="hsl-h">Hue</label>
+              <div class="color-number-wrap"><input id="hsl-h" type="number" min="0" max="360" step="1"
+                  value="221"><span>°</span></div><input class="color-range" id="hsl-h-range" type="range" min="0"
+                max="360" value="221" aria-label="Hue slider">
+            </div>
+            <div class="color-channel"><label for="hsl-s">Saturation</label>
+              <div class="color-number-wrap"><input id="hsl-s" type="number" min="0" max="100" step="1"
+                  value="83"><span>%</span></div><input class="color-range" id="hsl-s-range" type="range" min="0"
+                max="100" value="83" aria-label="Saturation slider">
+            </div>
+            <div class="color-channel"><label for="hsl-l">Lightness</label>
+              <div class="color-number-wrap"><input id="hsl-l" type="number" min="0" max="100" step="1"
+                  value="53"><span>%</span></div><input class="color-range" id="hsl-l-range" type="range" min="0"
+                max="100" value="53" aria-label="Lightness slider">
+            </div>
+            <div class="color-channel"><label for="hsl-a">Alpha</label>
+              <div class="color-number-wrap"><input id="hsl-a" type="number" min="0" max="1" step="0.01"
+                  value="1"><span>α</span></div><input class="color-range" id="hsl-a-range" type="range" min="0" max="1"
+                step="0.01" value="1" aria-label="HSL alpha slider">
+            </div>
             <output class="color-format-output" id="hsl-output" aria-live="polite">hsl(221, 83%, 53%)</output>
           </fieldset>
         </div>
@@ -68,8 +135,17 @@
       </section>
 
       <section class="color-preview-panel card" aria-labelledby="color-preview-title">
-        <div class="color-panel-heading"><div><span class="eyebrow">LIVE PREVIEW</span><h2 id="color-preview-title">See your color</h2></div></div>
-        <div class="color-preview-mode field-group"><label for="color-preview-mode">Preview mode</label><select id="color-preview-mode"><option value="background">Solid Background</option><option value="text">Text Color</option><option value="border">Border Color</option></select></div>
+        <div class="color-panel-heading">
+          <div><span class="eyebrow">LIVE PREVIEW</span>
+            <h2 id="color-preview-title">See your color</h2>
+          </div>
+        </div>
+        <div class="color-preview-mode field-group"><label for="color-preview-mode">Preview mode</label><select
+            id="color-preview-mode">
+            <option value="background">Solid Background</option>
+            <option value="text">Text Color</option>
+            <option value="border">Border Color</option>
+          </select></div>
         <div class="color-preview-stage" id="color-preview-stage">
           <div class="color-swatch" id="color-swatch">
             <div class="color-preview-sample" id="color-preview-sample">
@@ -80,34 +156,78 @@
             </div>
           </div>
         </div>
-        <div class="color-preview-footer"><span class="color-transparency-note">Checkerboard shows transparency</span><button class="button button--copy" type="button" data-copy="css">Copy Color</button></div>
+        <div class="color-preview-footer"><span class="color-transparency-note">Checkerboard shows
+            transparency</span><button class="button button--copy" type="button" data-copy="css">Copy Color</button>
+        </div>
         <div class="color-adjustments">
-          <div class="color-adjustments-heading"><div><span class="eyebrow">COLOR ADJUSTMENTS</span><h3>Fine-tune color</h3></div><button class="button--reset color-adjustment-reset" type="button" data-color-action="reset"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 2.64-6.36L3 8m0-5v5h5"/></svg>Reset color</button></div>
-          <div class="adjustment-row"><label for="adjust-hue">Hue <output id="adjust-hue-value">221°</output></label><input class="color-range" id="adjust-hue" type="range" min="0" max="360" value="221"></div>
-          <div class="adjustment-row"><label for="adjust-saturation">Saturation <output id="adjust-saturation-value">83%</output></label><input class="color-range" id="adjust-saturation" type="range" min="0" max="100" value="83"></div>
-          <div class="adjustment-row"><label for="adjust-lightness">Lightness <output id="adjust-lightness-value">53%</output></label><input class="color-range" id="adjust-lightness" type="range" min="0" max="100" value="53"></div>
-          <div class="adjustment-row"><label for="adjust-alpha">Opacity <output id="adjust-alpha-value">100%</output></label><input class="color-range" id="adjust-alpha" type="range" min="0" max="100" value="100"></div>
+          <div class="color-adjustments-heading">
+            <div><span class="eyebrow">COLOR ADJUSTMENTS</span>
+              <h3>Fine-tune color</h3>
+            </div><button class="button--reset color-adjustment-reset" type="button" data-color-action="reset"><svg
+                viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M3 12a9 9 0 1 0 2.64-6.36L3 8m0-5v5h5" />
+              </svg>Reset color</button>
+          </div>
+          <div class="adjustment-row"><label for="adjust-hue">Hue <output
+                id="adjust-hue-value">221°</output></label><input class="color-range" id="adjust-hue" type="range"
+              min="0" max="360" value="221"></div>
+          <div class="adjustment-row"><label for="adjust-saturation">Saturation <output
+                id="adjust-saturation-value">83%</output></label><input class="color-range" id="adjust-saturation"
+              type="range" min="0" max="100" value="83"></div>
+          <div class="adjustment-row"><label for="adjust-lightness">Lightness <output
+                id="adjust-lightness-value">53%</output></label><input class="color-range" id="adjust-lightness"
+              type="range" min="0" max="100" value="53"></div>
+          <div class="adjustment-row"><label for="adjust-alpha">Opacity <output
+                id="adjust-alpha-value">100%</output></label><input class="color-range" id="adjust-alpha" type="range"
+              min="0" max="100" value="100"></div>
         </div>
       </section>
     </section>
 
     <section class="color-palette-section container" aria-labelledby="color-palette-title">
-      <div class="section-heading color-section-heading"><div><span class="eyebrow">COLOR PALETTE</span><h2 id="color-palette-title">Shades from your color</h2><p>Calculated HSL lightness steps keep the hue and saturation as consistent as possible; this is not an official Tailwind palette.</p></div><button class="button button--secondary" id="copy-palette-css" type="button">Copy Palette CSS</button></div>
+      <div class="section-heading color-section-heading">
+        <div><span class="eyebrow">COLOR PALETTE</span>
+          <h2 id="color-palette-title">Shades from your color</h2>
+          <p>Calculated HSL lightness steps keep the hue and saturation as consistent as possible; this is not an
+            official Tailwind palette.</p>
+        </div><button class="button button--secondary" id="copy-palette-css" type="button">Copy Palette CSS</button>
+      </div>
       <div class="color-palette-grid" id="color-palette-grid" aria-label="Generated color shades"></div>
       <p class="color-copy-status" id="palette-copy-status" role="status" aria-live="polite"></p>
     </section>
 
     <section class="contrast-section container" aria-labelledby="contrast-title">
-      <div class="section-heading"><div><span class="eyebrow">ACCESSIBILITY</span><h2 id="contrast-title">Color contrast checker</h2><p>Check the contrast between foreground text and its background using WCAG 2.x.</p></div></div>
+      <div class="section-heading">
+        <div><span class="eyebrow">ACCESSIBILITY</span>
+          <h2 id="contrast-title">Color contrast checker</h2>
+          <p>Check the contrast between foreground text and its background using WCAG 2.x.</p>
+        </div>
+      </div>
       <div class="contrast-card card">
         <div class="contrast-controls">
-          <div class="contrast-color-field field-group"><label for="contrast-foreground-hex">Foreground color</label><div class="contrast-color-inputs"><input type="color" id="contrast-foreground-picker" value="#2563eb" aria-label="Foreground color picker"><input type="text" id="contrast-foreground-hex" value="#2563EB" maxlength="9" aria-describedby="contrast-foreground-error"><span class="contrast-alpha-label"><input type="number" id="contrast-foreground-alpha" min="0" max="1" step="0.01" value="1" aria-label="Foreground alpha" aria-describedby="contrast-foreground-error"><span>α</span></span></div><p class="color-error" id="contrast-foreground-error" role="alert" aria-live="polite"></p></div>
+          <div class="contrast-color-field field-group"><label for="contrast-foreground-hex">Foreground color</label>
+            <div class="contrast-color-inputs"><input type="color" id="contrast-foreground-picker" value="#2563eb"
+                aria-label="Foreground color picker"><input type="text" id="contrast-foreground-hex" value="#2563EB"
+                maxlength="9" aria-describedby="contrast-foreground-error"><span class="contrast-alpha-label"><input
+                  type="number" id="contrast-foreground-alpha" min="0" max="1" step="0.01" value="1"
+                  aria-label="Foreground alpha" aria-describedby="contrast-foreground-error"><span>α</span></span></div>
+            <p class="color-error" id="contrast-foreground-error" role="alert" aria-live="polite"></p>
+          </div>
           <span class="contrast-versus" aria-hidden="true">on</span>
-          <div class="contrast-color-field field-group"><label for="contrast-background-hex">Background color</label><div class="contrast-color-inputs"><input type="color" id="contrast-background-picker" value="#ffffff" aria-label="Background color picker"><input type="text" id="contrast-background-hex" value="#FFFFFF" maxlength="9" aria-describedby="contrast-background-error"><span class="contrast-alpha-label"><input type="number" id="contrast-background-alpha" min="0" max="1" step="0.01" value="1" aria-label="Background alpha" aria-describedby="contrast-background-error"><span>α</span></span></div><p class="color-error" id="contrast-background-error" role="alert" aria-live="polite"></p></div>
+          <div class="contrast-color-field field-group"><label for="contrast-background-hex">Background color</label>
+            <div class="contrast-color-inputs"><input type="color" id="contrast-background-picker" value="#ffffff"
+                aria-label="Background color picker"><input type="text" id="contrast-background-hex" value="#FFFFFF"
+                maxlength="9" aria-describedby="contrast-background-error"><span class="contrast-alpha-label"><input
+                  type="number" id="contrast-background-alpha" min="0" max="1" step="0.01" value="1"
+                  aria-label="Background alpha" aria-describedby="contrast-background-error"><span>α</span></span></div>
+            <p class="color-error" id="contrast-background-error" role="alert" aria-live="polite"></p>
+          </div>
         </div>
-        <p class="contrast-canvas-note">Transparent foreground and background colors are composited over an opaque white canvas before the contrast ratio is calculated.</p>
+        <p class="contrast-canvas-note">Transparent foreground and background colors are composited over an opaque white
+          canvas before the contrast ratio is calculated.</p>
         <div class="contrast-result">
-          <div class="contrast-sample" id="contrast-sample"><strong>Readable text</strong><span>The quick brown fox jumps over the lazy dog.</span></div>
+          <div class="contrast-sample" id="contrast-sample"><strong>Readable text</strong><span>The quick brown fox
+              jumps over the lazy dog.</span></div>
           <div class="contrast-score"><span>Contrast ratio</span><strong id="contrast-ratio">—</strong></div>
           <ul class="contrast-checks" id="contrast-checks" aria-live="polite"></ul>
         </div>
@@ -116,42 +236,141 @@
 
     <section class="color-guide-section" aria-labelledby="color-guide-title">
       <div class="container">
-        <div class="section-heading section-heading--center"><span class="eyebrow">COLOR FORMATS</span><h2 id="color-guide-title">A guide to CSS color formats</h2><p>Choose the notation that makes your colors easiest to read and maintain.</p></div>
+        <div class="section-heading section-heading--center"><span class="eyebrow">COLOR FORMATS</span>
+          <h2 id="color-guide-title">A guide to CSS color formats</h2>
+          <p>Choose the notation that makes your colors easiest to read and maintain.</p>
+        </div>
         <div class="color-guide-grid">
-          <article class="color-guide-card card"><span>01</span><h3>What is HEX?</h3><p>HEX notation encodes red, green, and blue channel values in base 16. Short and widely used in design tools.</p><pre><code>color: #2563EB;
-color: #2563EB80; /* with alpha */</code></pre></article>
-          <article class="color-guide-card card"><span>02</span><h3>What is RGB?</h3><p>RGB defines a color with red, green, and blue channel values from 0 to 255. It maps directly to the display color model.</p><pre><code>color: rgb(37 99 235);
-color: rgb(37 99 235 / 50%);</code></pre></article>
-          <article class="color-guide-card card"><span>03</span><h3>What is HSL?</h3><p>HSL describes hue, saturation, and lightness. Adjusting lightness makes it convenient to create coordinated shades.</p><pre><code>color: hsl(221 83% 53%);
-color: hsl(221 83% 53% / .5);</code></pre></article>
-          <article class="color-guide-card card"><span>04</span><h3>HEX vs RGB vs HSL</h3><p>All three notations represent colors. Use the format that best fits your workflow: HEX for compact values, RGB for channels, or HSL for intuitive adjustments.</p><pre><code>--hex: #2563EB;
+          <article class="color-guide-card card"><span>01</span>
+            <h3>What is HEX?</h3>
+            <p>HEX notation encodes red, green, and blue channel values in base 16. Short and widely used in design
+              tools.</p>
+            <pre><code>color: #2563EB;
+color: #2563EB80; /* with alpha */</code></pre>
+          </article>
+          <article class="color-guide-card card"><span>02</span>
+            <h3>What is RGB?</h3>
+            <p>RGB defines a color with red, green, and blue channel values from 0 to 255. It maps directly to the
+              display color model.</p>
+            <pre><code>color: rgb(37 99 235);
+color: rgb(37 99 235 / 50%);</code></pre>
+          </article>
+          <article class="color-guide-card card"><span>03</span>
+            <h3>What is HSL?</h3>
+            <p>HSL describes hue, saturation, and lightness. Adjusting lightness makes it convenient to create
+              coordinated shades.</p>
+            <pre><code>color: hsl(221 83% 53%);
+color: hsl(221 83% 53% / .5);</code></pre>
+          </article>
+          <article class="color-guide-card card"><span>04</span>
+            <h3>HEX vs RGB vs HSL</h3>
+            <p>All three notations represent colors. Use the format that best fits your workflow: HEX for compact
+              values, RGB for channels, or HSL for intuitive adjustments.</p>
+            <pre><code>--hex: #2563EB;
 --rgb: rgb(37 99 235);
---hsl: hsl(221 83% 53%);</code></pre></article>
-          <article class="color-guide-card card"><span>05</span><h3>What is Alpha?</h3><p>Alpha represents opacity from 0 (transparent) to 1 (opaque). Alpha can be expressed in modern CSS color syntax or in 4/8-digit HEX.</p><pre><code>background: rgb(37 99 235 / .5);
-color: #2563EB80;</code></pre></article>
-          <article class="color-guide-card card"><span>06</span><h3>How to Convert Colors</h3><p>Each format is converted through the same underlying RGB channels. HEX channels are decoded from base 16; HSL is calculated from normalized RGB values.</p><pre><code>/* Equivalent color values */
+--hsl: hsl(221 83% 53%);</code></pre>
+          </article>
+          <article class="color-guide-card card"><span>05</span>
+            <h3>What is Alpha?</h3>
+            <p>Alpha represents opacity from 0 (transparent) to 1 (opaque). Alpha can be expressed in modern CSS color
+              syntax or in 4/8-digit HEX.</p>
+            <pre><code>background: rgb(37 99 235 / .5);
+color: #2563EB80;</code></pre>
+          </article>
+          <article class="color-guide-card card"><span>06</span>
+            <h3>How to Convert Colors</h3>
+            <p>Each format is converted through the same underlying RGB channels. HEX channels are decoded from base 16;
+              HSL is calculated from normalized RGB values.</p>
+            <pre><code>/* Equivalent color values */
 #2563EB
 rgb(37, 99, 235)
-hsl(221, 83%, 53%)</code></pre></article>
+hsl(221, 83%, 53%)</code></pre>
+          </article>
         </div>
       </div>
     </section>
 
     <section class="faq-section color-faq container" aria-labelledby="color-faq-title">
-      <div class="section-heading section-heading--center"><span class="eyebrow">FAQ</span><h2 id="color-faq-title">Frequently asked questions</h2><p>Quick answers about CSS color formats and accessible color use.</p></div>
+      <div class="section-heading section-heading--center"><span class="eyebrow">FAQ</span>
+        <h2 id="color-faq-title">Frequently asked questions</h2>
+        <p>Quick answers about CSS color formats and accessible color use.</p>
+      </div>
       <div class="faq-list">
-        <article class="faq-item"><h3><button class="faq-question" id="color-faq-q1" type="button" aria-expanded="false" aria-controls="color-faq-a1"><span>What is the difference between HEX, RGB, and HSL?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="color-faq-a1" role="region" aria-labelledby="color-faq-q1" hidden><p>They are different notations for describing colors. HEX uses hexadecimal channel values, RGB uses red/green/blue channels, and HSL uses hue, saturation, and lightness.</p></div></article>
-        <article class="faq-item"><h3><button class="faq-question" id="color-faq-q2" type="button" aria-expanded="false" aria-controls="color-faq-a2"><span>How do I convert HEX to RGB?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="color-faq-a2" role="region" aria-labelledby="color-faq-q2" hidden><p>Split the six-digit HEX value into three pairs and parse each pair as a base-16 number. For example, #2563EB becomes rgb(37, 99, 235).</p></div></article>
-        <article class="faq-item"><h3><button class="faq-question" id="color-faq-q3" type="button" aria-expanded="false" aria-controls="color-faq-a3"><span>How do I convert RGB to HSL?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="color-faq-a3" role="region" aria-labelledby="color-faq-q3" hidden><p>Normalize RGB channels to 0–1, calculate lightness from the maximum and minimum channels, then derive hue and saturation from their difference.</p></div></article>
-        <article class="faq-item"><h3><button class="faq-question" id="color-faq-q4" type="button" aria-expanded="false" aria-controls="color-faq-a4"><span>Can I use HSL colors in CSS?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="color-faq-a4" role="region" aria-labelledby="color-faq-q4" hidden><p>Yes. Modern browsers support hsl() and hsla() CSS color functions, including alpha transparency.</p></div></article>
-        <article class="faq-item"><h3><button class="faq-question" id="color-faq-q5" type="button" aria-expanded="false" aria-controls="color-faq-a5"><span>What does the Alpha channel mean?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="color-faq-a5" role="region" aria-labelledby="color-faq-q5" hidden><p>Alpha is opacity: 0 is fully transparent and 1 is fully opaque. Eight-digit HEX stores alpha in its final two digits.</p></div></article>
-        <article class="faq-item"><h3><button class="faq-question" id="color-faq-q6" type="button" aria-expanded="false" aria-controls="color-faq-a6"><span>Is HEX or RGB better for web development?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="color-faq-a6" role="region" aria-labelledby="color-faq-q6" hidden><p>Neither is universally better. Both represent the same colors; choose the notation that best suits your project and team conventions.</p></div></article>
-        <article class="faq-item"><h3><button class="faq-question" id="color-faq-q7" type="button" aria-expanded="false" aria-controls="color-faq-a7"><span>How do I create lighter and darker shades?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="color-faq-a7" role="region" aria-labelledby="color-faq-q7" hidden><p>Adjust the HSL lightness while keeping hue and saturation similar. The palette tool creates convenient steps from the selected color, but the results are not an official design-system palette.</p></div></article>
-        <article class="faq-item"><h3><button class="faq-question" id="color-faq-q8" type="button" aria-expanded="false" aria-controls="color-faq-a8"><span>How do I check color contrast accessibility?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="color-faq-a8" role="region" aria-labelledby="color-faq-q8" hidden><p>Compare the relative luminance of foreground and background colors. WCAG contrast thresholds depend on text size; use the contrast checker as one part of an accessibility review.</p></div></article>
+        <article class="faq-item">
+          <h3><button class="faq-question" id="color-faq-q1" type="button" aria-expanded="false"
+              aria-controls="color-faq-a1"><span>What is the difference between HEX, RGB, and HSL?</span><span
+                class="faq-icon" aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="color-faq-a1" role="region" aria-labelledby="color-faq-q1" hidden>
+            <p>They are different notations for describing colors. HEX uses hexadecimal channel values, RGB uses
+              red/green/blue channels, and HSL uses hue, saturation, and lightness.</p>
+          </div>
+        </article>
+        <article class="faq-item">
+          <h3><button class="faq-question" id="color-faq-q2" type="button" aria-expanded="false"
+              aria-controls="color-faq-a2"><span>How do I convert HEX to RGB?</span><span class="faq-icon"
+                aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="color-faq-a2" role="region" aria-labelledby="color-faq-q2" hidden>
+            <p>Split the six-digit HEX value into three pairs and parse each pair as a base-16 number. For example,
+              #2563EB becomes rgb(37, 99, 235).</p>
+          </div>
+        </article>
+        <article class="faq-item">
+          <h3><button class="faq-question" id="color-faq-q3" type="button" aria-expanded="false"
+              aria-controls="color-faq-a3"><span>How do I convert RGB to HSL?</span><span class="faq-icon"
+                aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="color-faq-a3" role="region" aria-labelledby="color-faq-q3" hidden>
+            <p>Normalize RGB channels to 0–1, calculate lightness from the maximum and minimum channels, then derive hue
+              and saturation from their difference.</p>
+          </div>
+        </article>
+        <article class="faq-item">
+          <h3><button class="faq-question" id="color-faq-q4" type="button" aria-expanded="false"
+              aria-controls="color-faq-a4"><span>Can I use HSL colors in CSS?</span><span class="faq-icon"
+                aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="color-faq-a4" role="region" aria-labelledby="color-faq-q4" hidden>
+            <p>Yes. Modern browsers support hsl() and hsla() CSS color functions, including alpha transparency.</p>
+          </div>
+        </article>
+        <article class="faq-item">
+          <h3><button class="faq-question" id="color-faq-q5" type="button" aria-expanded="false"
+              aria-controls="color-faq-a5"><span>What does the Alpha channel mean?</span><span class="faq-icon"
+                aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="color-faq-a5" role="region" aria-labelledby="color-faq-q5" hidden>
+            <p>Alpha is opacity: 0 is fully transparent and 1 is fully opaque. Eight-digit HEX stores alpha in its final
+              two digits.</p>
+          </div>
+        </article>
+        <article class="faq-item">
+          <h3><button class="faq-question" id="color-faq-q6" type="button" aria-expanded="false"
+              aria-controls="color-faq-a6"><span>Is HEX or RGB better for web development?</span><span class="faq-icon"
+                aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="color-faq-a6" role="region" aria-labelledby="color-faq-q6" hidden>
+            <p>Neither is universally better. Both represent the same colors; choose the notation that best suits your
+              project and team conventions.</p>
+          </div>
+        </article>
+        <article class="faq-item">
+          <h3><button class="faq-question" id="color-faq-q7" type="button" aria-expanded="false"
+              aria-controls="color-faq-a7"><span>How do I create lighter and darker shades?</span><span class="faq-icon"
+                aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="color-faq-a7" role="region" aria-labelledby="color-faq-q7" hidden>
+            <p>Adjust the HSL lightness while keeping hue and saturation similar. The palette tool creates convenient
+              steps from the selected color, but the results are not an official design-system palette.</p>
+          </div>
+        </article>
+        <article class="faq-item">
+          <h3><button class="faq-question" id="color-faq-q8" type="button" aria-expanded="false"
+              aria-controls="color-faq-a8"><span>How do I check color contrast accessibility?</span><span
+                class="faq-icon" aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="color-faq-a8" role="region" aria-labelledby="color-faq-q8" hidden>
+            <p>Compare the relative luminance of foreground and background colors. WCAG contrast thresholds depend on
+              text size; use the contrast checker as one part of an accessibility review.</p>
+          </div>
+        </article>
       </div>
     </section>
   </main>
   <div id="footer"></div>
 </body>
-</html>
 
+</html>

@@ -1,20 +1,44 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Design, preview, and generate accessible CSS animations with a visual keyframe timeline editor.">
+  <meta name="description"
+    content="Design, preview, and generate accessible CSS animations with a visual keyframe timeline editor.">
   <meta name="theme-color" content="#f8fafc">
   <title>CSS Animation Generator | Unitwise</title>
+  <link rel="canonical" href="https://adsite-ashen.vercel.app/animation.html">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://adsite-ashen.vercel.app/animation.html">
+  <meta property="og:title" content="CSS Animation Generator | Unitwise">
+  <meta property="og:description"
+    content="Design, preview, and generate accessible CSS animations with a visual keyframe timeline editor.">
+  <meta property="og:site_name" content="Unitwise">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://adsite-ashen.vercel.app/animation.html">
+  <meta name="twitter:title" content="CSS Animation Generator | Unitwise">
+  <meta name="twitter:description"
+    content="Design, preview, and generate accessible CSS animations with a visual keyframe timeline editor.">
+
   <link rel="stylesheet" href="assets/css/normalize.css">
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/commons.css?v=2">
   <link rel="stylesheet" href="assets/css/animation.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="assets/js/common.js?v=2"></script>
   <script src="assets/js/animation.js"></script>
+
+  <meta name="google-site-verification" content="XZpFfX3nSkuJwJqcZBJIZyjZYTVvXYMlZHfaFTL9WIM" />
+  <meta name="naver-site-verification" content="78222065720b46b00c994ca2ac2a4b5945cfe280" />
 </head>
+
 <body data-page="animation">
   <a class="skip-link" href="#main-content">Skip to content</a>
   <div id="header"></div>
@@ -23,202 +47,485 @@
       <span class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>MOTION DESIGN TOOL</span>
       <h1 id="hero-title">CSS Animation Generator</h1>
       <p class="hero__lead">Create beautiful CSS animations visually.</p>
-      <p class="hero__description">Customize motion, timing, easing, and keyframes to generate clean CSS animations instantly.</p>
+      <p class="hero__description">Customize motion, timing, easing, and keyframes to generate clean CSS animations
+        instantly.</p>
     </section>
 
     <section class="animation-workspace container" aria-label="Animation settings and live preview">
       <section class="animation-settings card" aria-labelledby="animation-settings-title">
         <div class="animation-panel-heading">
-        <div><span class="eyebrow">MOTION SETTINGS</span><h2 id="animation-settings-title">Animation Settings <span class="animation-preset-status" id="animation-preset-status" hidden>Modified</span></h2></div>
+          <div><span class="eyebrow">MOTION SETTINGS</span>
+            <h2 id="animation-settings-title">Animation Settings <span class="animation-preset-status"
+                id="animation-preset-status" hidden>Modified</span></h2>
+          </div>
           <span class="animation-live-badge"><i aria-hidden="true"></i> Live</span>
         </div>
         <div class="field-group animation-type-field"><label for="animation-type">Animation type</label>
           <select id="animation-type">
-            <option value="fade-in" selected>Fade In</option><option value="fade-out">Fade Out</option>
-            <option value="slide-in">Slide In</option><option value="slide-out">Slide Out</option>
-            <option value="scale-in">Scale In</option><option value="scale-out">Scale Out</option>
-            <option value="rotate">Rotate</option><option value="bounce">Bounce</option>
-            <option value="pulse">Pulse</option><option value="shake">Shake</option>
-            <option value="swing">Swing</option><option value="flip">Flip</option>
-            <option value="zoom-in">Zoom In</option><option value="zoom-out">Zoom Out</option>
+            <option value="fade-in" selected>Fade In</option>
+            <option value="fade-out">Fade Out</option>
+            <option value="slide-in">Slide In</option>
+            <option value="slide-out">Slide Out</option>
+            <option value="scale-in">Scale In</option>
+            <option value="scale-out">Scale Out</option>
+            <option value="rotate">Rotate</option>
+            <option value="bounce">Bounce</option>
+            <option value="pulse">Pulse</option>
+            <option value="shake">Shake</option>
+            <option value="swing">Swing</option>
+            <option value="flip">Flip</option>
+            <option value="zoom-in">Zoom In</option>
+            <option value="zoom-out">Zoom Out</option>
             <option value="custom">Custom Animation</option>
           </select>
         </div>
         <div class="animation-measure-control">
           <label for="animation-duration">Duration <output id="animation-duration-output">1s</output></label>
-          <div class="animation-measure-row"><input id="animation-duration" type="number" min="0.1" max="10" step="0.1" value="1" inputmode="decimal" aria-describedby="animation-validation"><span>sec</span></div>
-          <input class="animation-range" id="animation-duration-range" type="range" min="0.1" max="10" step="0.1" value="1" aria-label="Animation duration slider">
+          <div class="animation-measure-row"><input id="animation-duration" type="number" min="0.1" max="10" step="0.1"
+              value="1" inputmode="decimal" aria-describedby="animation-validation"><span>sec</span></div>
+          <input class="animation-range" id="animation-duration-range" type="range" min="0.1" max="10" step="0.1"
+            value="1" aria-label="Animation duration slider">
         </div>
         <div class="animation-measure-control">
           <label for="animation-delay">Delay <output id="animation-delay-output">0s</output></label>
-          <div class="animation-measure-row"><input id="animation-delay" type="number" min="0" max="5" step="0.1" value="0" inputmode="decimal" aria-describedby="animation-validation"><span>sec</span></div>
-          <input class="animation-range" id="animation-delay-range" type="range" min="0" max="5" step="0.1" value="0" aria-label="Animation delay slider">
+          <div class="animation-measure-row"><input id="animation-delay" type="number" min="0" max="5" step="0.1"
+              value="0" inputmode="decimal" aria-describedby="animation-validation"><span>sec</span></div>
+          <input class="animation-range" id="animation-delay-range" type="range" min="0" max="5" step="0.1" value="0"
+            aria-label="Animation delay slider">
         </div>
         <div class="field-group"><label for="animation-easing">Timing function</label>
-          <select id="animation-easing"><option value="linear">linear</option><option value="ease" selected>ease</option><option value="ease-in">ease-in</option><option value="ease-out">ease-out</option><option value="ease-in-out">ease-in-out</option><option value="cubic-bezier">cubic-bezier</option><option value="steps">steps</option></select>
+          <select id="animation-easing">
+            <option value="linear">linear</option>
+            <option value="ease" selected>ease</option>
+            <option value="ease-in">ease-in</option>
+            <option value="ease-out">ease-out</option>
+            <option value="ease-in-out">ease-in-out</option>
+            <option value="cubic-bezier">cubic-bezier</option>
+            <option value="steps">steps</option>
+          </select>
         </div>
         <fieldset class="animation-subsettings" id="cubic-settings" hidden>
           <legend>Cubic-bezier curve</legend>
           <div class="animation-bezier-grid">
-            <div class="field-group"><label for="bezier-x1">x1</label><input id="bezier-x1" type="number" min="0" max="1" step="0.01" value="0.25"></div>
-            <div class="field-group"><label for="bezier-y1">y1</label><input id="bezier-y1" type="number" min="-5" max="5" step="0.1" value="0.1"></div>
-            <div class="field-group"><label for="bezier-x2">x2</label><input id="bezier-x2" type="number" min="0" max="1" step="0.01" value="0.25"></div>
-            <div class="field-group"><label for="bezier-y2">y2</label><input id="bezier-y2" type="number" min="-5" max="5" step="0.1" value="1"></div>
+            <div class="field-group"><label for="bezier-x1">x1</label><input id="bezier-x1" type="number" min="0"
+                max="1" step="0.01" value="0.25"></div>
+            <div class="field-group"><label for="bezier-y1">y1</label><input id="bezier-y1" type="number" min="-5"
+                max="5" step="0.1" value="0.1"></div>
+            <div class="field-group"><label for="bezier-x2">x2</label><input id="bezier-x2" type="number" min="0"
+                max="1" step="0.01" value="0.25"></div>
+            <div class="field-group"><label for="bezier-y2">y2</label><input id="bezier-y2" type="number" min="-5"
+                max="5" step="0.1" value="1"></div>
           </div>
         </fieldset>
         <fieldset class="animation-subsettings" id="steps-settings" hidden>
           <legend>Steps easing</legend>
           <div class="animation-steps-grid">
-            <div class="field-group"><label for="animation-step-count">Step count</label><input id="animation-step-count" type="number" min="1" max="100" step="1" value="4"></div>
-            <div class="field-group"><label for="animation-step-position">Step position</label><select id="animation-step-position"><option value="jump-start">jump-start</option><option value="jump-end" selected>jump-end</option><option value="jump-none">jump-none</option><option value="jump-both">jump-both</option></select></div>
+            <div class="field-group"><label for="animation-step-count">Step count</label><input
+                id="animation-step-count" type="number" min="1" max="100" step="1" value="4"></div>
+            <div class="field-group"><label for="animation-step-position">Step position</label><select
+                id="animation-step-position">
+                <option value="jump-start">jump-start</option>
+                <option value="jump-end" selected>jump-end</option>
+                <option value="jump-none">jump-none</option>
+                <option value="jump-both">jump-both</option>
+              </select></div>
           </div>
         </fieldset>
         <div class="field-group"><label for="animation-iteration">Iteration count</label>
-          <select id="animation-iteration"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="5">5</option><option value="10">10</option><option value="infinite" selected>infinite</option><option value="custom">Custom</option></select>
+          <select id="animation-iteration">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="infinite" selected>infinite</option>
+            <option value="custom">Custom</option>
+          </select>
         </div>
-        <div class="field-group animation-custom-count" id="custom-iteration-control" hidden><label for="animation-custom-iteration">Custom iterations</label><input id="animation-custom-iteration" type="number" min="0" max="10000" step="0.1" value="1" inputmode="decimal"></div>
+        <div class="field-group animation-custom-count" id="custom-iteration-control" hidden><label
+            for="animation-custom-iteration">Custom iterations</label><input id="animation-custom-iteration"
+            type="number" min="0" max="10000" step="0.1" value="1" inputmode="decimal"></div>
         <div class="animation-select-grid">
-          <div class="field-group"><label for="animation-direction">Direction</label><select id="animation-direction"><option value="normal" selected>normal</option><option value="reverse">reverse</option><option value="alternate">alternate</option><option value="alternate-reverse">alternate-reverse</option></select></div>
-          <div class="field-group"><label for="animation-fill">Fill mode</label><select id="animation-fill"><option value="none">none</option><option value="forwards">forwards</option><option value="backwards">backwards</option><option value="both" selected>both</option></select></div>
-          <div class="field-group"><label for="animation-play-state">Play state</label><select id="animation-play-state"><option value="running" selected>running</option><option value="paused">paused</option></select></div>
+          <div class="field-group"><label for="animation-direction">Direction</label><select id="animation-direction">
+              <option value="normal" selected>normal</option>
+              <option value="reverse">reverse</option>
+              <option value="alternate">alternate</option>
+              <option value="alternate-reverse">alternate-reverse</option>
+            </select></div>
+          <div class="field-group"><label for="animation-fill">Fill mode</label><select id="animation-fill">
+              <option value="none">none</option>
+              <option value="forwards">forwards</option>
+              <option value="backwards">backwards</option>
+              <option value="both" selected>both</option>
+            </select></div>
+          <div class="field-group"><label for="animation-play-state">Play state</label><select
+              id="animation-play-state">
+              <option value="running" selected>running</option>
+              <option value="paused">paused</option>
+            </select></div>
         </div>
         <p class="animation-validation" id="animation-validation" role="alert" aria-live="polite"></p>
-        <button class="button--reset animation-settings-reset" id="reset-animation-settings" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 2.64-6.36L3 8m0-5v5h5"/></svg>Reset Settings</button>
+        <button class="button--reset animation-settings-reset" id="reset-animation-settings" type="button"><svg
+            viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 12a9 9 0 1 0 2.64-6.36L3 8m0-5v5h5" />
+          </svg>Reset Settings</button>
       </section>
 
       <section class="animation-preview-panel card" aria-labelledby="animation-preview-title">
         <div class="animation-panel-heading">
-          <div><span class="eyebrow">LIVE PREVIEW</span><h2 id="animation-preview-title">See your motion</h2></div>
-          <span class="animation-play-status" id="animation-play-status" role="status" aria-live="polite"><i aria-hidden="true"></i> Playing</span>
+          <div><span class="eyebrow">LIVE PREVIEW</span>
+            <h2 id="animation-preview-title">See your motion</h2>
+          </div>
+          <span class="animation-play-status" id="animation-play-status" role="status" aria-live="polite"><i
+              aria-hidden="true"></i> Playing</span>
         </div>
         <div class="animation-preview-options">
-          <div class="field-group"><label for="preview-shape">Shape</label><select id="preview-shape"><option value="square">Square</option><option value="circle">Circle</option><option value="rounded" selected>Rounded Rectangle</option><option value="text">Text</option></select></div>
-          <div class="field-group animation-color-field"><label for="preview-color">Color</label><input id="preview-color" type="color" value="#2563eb"></div>
-          <div class="field-group"><label for="preview-background">Background</label><select id="preview-background"><option value="light" selected>Light</option><option value="dark">Dark</option><option value="checkerboard">Checkerboard</option></select></div>
+          <div class="field-group"><label for="preview-shape">Shape</label><select id="preview-shape">
+              <option value="square">Square</option>
+              <option value="circle">Circle</option>
+              <option value="rounded" selected>Rounded Rectangle</option>
+              <option value="text">Text</option>
+            </select></div>
+          <div class="field-group animation-color-field"><label for="preview-color">Color</label><input
+              id="preview-color" type="color" value="#2563eb"></div>
+          <div class="field-group"><label for="preview-background">Background</label><select id="preview-background">
+              <option value="light" selected>Light</option>
+              <option value="dark">Dark</option>
+              <option value="checkerboard">Checkerboard</option>
+            </select></div>
         </div>
         <div class="animation-preview-stage animation-preview-stage--light" id="animation-preview-stage">
           <div class="animation-motion-guide" aria-hidden="true"></div>
-          <div class="animated-element animated-element--rounded" id="animated-element" aria-label="Animated element preview"><span>Animated<br>Element</span></div>
-          <span class="animation-preview-hint" id="preview-motion-note" hidden>Preview animation is paused because reduced motion is enabled. Use Play to opt in.</span>
+          <div class="animated-element animated-element--rounded" id="animated-element"
+            aria-label="Animated element preview"><span>Animated<br>Element</span></div>
+          <span class="animation-preview-hint" id="preview-motion-note" hidden>Preview animation is paused because
+            reduced motion is enabled. Use Play to opt in.</span>
         </div>
         <div class="animation-playback-row">
           <div class="animation-playback-buttons" role="group" aria-label="Animation playback controls">
-            <button class="button button--copy" id="preview-play" type="button" aria-label="Play animation">▶ Play</button>
-            <button class="button button--secondary" id="preview-pause" type="button" aria-label="Pause animation">Ⅱ Pause</button>
-            <button class="button button--secondary" id="preview-restart" type="button" aria-label="Restart animation">↻ Restart</button>
-            <button class="button button--secondary" id="preview-reset" type="button" aria-label="Reset preview to start">Reset Preview</button>
+            <button class="button button--copy" id="preview-play" type="button" aria-label="Play animation">▶
+              Play</button>
+            <button class="button button--secondary" id="preview-pause" type="button" aria-label="Pause animation">Ⅱ
+              Pause</button>
+            <button class="button button--secondary" id="preview-restart" type="button" aria-label="Restart animation">↻
+              Restart</button>
+            <button class="button button--secondary" id="preview-reset" type="button"
+              aria-label="Reset preview to start">Reset Preview</button>
           </div>
-          <div class="field-group animation-speed-field"><label for="preview-speed">Preview speed</label><select id="preview-speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="1.5">1.5×</option><option value="2">2×</option></select></div>
+          <div class="field-group animation-speed-field"><label for="preview-speed">Preview speed</label><select
+              id="preview-speed">
+              <option value="0.5">0.5×</option>
+              <option value="1" selected>1×</option>
+              <option value="1.5">1.5×</option>
+              <option value="2">2×</option>
+            </select></div>
         </div>
-        <p class="animation-preview-disclaimer">Preview shape and color are not included in the generated CSS unless they are explicitly part of a keyframe.</p>
+        <p class="animation-preview-disclaimer">Preview shape and color are not included in the generated CSS unless
+          they are explicitly part of a keyframe.</p>
       </section>
     </section>
 
     <section class="animation-timeline-section container" aria-labelledby="animation-timeline-title">
-      <div class="section-heading animation-section-heading"><div><span class="eyebrow">KEYFRAME EDITOR</span><h2 id="animation-timeline-title">Build your animation timeline</h2><p>Add, move, and edit keyframes. Start and end keyframes stay at 0% and 100%.</p></div><button class="button button--secondary" id="add-keyframe" type="button">+ Add Keyframe</button></div>
+      <div class="section-heading animation-section-heading">
+        <div><span class="eyebrow">KEYFRAME EDITOR</span>
+          <h2 id="animation-timeline-title">Build your animation timeline</h2>
+          <p>Add, move, and edit keyframes. Start and end keyframes stay at 0% and 100%.</p>
+        </div><button class="button button--secondary" id="add-keyframe" type="button">+ Add Keyframe</button>
+      </div>
       <div class="animation-timeline-card card">
-        <div class="animation-timeline-toolbar"><div><strong>Keyframe timeline</strong><span id="keyframe-count">2 / 12 keyframes</span></div><div class="animation-cycle-indicator" id="animation-cycle-indicator" role="status">Cycle 1 · 0%</div></div>
-        <div class="animation-timeline" id="animation-timeline" role="group" aria-label="Keyframe timeline from 0 to 100 percent">
+        <div class="animation-timeline-toolbar">
+          <div><strong>Keyframe timeline</strong><span id="keyframe-count">2 / 12 keyframes</span></div>
+          <div class="animation-cycle-indicator" id="animation-cycle-indicator" role="status">Cycle 1 · 0%</div>
+        </div>
+        <div class="animation-timeline" id="animation-timeline" role="group"
+          aria-label="Keyframe timeline from 0 to 100 percent">
           <div class="animation-timeline-track" aria-hidden="true"></div>
-          <div class="animation-tick animation-tick--start" aria-hidden="true">0%</div><div class="animation-tick animation-tick--quarter" aria-hidden="true">25%</div><div class="animation-tick animation-tick--half" aria-hidden="true">50%</div><div class="animation-tick animation-tick--three-quarter" aria-hidden="true">75%</div><div class="animation-tick animation-tick--end" aria-hidden="true">100%</div>
+          <div class="animation-tick animation-tick--start" aria-hidden="true">0%</div>
+          <div class="animation-tick animation-tick--quarter" aria-hidden="true">25%</div>
+          <div class="animation-tick animation-tick--half" aria-hidden="true">50%</div>
+          <div class="animation-tick animation-tick--three-quarter" aria-hidden="true">75%</div>
+          <div class="animation-tick animation-tick--end" aria-hidden="true">100%</div>
           <div id="keyframe-markers"></div>
           <div class="animation-playhead" id="animation-playhead" aria-hidden="true"></div>
         </div>
         <div class="animation-keyframe-actions">
-          <div class="field-group animation-offset-control"><label for="selected-keyframe-offset">Selected keyframe position</label><div class="animation-measure-row"><input id="selected-keyframe-offset" type="number" min="0" max="100" step="0.1" value="0"><span>%</span></div></div>
+          <div class="field-group animation-offset-control"><label for="selected-keyframe-offset">Selected keyframe
+              position</label>
+            <div class="animation-measure-row"><input id="selected-keyframe-offset" type="number" min="0" max="100"
+                step="0.1" value="0"><span>%</span></div>
+          </div>
           <button class="button button--secondary" id="remove-keyframe" type="button" disabled>Remove Keyframe</button>
         </div>
         <p class="animation-validation" id="keyframe-validation" role="alert" aria-live="polite"></p>
         <div class="animation-scrubber">
-          <div class="animation-scrubber-heading"><div><strong>Timeline Scrubber</strong><span id="scrubber-time">0.00s / 1.00s</span></div><span id="scrubber-progress">0%</span></div>
-          <input id="animation-scrubber" type="range" min="0" max="100" step="0.1" value="0" aria-label="Scrub through one animation cycle">
-          <div class="animation-scrubber-controls"><button class="text-button" id="seek-start" type="button">Seek to Start</button><button class="text-button" id="seek-end" type="button">Seek to End</button><span>Scrubs one cycle; delay and direction are included in the live effect.</span></div>
+          <div class="animation-scrubber-heading">
+            <div><strong>Timeline Scrubber</strong><span id="scrubber-time">0.00s / 1.00s</span></div><span
+              id="scrubber-progress">0%</span>
+          </div>
+          <input id="animation-scrubber" type="range" min="0" max="100" step="0.1" value="0"
+            aria-label="Scrub through one animation cycle">
+          <div class="animation-scrubber-controls"><button class="text-button" id="seek-start" type="button">Seek to
+              Start</button><button class="text-button" id="seek-end" type="button">Seek to End</button><span>Scrubs one
+              cycle; delay and direction are included in the live effect.</span></div>
         </div>
       </div>
       <section class="keyframe-properties card" aria-labelledby="keyframe-properties-title">
-        <div class="animation-panel-heading"><div><span class="eyebrow">SELECTED FRAME</span><h3 id="keyframe-properties-title">Keyframe properties <span id="selected-keyframe-label">· 0%</span></h3></div><span class="animation-property-note">Values interpolate between keyframes.</span></div>
-        <div class="keyframe-property-grid">
-          <div class="animation-property-control"><label for="kf-opacity">Opacity <output id="kf-opacity-output">0</output></label><input id="kf-opacity" type="range" min="0" max="1" step="0.01" value="0"><div class="animation-measure-row"><input id="kf-opacity-number" type="number" min="0" max="1" step="0.01" value="0"><span>0–1</span></div></div>
-          <div class="animation-property-control"><label for="kf-translate-x">Translate X <output id="kf-translate-x-output">0px</output></label><input id="kf-translate-x" type="range" min="-300" max="300" step="1" value="0"><div class="animation-measure-row"><input id="kf-translate-x-number" type="number" min="-300" max="300" step="1" value="0"><span>px</span></div></div>
-          <div class="animation-property-control"><label for="kf-translate-y">Translate Y <output id="kf-translate-y-output">0px</output></label><input id="kf-translate-y" type="range" min="-300" max="300" step="1" value="0"><div class="animation-measure-row"><input id="kf-translate-y-number" type="number" min="-300" max="300" step="1" value="0"><span>px</span></div></div>
-          <div class="animation-property-control"><label for="kf-scale">Scale <output id="kf-scale-output">1</output></label><input id="kf-scale" type="range" min="0" max="3" step="0.01" value="1"><div class="animation-measure-row"><input id="kf-scale-number" type="number" min="0" max="3" step="0.01" value="1"><span>×</span></div></div>
-          <div class="animation-property-control"><label for="kf-rotate">Rotate <output id="kf-rotate-output">0°</output></label><input id="kf-rotate" type="range" min="-360" max="360" step="1" value="0"><div class="animation-measure-row"><input id="kf-rotate-number" type="number" min="-360" max="360" step="1" value="0"><span>deg</span></div></div>
-          <div class="animation-property-control"><label for="kf-radius">Border radius <output id="kf-radius-output">16%</output></label><input id="kf-radius" type="range" min="0" max="50" step="1" value="16"><div class="animation-measure-row"><input id="kf-radius-number" type="number" min="0" max="50" step="1" value="16"><span>%</span></div></div>
-          <div class="field-group animation-keyframe-color"><label for="kf-background-color">Background color</label><input id="kf-background-color" type="color" value="#2563eb"></div>
+        <div class="animation-panel-heading">
+          <div><span class="eyebrow">SELECTED FRAME</span>
+            <h3 id="keyframe-properties-title">Keyframe properties <span id="selected-keyframe-label">· 0%</span></h3>
+          </div><span class="animation-property-note">Values interpolate between keyframes.</span>
         </div>
-        <p class="animation-property-note animation-property-warning">Colors, border radius, and transforms are interpolated by the browser; discrete/non-interpolable CSS properties are not part of this editor.</p>
+        <div class="keyframe-property-grid">
+          <div class="animation-property-control"><label for="kf-opacity">Opacity <output
+                id="kf-opacity-output">0</output></label><input id="kf-opacity" type="range" min="0" max="1" step="0.01"
+              value="0">
+            <div class="animation-measure-row"><input id="kf-opacity-number" type="number" min="0" max="1" step="0.01"
+                value="0"><span>0–1</span></div>
+          </div>
+          <div class="animation-property-control"><label for="kf-translate-x">Translate X <output
+                id="kf-translate-x-output">0px</output></label><input id="kf-translate-x" type="range" min="-300"
+              max="300" step="1" value="0">
+            <div class="animation-measure-row"><input id="kf-translate-x-number" type="number" min="-300" max="300"
+                step="1" value="0"><span>px</span></div>
+          </div>
+          <div class="animation-property-control"><label for="kf-translate-y">Translate Y <output
+                id="kf-translate-y-output">0px</output></label><input id="kf-translate-y" type="range" min="-300"
+              max="300" step="1" value="0">
+            <div class="animation-measure-row"><input id="kf-translate-y-number" type="number" min="-300" max="300"
+                step="1" value="0"><span>px</span></div>
+          </div>
+          <div class="animation-property-control"><label for="kf-scale">Scale <output
+                id="kf-scale-output">1</output></label><input id="kf-scale" type="range" min="0" max="3" step="0.01"
+              value="1">
+            <div class="animation-measure-row"><input id="kf-scale-number" type="number" min="0" max="3" step="0.01"
+                value="1"><span>×</span></div>
+          </div>
+          <div class="animation-property-control"><label for="kf-rotate">Rotate <output
+                id="kf-rotate-output">0°</output></label><input id="kf-rotate" type="range" min="-360" max="360"
+              step="1" value="0">
+            <div class="animation-measure-row"><input id="kf-rotate-number" type="number" min="-360" max="360" step="1"
+                value="0"><span>deg</span></div>
+          </div>
+          <div class="animation-property-control"><label for="kf-radius">Border radius <output
+                id="kf-radius-output">16%</output></label><input id="kf-radius" type="range" min="0" max="50" step="1"
+              value="16">
+            <div class="animation-measure-row"><input id="kf-radius-number" type="number" min="0" max="50" step="1"
+                value="16"><span>%</span></div>
+          </div>
+          <div class="field-group animation-keyframe-color"><label for="kf-background-color">Background
+              color</label><input id="kf-background-color" type="color" value="#2563eb"></div>
+        </div>
+        <p class="animation-property-note animation-property-warning">Colors, border radius, and transforms are
+          interpolated by the browser; discrete/non-interpolable CSS properties are not part of this editor.</p>
       </section>
     </section>
 
     <section class="animation-code-section container" aria-labelledby="animation-code-title">
-      <div class="section-heading animation-section-heading"><div><span class="eyebrow">COPY-READY CSS</span><h2 id="animation-code-title">Generated CSS</h2><p>Keyframe values are shared by the live preview and generated declarations.</p></div></div>
+      <div class="section-heading animation-section-heading">
+        <div><span class="eyebrow">COPY-READY CSS</span>
+          <h2 id="animation-code-title">Generated CSS</h2>
+          <p>Keyframe values are shared by the live preview and generated declarations.</p>
+        </div>
+      </div>
       <div class="animation-code-actions">
         <button class="button button--copy" id="copy-animation-css" type="button">Copy CSS</button>
         <button class="button button--secondary" id="copy-keyframes-css" type="button">Copy Keyframes</button>
-        <button class="button button--secondary" id="copy-animation-property" type="button">Copy Animation Property</button>
-        <button class="button--reset text-button" id="reset-animation-code" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 2.64-6.36L3 8m0-5v5h5"/></svg>Reset Settings</button>
+        <button class="button button--secondary" id="copy-animation-property" type="button">Copy Animation
+          Property</button>
+        <button class="button--reset text-button" id="reset-animation-code" type="button"><svg viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path d="M3 12a9 9 0 1 0 2.64-6.36L3 8m0-5v5h5" />
+          </svg>Reset Settings</button>
       </div>
-      <div class="animation-code-window"><pre><code id="generated-animation-css" aria-live="polite" aria-atomic="true"></code></pre></div>
-      <div class="animation-shorthand"><div><strong>Animation shorthand</strong><code id="generated-animation-shorthand"></code></div><button class="text-button" id="copy-animation-shorthand" type="button">Copy shorthand</button></div>
+      <div class="animation-code-window">
+        <pre><code id="generated-animation-css" aria-live="polite" aria-atomic="true"></code></pre>
+      </div>
+      <div class="animation-shorthand">
+        <div><strong>Animation shorthand</strong><code id="generated-animation-shorthand"></code></div><button
+          class="text-button" id="copy-animation-shorthand" type="button">Copy shorthand</button>
+      </div>
       <p class="animation-copy-status" id="animation-copy-status" role="status" aria-live="polite"></p>
     </section>
 
     <section class="animation-presets-section container" aria-labelledby="animation-presets-title">
-      <div class="section-heading"><div><span class="eyebrow">MOTION LIBRARY</span><h2 id="animation-presets-title">Animation presets</h2><p>Choose a starting point, then customize every frame and timing option.</p></div></div>
+      <div class="section-heading">
+        <div><span class="eyebrow">MOTION LIBRARY</span>
+          <h2 id="animation-presets-title">Animation presets</h2>
+          <p>Choose a starting point, then customize every frame and timing option.</p>
+        </div>
+      </div>
       <div class="animation-preset-tools">
         <div class="animation-preset-filters" role="group" aria-label="Filter presets by category">
           <button class="animation-filter is-active" type="button" data-category="all" aria-pressed="true">All</button>
           <button class="animation-filter" type="button" data-category="entrance" aria-pressed="false">Entrance</button>
           <button class="animation-filter" type="button" data-category="exit" aria-pressed="false">Exit</button>
-          <button class="animation-filter" type="button" data-category="attention" aria-pressed="false">Attention</button>
-          <button class="animation-filter" type="button" data-category="transform" aria-pressed="false">Transform</button>
+          <button class="animation-filter" type="button" data-category="attention"
+            aria-pressed="false">Attention</button>
+          <button class="animation-filter" type="button" data-category="transform"
+            aria-pressed="false">Transform</button>
         </div>
-        <div class="field-group animation-preset-search"><label for="search-animation-presets">Search presets</label><input id="search-animation-presets" type="search" placeholder="Try fade, slide, bounce…" autocomplete="off"></div>
+        <div class="field-group animation-preset-search"><label for="search-animation-presets">Search
+            presets</label><input id="search-animation-presets" type="search" placeholder="Try fade, slide, bounce…"
+            autocomplete="off"></div>
       </div>
       <div class="animation-preset-grid" id="animation-presets"></div>
-      <p class="animation-empty-presets" id="animation-empty-presets" hidden>No presets match that search. Try another term or category.</p>
+      <p class="animation-empty-presets" id="animation-empty-presets" hidden>No presets match that search. Try another
+        term or category.</p>
     </section>
 
     <section class="animation-guide-section" aria-labelledby="animation-guide-title">
-      <div class="container"><div class="section-heading section-heading--center"><span class="eyebrow">THE MOTION BASICS</span><h2 id="animation-guide-title">A guide to CSS animation</h2><p>Understand the timing and keyframe properties behind polished motion.</p></div>
+      <div class="container">
+        <div class="section-heading section-heading--center"><span class="eyebrow">THE MOTION BASICS</span>
+          <h2 id="animation-guide-title">A guide to CSS animation</h2>
+          <p>Understand the timing and keyframe properties behind polished motion.</p>
+        </div>
         <div class="animation-guide-grid">
-          <article class="animation-guide-card card"><span>01</span><h3>What is CSS Animation?</h3><p>CSS animations change property values over time using named keyframes and timing settings.</p><pre><code>.notice { animation: appear 300ms ease-out; }</code></pre></article>
-          <article class="animation-guide-card card"><span>02</span><h3>How @keyframes Works</h3><p>Keyframes describe intermediate styles using percentages or from/to at the start and end of a cycle.</p><pre><code>@keyframes appear {
+          <article class="animation-guide-card card"><span>01</span>
+            <h3>What is CSS Animation?</h3>
+            <p>CSS animations change property values over time using named keyframes and timing settings.</p>
+            <pre><code>.notice { animation: appear 300ms ease-out; }</code></pre>
+          </article>
+          <article class="animation-guide-card card"><span>02</span>
+            <h3>How @keyframes Works</h3>
+            <p>Keyframes describe intermediate styles using percentages or from/to at the start and end of a cycle.</p>
+            <pre><code>@keyframes appear {
   from { opacity: 0; }
   to { opacity: 1; }
-}</code></pre></article>
-          <article class="animation-guide-card card"><span>03</span><h3>Duration &amp; Delay</h3><p>Duration sets one cycle's length; delay controls how long it waits before the first cycle begins.</p><pre><code>animation-duration: 600ms;
-animation-delay: 120ms;</code></pre></article>
-          <article class="animation-guide-card card"><span>04</span><h3>Timing Functions</h3><p>Easing controls the rate of change. Cubic Bézier curves customize it, while steps() creates discrete jumps.</p><pre><code>animation-timing-function:
-  cubic-bezier(.2, .8, .2, 1);</code></pre></article>
-          <article class="animation-guide-card card"><span>05</span><h3>Iteration &amp; Direction</h3><p>Repeat a finite number of cycles or infinitely, and choose whether alternate cycles reverse.</p><pre><code>animation-iteration-count: 3;
-animation-direction: alternate;</code></pre></article>
-          <article class="animation-guide-card card"><span>06</span><h3>Fill Mode</h3><p>Fill mode determines whether keyframe styles apply before the first cycle or after the last.</p><pre><code>animation-fill-mode: both;</code></pre></article>
-          <article class="animation-guide-card card"><span>07</span><h3>Animation vs Transition</h3><p>Transitions usually connect two states after a trigger; animations can define multiple stages and run automatically.</p><pre><code>transition: opacity 200ms ease;
-animation: appear 500ms ease;</code></pre></article>
-          <article class="animation-guide-card card"><span>08</span><h3>Performance Tips</h3><p>Prefer transform and opacity where possible. They often avoid layout work; keep motion purposeful and honor reduced-motion preferences.</p><pre><code>@media (prefers-reduced-motion: reduce) {
+}</code></pre>
+          </article>
+          <article class="animation-guide-card card"><span>03</span>
+            <h3>Duration &amp; Delay</h3>
+            <p>Duration sets one cycle's length; delay controls how long it waits before the first cycle begins.</p>
+            <pre><code>animation-duration: 600ms;
+animation-delay: 120ms;</code></pre>
+          </article>
+          <article class="animation-guide-card card"><span>04</span>
+            <h3>Timing Functions</h3>
+            <p>Easing controls the rate of change. Cubic Bézier curves customize it, while steps() creates discrete
+              jumps.</p>
+            <pre><code>animation-timing-function:
+  cubic-bezier(.2, .8, .2, 1);</code></pre>
+          </article>
+          <article class="animation-guide-card card"><span>05</span>
+            <h3>Iteration &amp; Direction</h3>
+            <p>Repeat a finite number of cycles or infinitely, and choose whether alternate cycles reverse.</p>
+            <pre><code>animation-iteration-count: 3;
+animation-direction: alternate;</code></pre>
+          </article>
+          <article class="animation-guide-card card"><span>06</span>
+            <h3>Fill Mode</h3>
+            <p>Fill mode determines whether keyframe styles apply before the first cycle or after the last.</p>
+            <pre><code>animation-fill-mode: both;</code></pre>
+          </article>
+          <article class="animation-guide-card card"><span>07</span>
+            <h3>Animation vs Transition</h3>
+            <p>Transitions usually connect two states after a trigger; animations can define multiple stages and run
+              automatically.</p>
+            <pre><code>transition: opacity 200ms ease;
+animation: appear 500ms ease;</code></pre>
+          </article>
+          <article class="animation-guide-card card"><span>08</span>
+            <h3>Performance Tips</h3>
+            <p>Prefer transform and opacity where possible. They often avoid layout work; keep motion purposeful and
+              honor reduced-motion preferences.</p>
+            <pre><code>@media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms; }
-}</code></pre></article>
+}</code></pre>
+          </article>
         </div>
       </div>
     </section>
 
     <section class="faq-section animation-faq container" aria-labelledby="animation-faq-title">
-      <div class="section-heading section-heading--center"><span class="eyebrow">FAQ</span><h2 id="animation-faq-title">Frequently asked questions</h2><p>Quick answers for building CSS motion that feels right.</p></div>
+      <div class="section-heading section-heading--center"><span class="eyebrow">FAQ</span>
+        <h2 id="animation-faq-title">Frequently asked questions</h2>
+        <p>Quick answers for building CSS motion that feels right.</p>
+      </div>
       <div class="faq-list">
-        <article class="faq-item"><h3><button class="faq-question" id="animation-faq-q1" type="button" aria-expanded="false" aria-controls="animation-faq-a1"><span>What is CSS animation?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="animation-faq-a1" role="region" aria-labelledby="animation-faq-q1" hidden><p>CSS animation changes CSS property values over time using @keyframes and animation timing properties.</p></div></article>
-        <article class="faq-item"><h3><button class="faq-question" id="animation-faq-q2" type="button" aria-expanded="false" aria-controls="animation-faq-a2"><span>How do I create keyframes in CSS?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="animation-faq-a2" role="region" aria-labelledby="animation-faq-q2" hidden><p>Declare a named @keyframes rule and describe styles at offsets such as 0%, 50%, and 100%, then reference its name from an animation property.</p></div></article>
-        <article class="faq-item"><h3><button class="faq-question" id="animation-faq-q3" type="button" aria-expanded="false" aria-controls="animation-faq-a3"><span>What is the difference between animation and transition?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="animation-faq-a3" role="region" aria-labelledby="animation-faq-q3" hidden><p>A transition interpolates between states when a property changes, while an animation uses keyframes and can run, repeat, or reverse independently.</p></div></article>
-        <article class="faq-item"><h3><button class="faq-question" id="animation-faq-q4" type="button" aria-expanded="false" aria-controls="animation-faq-a4"><span>How do I make an animation infinite?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="animation-faq-a4" role="region" aria-labelledby="animation-faq-q4" hidden><p>Set animation-iteration-count to infinite. Consider whether continuous motion is useful and provide a reduced-motion alternative.</p></div></article>
-        <article class="faq-item"><h3><button class="faq-question" id="animation-faq-q5" type="button" aria-expanded="false" aria-controls="animation-faq-a5"><span>How do I control animation speed?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="animation-faq-a5" role="region" aria-labelledby="animation-faq-q5" hidden><p>Change animation-duration to control cycle length. This tool's preview speed changes only the preview playback rate, not the generated CSS duration.</p></div></article>
-        <article class="faq-item"><h3><button class="faq-question" id="animation-faq-q6" type="button" aria-expanded="false" aria-controls="animation-faq-a6"><span>What is an easing function?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="animation-faq-a6" role="region" aria-labelledby="animation-faq-q6" hidden><p>An easing function controls how quickly a property changes during a cycle, from constant linear motion to acceleration, deceleration, or discrete steps.</p></div></article>
-        <article class="faq-item"><h3><button class="faq-question" id="animation-faq-q7" type="button" aria-expanded="false" aria-controls="animation-faq-a7"><span>Can I pause and resume CSS animations?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="animation-faq-a7" role="region" aria-labelledby="animation-faq-q7" hidden><p>Yes. CSS supports animation-play-state: paused and running. The preview controls pause and resume the animation at its current point.</p></div></article>
-        <article class="faq-item"><h3><button class="faq-question" id="animation-faq-q8" type="button" aria-expanded="false" aria-controls="animation-faq-a8"><span>How do I animate multiple properties?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="animation-faq-a8" role="region" aria-labelledby="animation-faq-q8" hidden><p>Include the properties in each keyframe. Transform components should be combined in one transform declaration so they do not override each other.</p></div></article>
-        <article class="faq-item"><h3><button class="faq-question" id="animation-faq-q9" type="button" aria-expanded="false" aria-controls="animation-faq-a9"><span>How do I make CSS animations accessible?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="animation-faq-a9" role="region" aria-labelledby="animation-faq-q9" hidden><p>Keep motion purposeful, avoid flashing, provide a pause option for persistent motion, and respect prefers-reduced-motion.</p></div></article>
+        <article class="faq-item">
+          <h3><button class="faq-question" id="animation-faq-q1" type="button" aria-expanded="false"
+              aria-controls="animation-faq-a1"><span>What is CSS animation?</span><span class="faq-icon"
+                aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="animation-faq-a1" role="region" aria-labelledby="animation-faq-q1" hidden>
+            <p>CSS animation changes CSS property values over time using @keyframes and animation timing properties.</p>
+          </div>
+        </article>
+        <article class="faq-item">
+          <h3><button class="faq-question" id="animation-faq-q2" type="button" aria-expanded="false"
+              aria-controls="animation-faq-a2"><span>How do I create keyframes in CSS?</span><span class="faq-icon"
+                aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="animation-faq-a2" role="region" aria-labelledby="animation-faq-q2" hidden>
+            <p>Declare a named @keyframes rule and describe styles at offsets such as 0%, 50%, and 100%, then reference
+              its name from an animation property.</p>
+          </div>
+        </article>
+        <article class="faq-item">
+          <h3><button class="faq-question" id="animation-faq-q3" type="button" aria-expanded="false"
+              aria-controls="animation-faq-a3"><span>What is the difference between animation and
+                transition?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="animation-faq-a3" role="region" aria-labelledby="animation-faq-q3" hidden>
+            <p>A transition interpolates between states when a property changes, while an animation uses keyframes and
+              can run, repeat, or reverse independently.</p>
+          </div>
+        </article>
+        <article class="faq-item">
+          <h3><button class="faq-question" id="animation-faq-q4" type="button" aria-expanded="false"
+              aria-controls="animation-faq-a4"><span>How do I make an animation infinite?</span><span class="faq-icon"
+                aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="animation-faq-a4" role="region" aria-labelledby="animation-faq-q4" hidden>
+            <p>Set animation-iteration-count to infinite. Consider whether continuous motion is useful and provide a
+              reduced-motion alternative.</p>
+          </div>
+        </article>
+        <article class="faq-item">
+          <h3><button class="faq-question" id="animation-faq-q5" type="button" aria-expanded="false"
+              aria-controls="animation-faq-a5"><span>How do I control animation speed?</span><span class="faq-icon"
+                aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="animation-faq-a5" role="region" aria-labelledby="animation-faq-q5" hidden>
+            <p>Change animation-duration to control cycle length. This tool's preview speed changes only the preview
+              playback rate, not the generated CSS duration.</p>
+          </div>
+        </article>
+        <article class="faq-item">
+          <h3><button class="faq-question" id="animation-faq-q6" type="button" aria-expanded="false"
+              aria-controls="animation-faq-a6"><span>What is an easing function?</span><span class="faq-icon"
+                aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="animation-faq-a6" role="region" aria-labelledby="animation-faq-q6" hidden>
+            <p>An easing function controls how quickly a property changes during a cycle, from constant linear motion to
+              acceleration, deceleration, or discrete steps.</p>
+          </div>
+        </article>
+        <article class="faq-item">
+          <h3><button class="faq-question" id="animation-faq-q7" type="button" aria-expanded="false"
+              aria-controls="animation-faq-a7"><span>Can I pause and resume CSS animations?</span><span class="faq-icon"
+                aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="animation-faq-a7" role="region" aria-labelledby="animation-faq-q7" hidden>
+            <p>Yes. CSS supports animation-play-state: paused and running. The preview controls pause and resume the
+              animation at its current point.</p>
+          </div>
+        </article>
+        <article class="faq-item">
+          <h3><button class="faq-question" id="animation-faq-q8" type="button" aria-expanded="false"
+              aria-controls="animation-faq-a8"><span>How do I animate multiple properties?</span><span class="faq-icon"
+                aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="animation-faq-a8" role="region" aria-labelledby="animation-faq-q8" hidden>
+            <p>Include the properties in each keyframe. Transform components should be combined in one transform
+              declaration so they do not override each other.</p>
+          </div>
+        </article>
+        <article class="faq-item">
+          <h3><button class="faq-question" id="animation-faq-q9" type="button" aria-expanded="false"
+              aria-controls="animation-faq-a9"><span>How do I make CSS animations accessible?</span><span
+                class="faq-icon" aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="animation-faq-a9" role="region" aria-labelledby="animation-faq-q9" hidden>
+            <p>Keep motion purposeful, avoid flashing, provide a pause option for persistent motion, and respect
+              prefers-reduced-motion.</p>
+          </div>
+        </article>
       </div>
     </section>
   </main>
   <div id="footer"></div>
 </body>
-</html>
 
+</html>

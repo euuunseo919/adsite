@@ -1,20 +1,44 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Create, layer, and preview custom CSS box shadows. Generate clean shadow code for your projects.">
+  <meta name="description"
+    content="Create, layer, and preview custom CSS box shadows. Generate clean shadow code for your projects.">
   <meta name="theme-color" content="#f8fafc">
   <title>CSS Box Shadow Generator | Unitwise</title>
+  <link rel="canonical" href="https://adsite-ashen.vercel.app/box-shadow.html">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://adsite-ashen.vercel.app/box-shadow.html">
+  <meta property="og:title" content="CSS Box Shadow Generator | Unitwise">
+  <meta property="og:description"
+    content="Create, layer, and preview custom CSS box shadows. Generate clean shadow code for your projects.">
+  <meta property="og:site_name" content="Unitwise">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://adsite-ashen.vercel.app/box-shadow.html">
+  <meta name="twitter:title" content="CSS Box Shadow Generator | Unitwise">
+  <meta name="twitter:description"
+    content="Create, layer, and preview custom CSS box shadows. Generate clean shadow code for your projects.">
+
   <link rel="stylesheet" href="assets/css/normalize.css">
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/commons.css?v=2">
   <link rel="stylesheet" href="assets/css/box-shadow.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="assets/js/common.js?v=2"></script>
   <script src="assets/js/box-shadow.js"></script>
+
+  <meta name="google-site-verification" content="XZpFfX3nSkuJwJqcZBJIZyjZYTVvXYMlZHfaFTL9WIM" />
+  <meta name="naver-site-verification" content="78222065720b46b00c994ca2ac2a4b5945cfe280" />
 </head>
+
 <body data-page="box-shadow">
   <a class="skip-link" href="#main-content">Skip to content</a>
   <div id="header"></div>
@@ -24,25 +48,35 @@
       <span class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>CSS SHADOW TOOL</span>
       <h1 id="hero-title">CSS Box Shadow Generator</h1>
       <p class="hero__lead">Create beautiful CSS shadows visually.</p>
-      <p class="hero__description">Customize shadow position, blur, spread, color, and opacity to generate clean CSS box-shadow code instantly.</p>
+      <p class="hero__description">Customize shadow position, blur, spread, color, and opacity to generate clean CSS
+        box-shadow code instantly.</p>
     </section>
 
     <section class="shadow-generator container" aria-labelledby="generator-title">
       <div class="section-heading shadow-section-heading">
-        <div><span class="eyebrow">BOX SHADOW GENERATOR</span><h2 id="generator-title">Compose your shadow</h2><p>Adjust a layer, combine several, and see the result as you work.</p></div>
-        <button class="button--reset text-button" id="reset-shadow" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 2.64-6.36L3 8m0-5v5h5"/></svg>Reset</button>
+        <div><span class="eyebrow">BOX SHADOW GENERATOR</span>
+          <h2 id="generator-title">Compose your shadow</h2>
+          <p>Adjust a layer, combine several, and see the result as you work.</p>
+        </div>
+        <button class="button--reset text-button" id="reset-shadow" type="button"><svg viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path d="M3 12a9 9 0 1 0 2.64-6.36L3 8m0-5v5h5" />
+          </svg>Reset</button>
       </div>
 
       <div class="shadow-workspace">
         <section class="shadow-settings card" aria-labelledby="shadow-settings-title">
           <div class="shadow-panel-heading">
-            <div><span class="eyebrow">SHADOW SETTINGS</span><h3 id="shadow-settings-title">Layer properties</h3></div>
+            <div><span class="eyebrow">SHADOW SETTINGS</span>
+              <h3 id="shadow-settings-title">Layer properties</h3>
+            </div>
             <span class="shadow-layer-count" id="shadow-layer-count">1 / 8 layers</span>
           </div>
 
           <div class="shadow-layer-toolbar">
             <h4>Shadow layers</h4>
-            <button class="button button--secondary shadow-add-button" id="add-shadow-layer" type="button"><span aria-hidden="true">+</span> Add layer</button>
+            <button class="button button--secondary shadow-add-button" id="add-shadow-layer" type="button"><span
+                aria-hidden="true">+</span> Add layer</button>
           </div>
           <ul class="shadow-layer-list" id="shadow-layer-list" aria-label="Shadow layers"></ul>
           <p class="shadow-layer-hint">Earlier layers are drawn above later layers in the CSS stack.</p>
@@ -52,136 +86,305 @@
             <p class="shadow-field-error shadow-settings-error" id="shadow-settings-error" role="alert"></p>
             <div class="shadow-control-list">
               <div class="shadow-range-control">
-                <div class="shadow-control-heading"><label for="shadow-x">Horizontal offset (X)</label><div class="shadow-value-input"><input id="shadow-x" type="number" min="-100" max="100" step="1" value="0"><span>px</span></div></div>
-                <input class="shadow-range" id="shadow-x-range" type="range" min="-100" max="100" step="1" value="0" aria-label="Horizontal offset slider">
+                <div class="shadow-control-heading"><label for="shadow-x">Horizontal offset (X)</label>
+                  <div class="shadow-value-input"><input id="shadow-x" type="number" min="-100" max="100" step="1"
+                      value="0"><span>px</span></div>
+                </div>
+                <input class="shadow-range" id="shadow-x-range" type="range" min="-100" max="100" step="1" value="0"
+                  aria-label="Horizontal offset slider">
               </div>
               <div class="shadow-range-control">
-                <div class="shadow-control-heading"><label for="shadow-y">Vertical offset (Y)</label><div class="shadow-value-input"><input id="shadow-y" type="number" min="-100" max="100" step="1" value="8"><span>px</span></div></div>
-                <input class="shadow-range" id="shadow-y-range" type="range" min="-100" max="100" step="1" value="8" aria-label="Vertical offset slider">
+                <div class="shadow-control-heading"><label for="shadow-y">Vertical offset (Y)</label>
+                  <div class="shadow-value-input"><input id="shadow-y" type="number" min="-100" max="100" step="1"
+                      value="8"><span>px</span></div>
+                </div>
+                <input class="shadow-range" id="shadow-y-range" type="range" min="-100" max="100" step="1" value="8"
+                  aria-label="Vertical offset slider">
               </div>
               <div class="shadow-range-control">
-                <div class="shadow-control-heading"><label for="shadow-blur">Blur radius</label><div class="shadow-value-input"><input id="shadow-blur" type="number" min="0" max="100" step="1" value="24"><span>px</span></div></div>
-                <input class="shadow-range" id="shadow-blur-range" type="range" min="0" max="100" step="1" value="24" aria-label="Blur radius slider">
+                <div class="shadow-control-heading"><label for="shadow-blur">Blur radius</label>
+                  <div class="shadow-value-input"><input id="shadow-blur" type="number" min="0" max="100" step="1"
+                      value="24"><span>px</span></div>
+                </div>
+                <input class="shadow-range" id="shadow-blur-range" type="range" min="0" max="100" step="1" value="24"
+                  aria-label="Blur radius slider">
               </div>
               <div class="shadow-range-control">
-                <div class="shadow-control-heading"><label for="shadow-spread">Spread radius</label><div class="shadow-value-input"><input id="shadow-spread" type="number" min="-100" max="100" step="1" value="0"><span>px</span></div></div>
-                <input class="shadow-range" id="shadow-spread-range" type="range" min="-100" max="100" step="1" value="0" aria-label="Spread radius slider">
+                <div class="shadow-control-heading"><label for="shadow-spread">Spread radius</label>
+                  <div class="shadow-value-input"><input id="shadow-spread" type="number" min="-100" max="100" step="1"
+                      value="0"><span>px</span></div>
+                </div>
+                <input class="shadow-range" id="shadow-spread-range" type="range" min="-100" max="100" step="1"
+                  value="0" aria-label="Spread radius slider">
               </div>
               <div class="shadow-color-row">
-                <div class="field-group"><label for="shadow-hex">Shadow color</label><div class="shadow-color-input"><input id="shadow-color-picker" type="color" value="#000000" aria-label="Choose shadow color"><input id="shadow-hex" type="text" value="#000000" maxlength="7" spellcheck="false" autocomplete="off" aria-describedby="shadow-color-error"></div><p class="shadow-field-error" id="shadow-color-error" role="alert"></p></div>
+                <div class="field-group"><label for="shadow-hex">Shadow color</label>
+                  <div class="shadow-color-input"><input id="shadow-color-picker" type="color" value="#000000"
+                      aria-label="Choose shadow color"><input id="shadow-hex" type="text" value="#000000" maxlength="7"
+                      spellcheck="false" autocomplete="off" aria-describedby="shadow-color-error"></div>
+                  <p class="shadow-field-error" id="shadow-color-error" role="alert"></p>
+                </div>
                 <div class="shadow-range-control shadow-opacity-control">
-                  <div class="shadow-control-heading"><label for="shadow-opacity">Opacity</label><div class="shadow-value-input"><input id="shadow-opacity" type="number" min="0" max="100" step="1" value="15"><span>%</span></div></div>
-                  <input class="shadow-range" id="shadow-opacity-range" type="range" min="0" max="100" step="1" value="15" aria-label="Shadow opacity slider">
+                  <div class="shadow-control-heading"><label for="shadow-opacity">Opacity</label>
+                    <div class="shadow-value-input"><input id="shadow-opacity" type="number" min="0" max="100" step="1"
+                        value="15"><span>%</span></div>
+                  </div>
+                  <input class="shadow-range" id="shadow-opacity-range" type="range" min="0" max="100" step="1"
+                    value="15" aria-label="Shadow opacity slider">
                 </div>
               </div>
-              <div class="field-group shadow-type-field"><label for="shadow-type">Shadow type</label><select id="shadow-type"><option value="outset" selected>Outset</option><option value="inset">Inset</option></select></div>
+              <div class="field-group shadow-type-field"><label for="shadow-type">Shadow type</label><select
+                  id="shadow-type">
+                  <option value="outset" selected>Outset</option>
+                  <option value="inset">Inset</option>
+                </select></div>
             </div>
           </fieldset>
 
           <fieldset class="shadow-preview-settings">
             <legend>Preview appearance</legend>
             <div class="shadow-preview-color-grid">
-              <div class="field-group"><label for="preview-background">Preview background</label><div class="shadow-color-input"><input id="preview-background-picker" type="color" value="#F1F5F9" aria-label="Choose preview background"><input id="preview-background" type="text" value="#F1F5F9" maxlength="7" spellcheck="false" autocomplete="off"></div></div>
-              <div class="field-group"><label for="card-background">Card background</label><div class="shadow-color-input"><input id="card-background-picker" type="color" value="#FFFFFF" aria-label="Choose card background"><input id="card-background" type="text" value="#FFFFFF" maxlength="7" spellcheck="false" autocomplete="off"></div></div>
+              <div class="field-group"><label for="preview-background">Preview background</label>
+                <div class="shadow-color-input"><input id="preview-background-picker" type="color" value="#F1F5F9"
+                    aria-label="Choose preview background"><input id="preview-background" type="text" value="#F1F5F9"
+                    maxlength="7" spellcheck="false" autocomplete="off"></div>
+              </div>
+              <div class="field-group"><label for="card-background">Card background</label>
+                <div class="shadow-color-input"><input id="card-background-picker" type="color" value="#FFFFFF"
+                    aria-label="Choose card background"><input id="card-background" type="text" value="#FFFFFF"
+                    maxlength="7" spellcheck="false" autocomplete="off"></div>
+              </div>
             </div>
-            <div class="shadow-control-heading shadow-radius-control"><label for="card-radius">Border radius</label><div class="shadow-value-input"><input id="card-radius" type="number" min="0" max="100" step="1" value="16"><span>px</span></div></div>
-            <input class="shadow-range" id="card-radius-range" type="range" min="0" max="100" step="1" value="16" aria-label="Border radius slider">
-            <label class="shadow-include-control" for="include-preview-styles"><input id="include-preview-styles" type="checkbox"><span class="shadow-checkbox" aria-hidden="true"></span><span>Include preview styles in CSS</span></label>
+            <div class="shadow-control-heading shadow-radius-control"><label for="card-radius">Border radius</label>
+              <div class="shadow-value-input"><input id="card-radius" type="number" min="0" max="100" step="1"
+                  value="16"><span>px</span></div>
+            </div>
+            <input class="shadow-range" id="card-radius-range" type="range" min="0" max="100" step="1" value="16"
+              aria-label="Border radius slider">
+            <label class="shadow-include-control" for="include-preview-styles"><input id="include-preview-styles"
+                type="checkbox"><span class="shadow-checkbox" aria-hidden="true"></span><span>Include preview styles in
+                CSS</span></label>
             <p class="shadow-field-error" id="preview-color-error" role="alert"></p>
           </fieldset>
         </section>
 
         <section class="shadow-preview-panel card" aria-labelledby="shadow-preview-title">
           <div class="shadow-panel-heading">
-            <div><span class="eyebrow">LIVE PREVIEW</span><h3 id="shadow-preview-title">See your shadow in context</h3></div>
+            <div><span class="eyebrow">LIVE PREVIEW</span>
+              <h3 id="shadow-preview-title">See your shadow in context</h3>
+            </div>
             <span class="shadow-preview-badge"><i aria-hidden="true"></i> Live</span>
           </div>
-          <p class="shadow-preview-help">Preview-only colors and radius stay separate from the generated shadow value.</p>
+          <p class="shadow-preview-help">Preview-only colors and radius stay separate from the generated shadow value.
+          </p>
           <div class="shadow-preview-stage" id="shadow-preview-stage">
             <article class="shadow-preview-card" id="shadow-preview-card">
-              <span class="shadow-preview-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 8.5 12 4l8 4.5v7L12 20l-8-4.5z"/><path d="m4.5 8.7 7.5 4.2 7.5-4.2M12 13v7"/></svg></span>
+              <span class="shadow-preview-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24">
+                  <path d="M4 8.5 12 4l8 4.5v7L12 20l-8-4.5z" />
+                  <path d="m4.5 8.7 7.5 4.2 7.5-4.2M12 13v7" />
+                </svg></span>
               <h4>Shadow Preview</h4>
               <p>Customize your shadow settings.</p>
             </article>
           </div>
-          <div class="shadow-preview-footer"><span id="shadow-visible-count">1 active layer</span><span class="shadow-preview-legend"><i></i> Preview card</span></div>
+          <div class="shadow-preview-footer"><span id="shadow-visible-count">1 active layer</span><span
+              class="shadow-preview-legend"><i></i> Preview card</span></div>
         </section>
       </div>
     </section>
 
     <section class="shadow-code-section container" aria-labelledby="shadow-code-title">
       <div class="section-heading">
-        <div><span class="eyebrow">READY-TO-USE CODE</span><h2 id="shadow-code-title">Generated CSS</h2><p>Copy the declaration or complete rule and use it in your project.</p></div>
-        <button class="button--reset text-button" id="reset-shadow-code" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 2.64-6.36L3 8m0-5v5h5"/></svg>Reset</button>
+        <div><span class="eyebrow">READY-TO-USE CODE</span>
+          <h2 id="shadow-code-title">Generated CSS</h2>
+          <p>Copy the declaration or complete rule and use it in your project.</p>
+        </div>
+        <button class="button--reset text-button" id="reset-shadow-code" type="button"><svg viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path d="M3 12a9 9 0 1 0 2.64-6.36L3 8m0-5v5h5" />
+          </svg>Reset</button>
       </div>
       <div class="shadow-code-card card">
-        <div class="shadow-code-toolbar"><span class="shadow-code-label"><i></i>CSS</span><div class="shadow-copy-actions"><button class="button button--secondary" id="copy-shadow-value" type="button">Copy value</button><button class="button button--copy" id="copy-shadow-css" type="button">Copy CSS</button></div></div>
-        <div class="shadow-code-window"><pre><code id="shadow-css-code" aria-live="polite" aria-atomic="true"></code></pre></div>
+        <div class="shadow-code-toolbar"><span class="shadow-code-label"><i></i>CSS</span>
+          <div class="shadow-copy-actions"><button class="button button--secondary" id="copy-shadow-value"
+              type="button">Copy value</button><button class="button button--copy" id="copy-shadow-css"
+              type="button">Copy CSS</button></div>
+        </div>
+        <div class="shadow-code-window">
+          <pre><code id="shadow-css-code" aria-live="polite" aria-atomic="true"></code></pre>
+        </div>
         <p class="shadow-copy-status" id="shadow-copy-status" role="status" aria-live="polite"></p>
       </div>
-      <p class="shadow-code-note">Preview background and border radius are only added to the generated CSS when “Include preview styles” is selected.</p>
+      <p class="shadow-code-note">Preview background and border radius are only added to the generated CSS when “Include
+        preview styles” is selected.</p>
     </section>
 
     <section class="shadow-presets-section" aria-labelledby="shadow-presets-title">
       <div class="container">
-        <div class="section-heading section-heading--center"><span class="eyebrow">QUICK START</span><h2 id="shadow-presets-title">Shadow presets</h2><p>Pick a starting point, then adjust every layer to make it yours.</p></div>
+        <div class="section-heading section-heading--center"><span class="eyebrow">QUICK START</span>
+          <h2 id="shadow-presets-title">Shadow presets</h2>
+          <p>Pick a starting point, then adjust every layer to make it yours.</p>
+        </div>
         <div class="shadow-presets">
-          <button class="shadow-preset" type="button" data-shadow-preset="soft"><span class="shadow-preset-swatch shadow-swatch--soft"><i></i></span><strong>Soft shadow</strong><small>Subtle and understated</small></button>
-          <button class="shadow-preset" type="button" data-shadow-preset="medium"><span class="shadow-preset-swatch shadow-swatch--medium"><i></i></span><strong>Medium shadow</strong><small>Everyday elevation</small></button>
-          <button class="shadow-preset" type="button" data-shadow-preset="strong"><span class="shadow-preset-swatch shadow-swatch--strong"><i></i></span><strong>Strong shadow</strong><small>Bold separation</small></button>
-          <button class="shadow-preset" type="button" data-shadow-preset="floating"><span class="shadow-preset-swatch shadow-swatch--floating"><i></i></span><strong>Floating card</strong><small>Lifted, layered depth</small></button>
-          <button class="shadow-preset" type="button" data-shadow-preset="material"><span class="shadow-preset-swatch shadow-swatch--material"><i></i></span><strong>Material style</strong><small>Classic elevation feel</small></button>
-          <button class="shadow-preset" type="button" data-shadow-preset="neumorphism"><span class="shadow-preset-swatch shadow-swatch--neumorphism"><i></i></span><strong>Neumorphism</strong><small>Soft light and dark depth</small></button>
-          <button class="shadow-preset" type="button" data-shadow-preset="inner"><span class="shadow-preset-swatch shadow-swatch--inner"><i></i></span><strong>Inner shadow</strong><small>Inset surface detail</small></button>
-          <button class="shadow-preset" type="button" data-shadow-preset="layered"><span class="shadow-preset-swatch shadow-swatch--layered"><i></i></span><strong>Layered shadow</strong><small>Multiple subtle layers</small></button>
+          <button class="shadow-preset" type="button" data-shadow-preset="soft"><span
+              class="shadow-preset-swatch shadow-swatch--soft"><i></i></span><strong>Soft shadow</strong><small>Subtle
+              and understated</small></button>
+          <button class="shadow-preset" type="button" data-shadow-preset="medium"><span
+              class="shadow-preset-swatch shadow-swatch--medium"><i></i></span><strong>Medium
+              shadow</strong><small>Everyday elevation</small></button>
+          <button class="shadow-preset" type="button" data-shadow-preset="strong"><span
+              class="shadow-preset-swatch shadow-swatch--strong"><i></i></span><strong>Strong shadow</strong><small>Bold
+              separation</small></button>
+          <button class="shadow-preset" type="button" data-shadow-preset="floating"><span
+              class="shadow-preset-swatch shadow-swatch--floating"><i></i></span><strong>Floating
+              card</strong><small>Lifted, layered depth</small></button>
+          <button class="shadow-preset" type="button" data-shadow-preset="material"><span
+              class="shadow-preset-swatch shadow-swatch--material"><i></i></span><strong>Material
+              style</strong><small>Classic elevation feel</small></button>
+          <button class="shadow-preset" type="button" data-shadow-preset="neumorphism"><span
+              class="shadow-preset-swatch shadow-swatch--neumorphism"><i></i></span><strong>Neumorphism</strong><small>Soft
+              light and dark depth</small></button>
+          <button class="shadow-preset" type="button" data-shadow-preset="inner"><span
+              class="shadow-preset-swatch shadow-swatch--inner"><i></i></span><strong>Inner shadow</strong><small>Inset
+              surface detail</small></button>
+          <button class="shadow-preset" type="button" data-shadow-preset="layered"><span
+              class="shadow-preset-swatch shadow-swatch--layered"><i></i></span><strong>Layered
+              shadow</strong><small>Multiple subtle layers</small></button>
         </div>
       </div>
     </section>
 
     <section class="shadow-guide-section container" aria-labelledby="shadow-guide-title">
-      <div class="section-heading section-heading--center"><span class="eyebrow">THE BASICS</span><h2 id="shadow-guide-title">A guide to box-shadow</h2><p>Learn how each value shapes the appearance of a CSS shadow.</p></div>
+      <div class="section-heading section-heading--center"><span class="eyebrow">THE BASICS</span>
+        <h2 id="shadow-guide-title">A guide to box-shadow</h2>
+        <p>Learn how each value shapes the appearance of a CSS shadow.</p>
+      </div>
       <div class="shadow-guide-grid">
-        <article class="shadow-guide-card card"><span>01</span><h3>What is CSS Box Shadow?</h3><p>The box-shadow property draws one or more shadows around an element’s frame without changing its layout size.</p><pre><code>.card {
+        <article class="shadow-guide-card card"><span>01</span>
+          <h3>What is CSS Box Shadow?</h3>
+          <p>The box-shadow property draws one or more shadows around an element’s frame without changing its layout
+            size.</p>
+          <pre><code>.card {
   box-shadow: 0 8px 24px
     rgba(0, 0, 0, .15);
-}</code></pre></article>
-        <article class="shadow-guide-card card"><span>02</span><h3>Horizontal &amp; Vertical Offset</h3><p>The first value moves a shadow left or right; the second moves it up or down.</p><pre><code>.card {
+}</code></pre>
+        </article>
+        <article class="shadow-guide-card card"><span>02</span>
+          <h3>Horizontal &amp; Vertical Offset</h3>
+          <p>The first value moves a shadow left or right; the second moves it up or down.</p>
+          <pre><code>.card {
   box-shadow: 8px 12px
     24px rgba(0, 0, 0, .15);
-}</code></pre></article>
-        <article class="shadow-guide-card card"><span>03</span><h3>Blur &amp; Spread</h3><p>Blur softens the edge. Spread expands or contracts the shadow before blur is applied.</p><pre><code>.card {
+}</code></pre>
+        </article>
+        <article class="shadow-guide-card card"><span>03</span>
+          <h3>Blur &amp; Spread</h3>
+          <p>Blur softens the edge. Spread expands or contracts the shadow before blur is applied.</p>
+          <pre><code>.card {
   box-shadow: 0 8px 24px 4px
     rgba(0, 0, 0, .15);
-}</code></pre></article>
-        <article class="shadow-guide-card card"><span>04</span><h3>Shadow Color &amp; Opacity</h3><p>Use a color with transparency to create shadows that blend naturally with the surface.</p><pre><code>.card {
+}</code></pre>
+        </article>
+        <article class="shadow-guide-card card"><span>04</span>
+          <h3>Shadow Color &amp; Opacity</h3>
+          <p>Use a color with transparency to create shadows that blend naturally with the surface.</p>
+          <pre><code>.card {
   box-shadow: 0 8px 24px
     rgba(37, 99, 235, .2);
-}</code></pre></article>
-        <article class="shadow-guide-card card"><span>05</span><h3>Inset vs Outset</h3><p>Outset shadows appear outside the element. The inset keyword draws a shadow inside its edge.</p><pre><code>.field {
+}</code></pre>
+        </article>
+        <article class="shadow-guide-card card"><span>05</span>
+          <h3>Inset vs Outset</h3>
+          <p>Outset shadows appear outside the element. The inset keyword draws a shadow inside its edge.</p>
+          <pre><code>.field {
   box-shadow: inset 0 2px 5px
     rgba(0, 0, 0, .12);
-}</code></pre></article>
-        <article class="shadow-guide-card card"><span>06</span><h3>Multiple Shadows</h3><p>Separate shadow layers with commas. Earlier shadows are painted over later ones.</p><pre><code>.card {
+}</code></pre>
+        </article>
+        <article class="shadow-guide-card card"><span>06</span>
+          <h3>Multiple Shadows</h3>
+          <p>Separate shadow layers with commas. Earlier shadows are painted over later ones.</p>
+          <pre><code>.card {
   box-shadow: 0 2px 4px #0001,
     0 12px 24px #0002;
-}</code></pre></article>
+}</code></pre>
+        </article>
       </div>
     </section>
 
     <section class="faq-section shadow-faq container" aria-labelledby="shadow-faq-title">
-      <div class="section-heading section-heading--center"><span class="eyebrow">FAQ</span><h2 id="shadow-faq-title">Frequently asked questions</h2><p>Quick answers to common box-shadow questions.</p></div>
+      <div class="section-heading section-heading--center"><span class="eyebrow">FAQ</span>
+        <h2 id="shadow-faq-title">Frequently asked questions</h2>
+        <p>Quick answers to common box-shadow questions.</p>
+      </div>
       <div class="faq-list">
-        <article class="faq-item"><h3><button class="faq-question" id="shadow-faq-q1" type="button" aria-expanded="false" aria-controls="shadow-faq-a1"><span>What is box-shadow in CSS?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="shadow-faq-a1" role="region" aria-labelledby="shadow-faq-q1" hidden><p>box-shadow adds one or more visual shadows around an element’s box. It can create depth, separation, and inset surface effects without affecting layout flow.</p></div></article>
-        <article class="faq-item"><h3><button class="faq-question" id="shadow-faq-q2" type="button" aria-expanded="false" aria-controls="shadow-faq-a2"><span>How do I make a soft shadow in CSS?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="shadow-faq-a2" role="region" aria-labelledby="shadow-faq-q2" hidden><p>Use a larger blur radius, a modest vertical offset, and a low-opacity color. A subtle multi-layer shadow can make the result look more natural.</p></div></article>
-        <article class="faq-item"><h3><button class="faq-question" id="shadow-faq-q3" type="button" aria-expanded="false" aria-controls="shadow-faq-a3"><span>What is the difference between blur and spread?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="shadow-faq-a3" role="region" aria-labelledby="shadow-faq-q3" hidden><p>Blur radius softens the shadow edge. Spread radius changes the shadow’s size before blur: positive values expand it, while negative values contract it.</p></div></article>
-        <article class="faq-item"><h3><button class="faq-question" id="shadow-faq-q4" type="button" aria-expanded="false" aria-controls="shadow-faq-a4"><span>Can I use multiple box shadows?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="shadow-faq-a4" role="region" aria-labelledby="shadow-faq-q4" hidden><p>Yes. Separate each shadow with a comma. The first shadow is painted on top, so layer order can affect the final appearance.</p></div></article>
-        <article class="faq-item"><h3><button class="faq-question" id="shadow-faq-q5" type="button" aria-expanded="false" aria-controls="shadow-faq-a5"><span>How do I create an inner shadow?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="shadow-faq-a5" role="region" aria-labelledby="shadow-faq-q5" hidden><p>Add inset before the offsets in the box-shadow value, for example: inset 0 2px 6px rgba(0, 0, 0, .15).</p></div></article>
-        <article class="faq-item"><h3><button class="faq-question" id="shadow-faq-q6" type="button" aria-expanded="false" aria-controls="shadow-faq-a6"><span>How can I make a shadow transparent?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="shadow-faq-a6" role="region" aria-labelledby="shadow-faq-q6" hidden><p>Use an alpha color such as rgba(0, 0, 0, .15), or set the generator’s opacity control to the desired percentage.</p></div></article>
-        <article class="faq-item"><h3><button class="faq-question" id="shadow-faq-q7" type="button" aria-expanded="false" aria-controls="shadow-faq-a7"><span>Does box-shadow affect element layout?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="shadow-faq-a7" role="region" aria-labelledby="shadow-faq-q7" hidden><p>No. Box shadows are visual effects and do not take up layout space, though they can be clipped by ancestors with overflow hidden.</p></div></article>
+        <article class="faq-item">
+          <h3><button class="faq-question" id="shadow-faq-q1" type="button" aria-expanded="false"
+              aria-controls="shadow-faq-a1"><span>What is box-shadow in CSS?</span><span class="faq-icon"
+                aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="shadow-faq-a1" role="region" aria-labelledby="shadow-faq-q1" hidden>
+            <p>box-shadow adds one or more visual shadows around an element’s box. It can create depth, separation, and
+              inset surface effects without affecting layout flow.</p>
+          </div>
+        </article>
+        <article class="faq-item">
+          <h3><button class="faq-question" id="shadow-faq-q2" type="button" aria-expanded="false"
+              aria-controls="shadow-faq-a2"><span>How do I make a soft shadow in CSS?</span><span class="faq-icon"
+                aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="shadow-faq-a2" role="region" aria-labelledby="shadow-faq-q2" hidden>
+            <p>Use a larger blur radius, a modest vertical offset, and a low-opacity color. A subtle multi-layer shadow
+              can make the result look more natural.</p>
+          </div>
+        </article>
+        <article class="faq-item">
+          <h3><button class="faq-question" id="shadow-faq-q3" type="button" aria-expanded="false"
+              aria-controls="shadow-faq-a3"><span>What is the difference between blur and spread?</span><span
+                class="faq-icon" aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="shadow-faq-a3" role="region" aria-labelledby="shadow-faq-q3" hidden>
+            <p>Blur radius softens the shadow edge. Spread radius changes the shadow’s size before blur: positive values
+              expand it, while negative values contract it.</p>
+          </div>
+        </article>
+        <article class="faq-item">
+          <h3><button class="faq-question" id="shadow-faq-q4" type="button" aria-expanded="false"
+              aria-controls="shadow-faq-a4"><span>Can I use multiple box shadows?</span><span class="faq-icon"
+                aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="shadow-faq-a4" role="region" aria-labelledby="shadow-faq-q4" hidden>
+            <p>Yes. Separate each shadow with a comma. The first shadow is painted on top, so layer order can affect the
+              final appearance.</p>
+          </div>
+        </article>
+        <article class="faq-item">
+          <h3><button class="faq-question" id="shadow-faq-q5" type="button" aria-expanded="false"
+              aria-controls="shadow-faq-a5"><span>How do I create an inner shadow?</span><span class="faq-icon"
+                aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="shadow-faq-a5" role="region" aria-labelledby="shadow-faq-q5" hidden>
+            <p>Add inset before the offsets in the box-shadow value, for example: inset 0 2px 6px rgba(0, 0, 0, .15).
+            </p>
+          </div>
+        </article>
+        <article class="faq-item">
+          <h3><button class="faq-question" id="shadow-faq-q6" type="button" aria-expanded="false"
+              aria-controls="shadow-faq-a6"><span>How can I make a shadow transparent?</span><span class="faq-icon"
+                aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="shadow-faq-a6" role="region" aria-labelledby="shadow-faq-q6" hidden>
+            <p>Use an alpha color such as rgba(0, 0, 0, .15), or set the generator’s opacity control to the desired
+              percentage.</p>
+          </div>
+        </article>
+        <article class="faq-item">
+          <h3><button class="faq-question" id="shadow-faq-q7" type="button" aria-expanded="false"
+              aria-controls="shadow-faq-a7"><span>Does box-shadow affect element layout?</span><span class="faq-icon"
+                aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="shadow-faq-a7" role="region" aria-labelledby="shadow-faq-q7" hidden>
+            <p>No. Box shadows are visual effects and do not take up layout space, though they can be clipped by
+              ancestors with overflow hidden.</p>
+          </div>
+        </article>
       </div>
     </section>
   </main>
   <div id="footer"></div>
 </body>
-</html>
 
+</html>

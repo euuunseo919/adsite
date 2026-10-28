@@ -1,20 +1,44 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Visually build responsive CSS Grid layouts, adjust tracks and alignment, and copy ready-to-use CSS and HTML.">
+  <meta name="description"
+    content="Visually build responsive CSS Grid layouts, adjust tracks and alignment, and copy ready-to-use CSS and HTML.">
   <meta name="theme-color" content="#f8fafc">
   <title>CSS Grid Generator | Unitwise</title>
+  <link rel="canonical" href="https://adsite-ashen.vercel.app/grid.html">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://adsite-ashen.vercel.app/grid.html">
+  <meta property="og:title" content="CSS Grid Generator | Unitwise">
+  <meta property="og:description"
+    content="Visually build responsive CSS Grid layouts, adjust tracks and alignment, and copy ready-to-use CSS and HTML.">
+  <meta property="og:site_name" content="Unitwise">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://adsite-ashen.vercel.app/grid.html">
+  <meta name="twitter:title" content="CSS Grid Generator | Unitwise">
+  <meta name="twitter:description"
+    content="Visually build responsive CSS Grid layouts, adjust tracks and alignment, and copy ready-to-use CSS and HTML.">
+
   <link rel="stylesheet" href="assets/css/normalize.css">
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/commons.css?v=2">
   <link rel="stylesheet" href="assets/css/grid.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="assets/js/common.js?v=2"></script>
   <script src="assets/js/grid.js"></script>
+
+  <meta name="google-site-verification" content="XZpFfX3nSkuJwJqcZBJIZyjZYTVvXYMlZHfaFTL9WIM" />
+  <meta name="naver-site-verification" content="78222065720b46b00c994ca2ac2a4b5945cfe280" />
 </head>
+
 <body data-page="grid">
   <a class="skip-link" href="#main-content">Skip to content</a>
   <div id="header"></div>
@@ -24,7 +48,8 @@
       <span class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>CSS LAYOUT TOOL</span>
       <h1 id="hero-title">CSS Grid Generator</h1>
       <p class="hero__lead">Build responsive CSS Grid layouts visually.</p>
-      <p class="hero__description">Customize columns, rows, gaps, and alignment to generate clean CSS Grid code instantly.</p>
+      <p class="hero__description">Customize columns, rows, gaps, and alignment to generate clean CSS Grid code
+        instantly.</p>
     </section>
 
     <section class="grid-generator container" aria-labelledby="generator-title">
@@ -35,7 +60,9 @@
           <p>Change a setting or select an item to customize its placement.</p>
         </div>
         <button class="button--reset text-button grid-reset-button" id="reset-grid" type="button">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 2.64-6.36L3 8m0-5v5h5"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 12a9 9 0 1 0 2.64-6.36L3 8m0-5v5h5" />
+          </svg>
           Reset grid
         </button>
       </div>
@@ -43,66 +70,119 @@
       <div class="grid-workspace">
         <section class="grid-settings card" aria-labelledby="settings-title">
           <div class="grid-panel-heading">
-            <div><span class="eyebrow">GRID SETTINGS</span><h3 id="settings-title">Layout properties</h3></div>
+            <div><span class="eyebrow">GRID SETTINGS</span>
+              <h3 id="settings-title">Layout properties</h3>
+            </div>
             <span class="grid-live-badge"><span aria-hidden="true"></span> Live</span>
           </div>
 
           <div class="grid-setting-group">
-            <div class="grid-group-heading"><h4>Tracks</h4><span>1–12 tracks</span></div>
+            <div class="grid-group-heading">
+              <h4>Tracks</h4><span>1–12 tracks</span>
+            </div>
             <div class="grid-range-control">
               <label for="grid-columns-number">Number of columns</label>
-              <div class="grid-range-control__values"><input id="grid-columns-number" type="number" min="1" max="12" step="1" value="3" aria-label="Number of columns"><span>columns</span></div>
-              <input id="grid-columns-range" type="range" min="1" max="12" step="1" value="3" aria-label="Number of columns slider">
+              <div class="grid-range-control__values"><input id="grid-columns-number" type="number" min="1" max="12"
+                  step="1" value="3" aria-label="Number of columns"><span>columns</span></div>
+              <input id="grid-columns-range" type="range" min="1" max="12" step="1" value="3"
+                aria-label="Number of columns slider">
             </div>
             <div class="grid-range-control">
               <label for="grid-rows-number">Number of rows</label>
-              <div class="grid-range-control__values"><input id="grid-rows-number" type="number" min="1" max="12" step="1" value="2" aria-label="Number of rows"><span>rows</span></div>
-              <input id="grid-rows-range" type="range" min="1" max="12" step="1" value="2" aria-label="Number of rows slider">
+              <div class="grid-range-control__values"><input id="grid-rows-number" type="number" min="1" max="12"
+                  step="1" value="2" aria-label="Number of rows"><span>rows</span></div>
+              <input id="grid-rows-range" type="range" min="1" max="12" step="1" value="2"
+                aria-label="Number of rows slider">
             </div>
           </div>
 
           <div class="grid-setting-group">
-            <div class="grid-group-heading"><h4>Spacing</h4><span>Independent gaps</span></div>
+            <div class="grid-group-heading">
+              <h4>Spacing</h4><span>Independent gaps</span>
+            </div>
             <div class="grid-gap-grid">
               <div class="grid-range-control">
                 <label for="grid-column-gap">Column gap</label>
-                <div class="grid-range-control__values"><input id="grid-column-gap" type="number" min="0" max="100" step="1" value="16"><span>px</span></div>
-                <input id="grid-column-gap-range" type="range" min="0" max="100" step="1" value="16" aria-label="Column gap slider">
+                <div class="grid-range-control__values"><input id="grid-column-gap" type="number" min="0" max="100"
+                    step="1" value="16"><span>px</span></div>
+                <input id="grid-column-gap-range" type="range" min="0" max="100" step="1" value="16"
+                  aria-label="Column gap slider">
               </div>
               <div class="grid-range-control">
                 <label for="grid-row-gap">Row gap</label>
-                <div class="grid-range-control__values"><input id="grid-row-gap" type="number" min="0" max="100" step="1" value="16"><span>px</span></div>
-                <input id="grid-row-gap-range" type="range" min="0" max="100" step="1" value="16" aria-label="Row gap slider">
+                <div class="grid-range-control__values"><input id="grid-row-gap" type="number" min="0" max="100"
+                    step="1" value="16"><span>px</span></div>
+                <input id="grid-row-gap-range" type="range" min="0" max="100" step="1" value="16"
+                  aria-label="Row gap slider">
               </div>
             </div>
           </div>
 
           <div class="grid-setting-group">
-            <div class="grid-group-heading"><h4>Alignment</h4><span>Items and tracks</span></div>
+            <div class="grid-group-heading">
+              <h4>Alignment</h4><span>Items and tracks</span>
+            </div>
             <div class="grid-alignment-grid">
-              <div class="field-group"><label for="justify-items">Justify items</label><select id="justify-items"><option selected>stretch</option><option>start</option><option>center</option><option>end</option></select></div>
-              <div class="field-group"><label for="align-items">Align items</label><select id="align-items"><option selected>stretch</option><option>start</option><option>center</option><option>end</option></select></div>
-              <div class="field-group"><label for="justify-content">Justify content</label><select id="justify-content"><option>start</option><option>center</option><option>end</option><option>space-between</option><option>space-around</option><option>space-evenly</option><option>stretch</option></select></div>
-              <div class="field-group"><label for="align-content">Align content</label><select id="align-content"><option>start</option><option>center</option><option>end</option><option>space-between</option><option>space-around</option><option>space-evenly</option><option>stretch</option></select></div>
+              <div class="field-group"><label for="justify-items">Justify items</label><select id="justify-items">
+                  <option selected>stretch</option>
+                  <option>start</option>
+                  <option>center</option>
+                  <option>end</option>
+                </select></div>
+              <div class="field-group"><label for="align-items">Align items</label><select id="align-items">
+                  <option selected>stretch</option>
+                  <option>start</option>
+                  <option>center</option>
+                  <option>end</option>
+                </select></div>
+              <div class="field-group"><label for="justify-content">Justify content</label><select id="justify-content">
+                  <option>start</option>
+                  <option>center</option>
+                  <option>end</option>
+                  <option>space-between</option>
+                  <option>space-around</option>
+                  <option>space-evenly</option>
+                  <option>stretch</option>
+                </select></div>
+              <div class="field-group"><label for="align-content">Align content</label><select id="align-content">
+                  <option>start</option>
+                  <option>center</option>
+                  <option>end</option>
+                  <option>space-between</option>
+                  <option>space-around</option>
+                  <option>space-evenly</option>
+                  <option>stretch</option>
+                </select></div>
             </div>
           </div>
 
           <div class="grid-setting-group grid-item-controls">
-            <div class="grid-group-heading"><h4>Grid items <span class="grid-item-count" id="grid-item-count">6 items</span></h4></div>
+            <div class="grid-group-heading">
+              <h4>Grid items <span class="grid-item-count" id="grid-item-count">6 items</span></h4>
+            </div>
             <div class="grid-item-actions">
-              <button class="button button--secondary" id="add-grid-item" type="button"><span aria-hidden="true">+</span> Add item</button>
-              <button class="button button--secondary" id="remove-grid-item" type="button"><span aria-hidden="true">−</span> Remove item</button>
+              <button class="button button--secondary" id="add-grid-item" type="button"><span
+                  aria-hidden="true">+</span> Add item</button>
+              <button class="button button--secondary" id="remove-grid-item" type="button"><span
+                  aria-hidden="true">−</span> Remove item</button>
             </div>
           </div>
 
           <fieldset class="grid-item-editor" id="grid-item-editor" hidden>
             <legend id="grid-item-editor-title">Edit grid item</legend>
-            <p class="grid-item-editor__hint">Leave a Start empty for automatic placement. Starts outside the defined tracks create implicit tracks; explicit items can overlap by design.</p>
+            <p class="grid-item-editor__hint">Leave a Start empty for automatic placement. Starts outside the defined
+              tracks create implicit tracks; explicit items can overlap by design.</p>
             <div class="grid-item-editor__grid">
-              <div class="field-group"><label for="item-column-start">Grid column start <span>(auto if empty)</span></label><input id="item-column-start" type="number" min="1" max="12" step="1" placeholder="auto"></div>
-              <div class="field-group"><label for="item-column-span">Grid column span</label><input id="item-column-span" type="number" min="1" max="12" step="1" value="1"></div>
-              <div class="field-group"><label for="item-row-start">Grid row start <span>(auto if empty)</span></label><input id="item-row-start" type="number" min="1" max="12" step="1" placeholder="auto"></div>
-              <div class="field-group"><label for="item-row-span">Grid row span</label><input id="item-row-span" type="number" min="1" max="12" step="1" value="1"></div>
+              <div class="field-group"><label for="item-column-start">Grid column start <span>(auto if
+                    empty)</span></label><input id="item-column-start" type="number" min="1" max="12" step="1"
+                  placeholder="auto"></div>
+              <div class="field-group"><label for="item-column-span">Grid column span</label><input
+                  id="item-column-span" type="number" min="1" max="12" step="1" value="1"></div>
+              <div class="field-group"><label for="item-row-start">Grid row start <span>(auto if
+                    empty)</span></label><input id="item-row-start" type="number" min="1" max="12" step="1"
+                  placeholder="auto"></div>
+              <div class="field-group"><label for="item-row-span">Grid row span</label><input id="item-row-span"
+                  type="number" min="1" max="12" step="1" value="1"></div>
             </div>
             <p class="grid-item-editor__error" id="grid-item-editor-error" role="alert"></p>
           </fieldset>
@@ -110,31 +190,51 @@
 
         <section class="grid-preview-panel card" aria-labelledby="preview-title">
           <div class="grid-panel-heading">
-            <div><span class="eyebrow">LIVE PREVIEW</span><h3 id="preview-title">Your grid layout</h3></div>
+            <div><span class="eyebrow">LIVE PREVIEW</span>
+              <h3 id="preview-title">Your grid layout</h3>
+            </div>
             <span class="preview-dimensions" id="preview-dimensions">3 cols × 2 rows</span>
           </div>
           <p class="grid-preview-hint">Select any item to edit its grid placement.</p>
           <div class="grid-preview-scroll" tabindex="0" aria-label="Scrollable grid layout preview">
             <div class="grid-preview-canvas" id="grid-preview" aria-label="CSS Grid live preview"></div>
           </div>
-          <div class="grid-preview-footer"><span class="grid-preview-legend"><span></span> Grid item</span><span id="implicit-track-note">Extra items create implicit tracks automatically.</span></div>
+          <div class="grid-preview-footer"><span class="grid-preview-legend"><span></span> Grid item</span><span
+              id="implicit-track-note">Extra items create implicit tracks automatically.</span></div>
         </section>
       </div>
     </section>
 
     <section class="generated-grid-section container" aria-labelledby="generated-title">
       <div class="section-heading">
-        <div><span class="eyebrow">READY-TO-USE CODE</span><h2 id="generated-title">Generated CSS &amp; HTML</h2><p>Copy the layout and drop it straight into your project.</p></div>
+        <div><span class="eyebrow">READY-TO-USE CODE</span>
+          <h2 id="generated-title">Generated CSS &amp; HTML</h2>
+          <p>Copy the layout and drop it straight into your project.</p>
+        </div>
       </div>
       <div class="generated-grid">
         <section class="grid-code-card card" aria-labelledby="css-code-title">
-          <div class="grid-code-card__heading"><div><span class="eyebrow">CSS</span><h3 id="css-code-title">Grid styles</h3></div><button class="button button--copy grid-copy-button" id="copy-grid-css" type="button">Copy CSS</button></div>
-          <div class="grid-code-window"><pre><code id="grid-css-code" aria-live="polite" aria-atomic="true"></code></pre></div>
+          <div class="grid-code-card__heading">
+            <div><span class="eyebrow">CSS</span>
+              <h3 id="css-code-title">Grid styles</h3>
+            </div><button class="button button--copy grid-copy-button" id="copy-grid-css" type="button">Copy
+              CSS</button>
+          </div>
+          <div class="grid-code-window">
+            <pre><code id="grid-css-code" aria-live="polite" aria-atomic="true"></code></pre>
+          </div>
           <p class="grid-copy-status" id="grid-css-status" role="status" aria-live="polite"></p>
         </section>
         <section class="grid-code-card card" aria-labelledby="html-code-title">
-          <div class="grid-code-card__heading"><div><span class="eyebrow">HTML</span><h3 id="html-code-title">Grid markup</h3></div><button class="button button--copy grid-copy-button" id="copy-grid-html" type="button">Copy HTML</button></div>
-          <div class="grid-code-window"><pre><code id="grid-html-code" aria-live="polite" aria-atomic="true"></code></pre></div>
+          <div class="grid-code-card__heading">
+            <div><span class="eyebrow">HTML</span>
+              <h3 id="html-code-title">Grid markup</h3>
+            </div><button class="button button--copy grid-copy-button" id="copy-grid-html" type="button">Copy
+              HTML</button>
+          </div>
+          <div class="grid-code-window">
+            <pre><code id="grid-html-code" aria-live="polite" aria-atomic="true"></code></pre>
+          </div>
           <p class="grid-copy-status" id="grid-html-status" role="status" aria-live="polite"></p>
         </section>
       </div>
@@ -142,57 +242,152 @@
 
     <section class="grid-presets-section" aria-labelledby="presets-title">
       <div class="container">
-        <div class="section-heading section-heading--center"><span class="eyebrow">QUICK START</span><h2 id="presets-title">Grid layout presets</h2><p>Start with a familiar layout, then make it your own.</p></div>
+        <div class="section-heading section-heading--center"><span class="eyebrow">QUICK START</span>
+          <h2 id="presets-title">Grid layout presets</h2>
+          <p>Start with a familiar layout, then make it your own.</p>
+        </div>
         <div class="grid-presets">
-          <button class="grid-preset-card" type="button" data-preset="two-columns"><span class="preset-icon preset-icon--two"><i></i><i></i></span><span><strong>2 Columns</strong><small>Simple two-column layout</small></span><span class="preset-arrow" aria-hidden="true">↗</span></button>
-          <button class="grid-preset-card" type="button" data-preset="three-columns"><span class="preset-icon preset-icon--three"><i></i><i></i><i></i></span><span><strong>3 Columns</strong><small>Balanced content grid</small></span><span class="preset-arrow" aria-hidden="true">↗</span></button>
-          <button class="grid-preset-card" type="button" data-preset="four-columns"><span class="preset-icon preset-icon--four"><i></i><i></i><i></i><i></i></span><span><strong>4 Columns</strong><small>Compact card layout</small></span><span class="preset-arrow" aria-hidden="true">↗</span></button>
-          <button class="grid-preset-card" type="button" data-preset="sidebar"><span class="preset-icon preset-icon--sidebar"><i></i><i></i><i></i></span><span><strong>Sidebar layout</strong><small>Fixed sidebar + flexible main</small></span><span class="preset-arrow" aria-hidden="true">↗</span></button>
-          <button class="grid-preset-card" type="button" data-preset="dashboard"><span class="preset-icon preset-icon--dashboard"><i></i><i></i><i></i><i></i></span><span><strong>Dashboard</strong><small>Cards with varied spans</small></span><span class="preset-arrow" aria-hidden="true">↗</span></button>
-          <button class="grid-preset-card" type="button" data-preset="gallery"><span class="preset-icon preset-icon--gallery"><i></i><i></i><i></i><i></i><i></i><i></i></span><span><strong>Gallery</strong><small>Even image-card grid</small></span><span class="preset-arrow" aria-hidden="true">↗</span></button>
+          <button class="grid-preset-card" type="button" data-preset="two-columns"><span
+              class="preset-icon preset-icon--two"><i></i><i></i></span><span><strong>2 Columns</strong><small>Simple
+                two-column layout</small></span><span class="preset-arrow" aria-hidden="true">↗</span></button>
+          <button class="grid-preset-card" type="button" data-preset="three-columns"><span
+              class="preset-icon preset-icon--three"><i></i><i></i><i></i></span><span><strong>3
+                Columns</strong><small>Balanced content grid</small></span><span class="preset-arrow"
+              aria-hidden="true">↗</span></button>
+          <button class="grid-preset-card" type="button" data-preset="four-columns"><span
+              class="preset-icon preset-icon--four"><i></i><i></i><i></i><i></i></span><span><strong>4
+                Columns</strong><small>Compact card layout</small></span><span class="preset-arrow"
+              aria-hidden="true">↗</span></button>
+          <button class="grid-preset-card" type="button" data-preset="sidebar"><span
+              class="preset-icon preset-icon--sidebar"><i></i><i></i><i></i></span><span><strong>Sidebar
+                layout</strong><small>Fixed sidebar + flexible main</small></span><span class="preset-arrow"
+              aria-hidden="true">↗</span></button>
+          <button class="grid-preset-card" type="button" data-preset="dashboard"><span
+              class="preset-icon preset-icon--dashboard"><i></i><i></i><i></i><i></i></span><span><strong>Dashboard</strong><small>Cards
+                with varied spans</small></span><span class="preset-arrow" aria-hidden="true">↗</span></button>
+          <button class="grid-preset-card" type="button" data-preset="gallery"><span
+              class="preset-icon preset-icon--gallery"><i></i><i></i><i></i><i></i><i></i><i></i></span><span><strong>Gallery</strong><small>Even
+                image-card grid</small></span><span class="preset-arrow" aria-hidden="true">↗</span></button>
         </div>
       </div>
     </section>
 
     <section class="grid-guide-section container" aria-labelledby="grid-guide-title">
-      <div class="section-heading section-heading--center"><span class="eyebrow">THE BASICS</span><h2 id="grid-guide-title">CSS Grid, made simple</h2><p>A quick guide to the layout properties behind your generated code.</p></div>
+      <div class="section-heading section-heading--center"><span class="eyebrow">THE BASICS</span>
+        <h2 id="grid-guide-title">CSS Grid, made simple</h2>
+        <p>A quick guide to the layout properties behind your generated code.</p>
+      </div>
       <div class="grid-guide-grid">
-        <article class="grid-guide-card card"><span class="grid-guide-card__icon">01</span><h3>What is CSS Grid?</h3><p>CSS Grid is a two-dimensional layout system for arranging content in rows and columns at the same time.</p><pre><code>.layout {
+        <article class="grid-guide-card card"><span class="grid-guide-card__icon">01</span>
+          <h3>What is CSS Grid?</h3>
+          <p>CSS Grid is a two-dimensional layout system for arranging content in rows and columns at the same time.</p>
+          <pre><code>.layout {
   display: grid;
-}</code></pre></article>
-        <article class="grid-guide-card card"><span class="grid-guide-card__icon">02</span><h3>Grid Columns &amp; Rows</h3><p>Define explicit tracks with grid-template-columns and grid-template-rows. The repeat() function keeps equal tracks concise.</p><pre><code>.layout {
+}</code></pre>
+        </article>
+        <article class="grid-guide-card card"><span class="grid-guide-card__icon">02</span>
+          <h3>Grid Columns &amp; Rows</h3>
+          <p>Define explicit tracks with grid-template-columns and grid-template-rows. The repeat() function keeps equal
+            tracks concise.</p>
+          <pre><code>.layout {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
-}</code></pre></article>
-        <article class="grid-guide-card card"><span class="grid-guide-card__icon">03</span><h3>Gap</h3><p>Use gap for both directions, or set column-gap and row-gap independently to tune the space between tracks.</p><pre><code>.layout {
+}</code></pre>
+        </article>
+        <article class="grid-guide-card card"><span class="grid-guide-card__icon">03</span>
+          <h3>Gap</h3>
+          <p>Use gap for both directions, or set column-gap and row-gap independently to tune the space between tracks.
+          </p>
+          <pre><code>.layout {
   column-gap: 16px;
   row-gap: 16px;
-}</code></pre></article>
-        <article class="grid-guide-card card"><span class="grid-guide-card__icon">04</span><h3>Alignment</h3><p>Items align inside their cells; content alignment positions the tracks within the grid container.</p><pre><code>.layout {
+}</code></pre>
+        </article>
+        <article class="grid-guide-card card"><span class="grid-guide-card__icon">04</span>
+          <h3>Alignment</h3>
+          <p>Items align inside their cells; content alignment positions the tracks within the grid container.</p>
+          <pre><code>.layout {
   justify-items: center;
   align-content: start;
-}</code></pre></article>
-        <article class="grid-guide-card card grid-guide-card--wide"><span class="grid-guide-card__icon">05</span><h3>CSS Grid vs Flexbox</h3><p>Grid is ideal for two-dimensional page and card layouts. Flexbox arranges items along one primary axis, making it a natural fit for toolbars, menus, and compact component groups.</p><pre><code>.page-layout {
+}</code></pre>
+        </article>
+        <article class="grid-guide-card card grid-guide-card--wide"><span class="grid-guide-card__icon">05</span>
+          <h3>CSS Grid vs Flexbox</h3>
+          <p>Grid is ideal for two-dimensional page and card layouts. Flexbox arranges items along one primary axis,
+            making it a natural fit for toolbars, menus, and compact component groups.</p>
+          <pre><code>.page-layout {
   display: grid;
   grid-template-columns: 16rem 1fr;
-}</code></pre></article>
+}</code></pre>
+        </article>
       </div>
     </section>
 
     <section class="faq-section grid-faq container" aria-labelledby="faq-title">
-      <div class="section-heading section-heading--center"><span class="eyebrow">FAQ</span><h2 id="faq-title">Frequently asked questions</h2><p>Helpful answers to common CSS Grid questions.</p></div>
+      <div class="section-heading section-heading--center"><span class="eyebrow">FAQ</span>
+        <h2 id="faq-title">Frequently asked questions</h2>
+        <p>Helpful answers to common CSS Grid questions.</p>
+      </div>
       <div class="faq-list">
-        <article class="faq-item"><h3><button class="faq-question" id="grid-faq-question-1" type="button" aria-expanded="false" aria-controls="grid-faq-answer-1"><span>What is CSS Grid used for?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="grid-faq-answer-1" role="region" aria-labelledby="grid-faq-question-1" hidden><p>CSS Grid is used to create two-dimensional layouts that control columns and rows together, from complete page structures to responsive card galleries.</p></div></article>
-        <article class="faq-item"><h3><button class="faq-question" id="grid-faq-question-2" type="button" aria-expanded="false" aria-controls="grid-faq-answer-2"><span>What is the difference between CSS Grid and Flexbox?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="grid-faq-answer-2" role="region" aria-labelledby="grid-faq-question-2" hidden><p>Grid controls rows and columns together, while Flexbox lays items out along one primary axis. Choose the system that best matches the shape of your layout.</p></div></article>
-        <article class="faq-item"><h3><button class="faq-question" id="grid-faq-question-3" type="button" aria-expanded="false" aria-controls="grid-faq-answer-3"><span>How do I create equal-width columns?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="grid-faq-answer-3" role="region" aria-labelledby="grid-faq-question-3" hidden><p>Use repeat() with the fractional unit, for example grid-template-columns: repeat(3, 1fr), to divide available space equally across three columns.</p></div></article>
-        <article class="faq-item"><h3><button class="faq-question" id="grid-faq-question-4" type="button" aria-expanded="false" aria-controls="grid-faq-answer-4"><span>How does gap work in CSS Grid?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="grid-faq-answer-4" role="region" aria-labelledby="grid-faq-question-4" hidden><p>Gap sets the space between grid tracks. Use row-gap and column-gap independently, or the gap shorthand to set both at once.</p></div></article>
-        <article class="faq-item"><h3><button class="faq-question" id="grid-faq-question-5" type="button" aria-expanded="false" aria-controls="grid-faq-answer-5"><span>Can CSS Grid be responsive?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="grid-faq-answer-5" role="region" aria-labelledby="grid-faq-question-5" hidden><p>Yes. Combine flexible tracks such as fr, minmax(), auto-fit, and auto-fill with media queries when a layout needs different structure at specific widths.</p></div></article>
-        <article class="faq-item"><h3><button class="faq-question" id="grid-faq-question-6" type="button" aria-expanded="false" aria-controls="grid-faq-answer-6"><span>What is the difference between explicit and implicit grid tracks?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="grid-faq-answer-6" role="region" aria-labelledby="grid-faq-question-6" hidden><p>Explicit tracks are defined by grid-template-rows or grid-template-columns. The browser creates implicit tracks automatically when content or placement needs tracks beyond that definition.</p></div></article>
+        <article class="faq-item">
+          <h3><button class="faq-question" id="grid-faq-question-1" type="button" aria-expanded="false"
+              aria-controls="grid-faq-answer-1"><span>What is CSS Grid used for?</span><span class="faq-icon"
+                aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="grid-faq-answer-1" role="region" aria-labelledby="grid-faq-question-1" hidden>
+            <p>CSS Grid is used to create two-dimensional layouts that control columns and rows together, from complete
+              page structures to responsive card galleries.</p>
+          </div>
+        </article>
+        <article class="faq-item">
+          <h3><button class="faq-question" id="grid-faq-question-2" type="button" aria-expanded="false"
+              aria-controls="grid-faq-answer-2"><span>What is the difference between CSS Grid and Flexbox?</span><span
+                class="faq-icon" aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="grid-faq-answer-2" role="region" aria-labelledby="grid-faq-question-2" hidden>
+            <p>Grid controls rows and columns together, while Flexbox lays items out along one primary axis. Choose the
+              system that best matches the shape of your layout.</p>
+          </div>
+        </article>
+        <article class="faq-item">
+          <h3><button class="faq-question" id="grid-faq-question-3" type="button" aria-expanded="false"
+              aria-controls="grid-faq-answer-3"><span>How do I create equal-width columns?</span><span class="faq-icon"
+                aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="grid-faq-answer-3" role="region" aria-labelledby="grid-faq-question-3" hidden>
+            <p>Use repeat() with the fractional unit, for example grid-template-columns: repeat(3, 1fr), to divide
+              available space equally across three columns.</p>
+          </div>
+        </article>
+        <article class="faq-item">
+          <h3><button class="faq-question" id="grid-faq-question-4" type="button" aria-expanded="false"
+              aria-controls="grid-faq-answer-4"><span>How does gap work in CSS Grid?</span><span class="faq-icon"
+                aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="grid-faq-answer-4" role="region" aria-labelledby="grid-faq-question-4" hidden>
+            <p>Gap sets the space between grid tracks. Use row-gap and column-gap independently, or the gap shorthand to
+              set both at once.</p>
+          </div>
+        </article>
+        <article class="faq-item">
+          <h3><button class="faq-question" id="grid-faq-question-5" type="button" aria-expanded="false"
+              aria-controls="grid-faq-answer-5"><span>Can CSS Grid be responsive?</span><span class="faq-icon"
+                aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="grid-faq-answer-5" role="region" aria-labelledby="grid-faq-question-5" hidden>
+            <p>Yes. Combine flexible tracks such as fr, minmax(), auto-fit, and auto-fill with media queries when a
+              layout needs different structure at specific widths.</p>
+          </div>
+        </article>
+        <article class="faq-item">
+          <h3><button class="faq-question" id="grid-faq-question-6" type="button" aria-expanded="false"
+              aria-controls="grid-faq-answer-6"><span>What is the difference between explicit and implicit grid
+                tracks?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="grid-faq-answer-6" role="region" aria-labelledby="grid-faq-question-6" hidden>
+            <p>Explicit tracks are defined by grid-template-rows or grid-template-columns. The browser creates implicit
+              tracks automatically when content or placement needs tracks beyond that definition.</p>
+          </div>
+        </article>
       </div>
     </section>
   </main>
 
   <div id="footer"></div>
 </body>
-</html>
 
+</html>

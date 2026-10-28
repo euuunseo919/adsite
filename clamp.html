@@ -1,20 +1,44 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Generate responsive CSS clamp() values with a live preview, viewport scale chart, and instant CSS copy.">
+  <meta name="description"
+    content="Generate responsive CSS clamp() values with a live preview, viewport scale chart, and instant CSS copy.">
   <meta name="theme-color" content="#f8fafc">
   <title>CSS Clamp Generator | Unitwise</title>
+  <link rel="canonical" href="https://adsite-ashen.vercel.app/clamp.html">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://adsite-ashen.vercel.app/clamp.html">
+  <meta property="og:title" content="CSS Clamp Generator | Unitwise">
+  <meta property="og:description"
+    content="Generate responsive CSS clamp() values with a live preview, viewport scale chart, and instant CSS copy.">
+  <meta property="og:site_name" content="Unitwise">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://adsite-ashen.vercel.app/clamp.html">
+  <meta name="twitter:title" content="CSS Clamp Generator | Unitwise">
+  <meta name="twitter:description"
+    content="Generate responsive CSS clamp() values with a live preview, viewport scale chart, and instant CSS copy.">
+
   <link rel="stylesheet" href="assets/css/normalize.css">
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/commons.css?v=2">
   <link rel="stylesheet" href="assets/css/clamp.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="assets/js/common.js?v=2"></script>
   <script src="assets/js/clamp.js"></script>
+
+  <meta name="google-site-verification" content="XZpFfX3nSkuJwJqcZBJIZyjZYTVvXYMlZHfaFTL9WIM" />
+  <meta name="naver-site-verification" content="78222065720b46b00c994ca2ac2a4b5945cfe280" />
 </head>
+
 <body data-page="clamp">
   <a class="skip-link" href="#main-content">Skip to content</a>
   <div id="header"></div>
@@ -24,7 +48,8 @@
       <span class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>RESPONSIVE CSS TOOL</span>
       <h1 id="hero-title">CSS Clamp Generator</h1>
       <p class="hero__lead">Generate responsive CSS clamp() values instantly.</p>
-      <p class="hero__description">Create fluid typography and responsive sizes that scale smoothly across different screen widths.</p>
+      <p class="hero__description">Create fluid typography and responsive sizes that scale smoothly across different
+        screen widths.</p>
     </section>
 
     <section class="clamp-generator container" aria-labelledby="generator-title">
@@ -45,14 +70,16 @@
               <div class="field-group">
                 <label for="minimum-size">Minimum size</label>
                 <div class="input-with-suffix">
-                  <input id="minimum-size" name="minimum-size" type="number" min="0" step="any" value="16" inputmode="decimal">
+                  <input id="minimum-size" name="minimum-size" type="number" min="0" step="any" value="16"
+                    inputmode="decimal">
                   <span>px</span>
                 </div>
               </div>
               <div class="field-group">
                 <label for="maximum-size">Maximum size</label>
                 <div class="input-with-suffix">
-                  <input id="maximum-size" name="maximum-size" type="number" min="0" step="any" value="32" inputmode="decimal">
+                  <input id="maximum-size" name="maximum-size" type="number" min="0" step="any" value="32"
+                    inputmode="decimal">
                   <span>px</span>
                 </div>
               </div>
@@ -65,14 +92,16 @@
               <div class="field-group">
                 <label for="minimum-viewport">Minimum viewport width</label>
                 <div class="input-with-suffix">
-                  <input id="minimum-viewport" name="minimum-viewport" type="number" min="1" step="any" value="320" inputmode="decimal">
+                  <input id="minimum-viewport" name="minimum-viewport" type="number" min="1" step="any" value="320"
+                    inputmode="decimal">
                   <span>px</span>
                 </div>
               </div>
               <div class="field-group">
                 <label for="maximum-viewport">Maximum viewport width</label>
                 <div class="input-with-suffix">
-                  <input id="maximum-viewport" name="maximum-viewport" type="number" min="1" step="any" value="1440" inputmode="decimal">
+                  <input id="maximum-viewport" name="maximum-viewport" type="number" min="1" step="any" value="1440"
+                    inputmode="decimal">
                   <span>px</span>
                 </div>
               </div>
@@ -80,10 +109,12 @@
           </fieldset>
 
           <div class="clamp-fieldset clamp-fieldset--options">
-            <label class="clamp-fieldset__title" for="root-font-size">Root font size <span>Converts pixel sizes to REM</span></label>
+            <label class="clamp-fieldset__title" for="root-font-size">Root font size <span>Converts pixel sizes to
+                REM</span></label>
             <div class="field-group clamp-root-field">
               <div class="input-with-suffix">
-                <input id="root-font-size" name="root-font-size" type="number" min="0.01" step="any" value="16" inputmode="decimal">
+                <input id="root-font-size" name="root-font-size" type="number" min="0.01" step="any" value="16"
+                  inputmode="decimal">
                 <span>px</span>
               </div>
             </div>
@@ -103,7 +134,8 @@
         </div>
 
         <p class="clamp-validation" id="clamp-validation" role="alert" aria-live="polite"></p>
-        <p class="clamp-settings__hint">Minimum and maximum values are in px; the generated CSS uses rem values relative to your root font size.</p>
+        <p class="clamp-settings__hint">Minimum and maximum values are in px; the generated CSS uses rem values relative
+          to your root font size.</p>
       </div>
 
       <div class="clamp-results-grid">
@@ -115,7 +147,8 @@
             </div>
             <span class="code-language">CSS</span>
           </div>
-          <p class="generated-card__hint">The selected property uses the size limits above. For spacing and layout properties, those values represent the property's actual CSS dimensions.</p>
+          <p class="generated-card__hint">The selected property uses the size limits above. For spacing and layout
+            properties, those values represent the property's actual CSS dimensions.</p>
           <div class="code-window">
             <pre><code id="generated-css" aria-live="polite" aria-atomic="true"><span class="code-token code-token--property">font-size</span>: <span class="code-token code-token--function">clamp</span>(
   <span class="code-token code-token--number">1rem</span>,
@@ -125,11 +158,16 @@
           </div>
           <div class="generated-card__actions">
             <button class="button button--copy" id="copy-clamp-css" type="button">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="8" y="8" width="12" height="12" rx="2" />
+                <path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3" />
+              </svg>
               <span>Copy CSS</span>
             </button>
             <button class="button--reset text-button" id="reset-clamp" type="button">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 2.64-6.36L3 8m0-5v5h5"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M3 12a9 9 0 1 0 2.64-6.36L3 8m0-5v5h5" />
+              </svg>
               Reset
             </button>
             <span class="clamp-copy-status" id="clamp-copy-status" role="status" aria-live="polite"></span>
@@ -146,7 +184,8 @@
           </div>
           <div class="preview-stage" id="preview-stage">
             <div class="preview-viewport" id="preview-viewport">
-              <div class="preview-demo-target clamp-preview-target--font-size" id="preview-target" aria-label="Responsive property preview">
+              <div class="preview-demo-target clamp-preview-target--font-size" id="preview-target"
+                aria-label="Responsive property preview">
                 <span>The quick brown fox</span><span>jumps over the lazy dog.</span>
               </div>
             </div>
@@ -156,9 +195,12 @@
               <label for="viewport-slider">Simulated viewport width</label>
               <output id="viewport-width" for="viewport-slider">320px</output>
             </div>
-            <input id="viewport-slider" class="viewport-slider" type="range" min="320" max="1440" step="1" value="320" aria-label="Simulated viewport width">
-            <div class="preview-controls__range"><span id="slider-min-label">320px</span><span id="slider-max-label">1440px</span></div>
-            <p class="preview-controls__note">Preview uses the selected simulation width, independent of your browser window.</p>
+            <input id="viewport-slider" class="viewport-slider" type="range" min="320" max="1440" step="1" value="320"
+              aria-label="Simulated viewport width">
+            <div class="preview-controls__range"><span id="slider-min-label">320px</span><span
+                id="slider-max-label">1440px</span></div>
+            <p class="preview-controls__note">Preview uses the selected simulation width, independent of your browser
+              window.</p>
           </div>
         </section>
       </div>
@@ -175,9 +217,11 @@
       </div>
       <div class="scale-chart-card card">
         <div class="chart-svg-wrap" id="chart-container">
-          <svg class="scale-chart" id="scale-chart" viewBox="0 0 800 300" role="img" aria-labelledby="chart-svg-title chart-svg-description">
+          <svg class="scale-chart" id="scale-chart" viewBox="0 0 800 300" role="img"
+            aria-labelledby="chart-svg-title chart-svg-description">
             <title id="chart-svg-title">Responsive CSS clamp value scale</title>
-            <desc id="chart-svg-description">Computed size increases smoothly from 16 pixels to 32 pixels as the viewport grows.</desc>
+            <desc id="chart-svg-description">Computed size increases smoothly from 16 pixels to 32 pixels as the
+              viewport grows.</desc>
             <g class="chart-grid"></g>
             <g class="chart-regions"></g>
             <g class="chart-axis"></g>
@@ -186,7 +230,8 @@
             <circle class="chart-marker" cx="66" cy="222" r="5"></circle>
           </svg>
         </div>
-        <div class="chart-region-labels"><span>Minimum size</span><span>Fluid scaling</span><span>Maximum size</span></div>
+        <div class="chart-region-labels"><span>Minimum size</span><span>Fluid scaling</span><span>Maximum size</span>
+        </div>
       </div>
     </section>
 
@@ -201,21 +246,26 @@
           <article class="clamp-guide-card card">
             <span class="guide-step">01</span>
             <h3>What is CSS clamp()?</h3>
-            <p><code>clamp()</code> sets a preferred value between a minimum and maximum. The browser keeps the result within those limits.</p>
+            <p><code>clamp()</code> sets a preferred value between a minimum and maximum. The browser keeps the result
+              within those limits.</p>
           </article>
           <article class="clamp-guide-card card">
             <span class="guide-step">02</span>
             <h3>How does CSS clamp() work?</h3>
-            <p>The middle value scales with the viewport. The first value is the lower bound, and the last value is the upper bound.</p>
+            <p>The middle value scales with the viewport. The first value is the lower bound, and the last value is the
+              upper bound.</p>
           </article>
           <article class="clamp-guide-card card">
             <span class="guide-step">03</span>
             <h3>When should you use CSS clamp()?</h3>
-            <p>Use it for fluid typography, spacing, and layout sizes that should grow smoothly without abrupt breakpoint changes.</p>
+            <p>Use it for fluid typography, spacing, and layout sizes that should grow smoothly without abrupt
+              breakpoint changes.</p>
           </article>
         </div>
         <div class="clamp-guide-example">
-          <div><span class="eyebrow">A QUICK EXAMPLE</span><p>Let a heading scale naturally across screen sizes.</p></div>
+          <div><span class="eyebrow">A QUICK EXAMPLE</span>
+            <p>Let a heading scale naturally across screen sizes.</p>
+          </div>
           <pre><code><span class="code-token code-token--selector">h1</span> {
   <span class="code-token code-token--property">font-size</span>: <span class="code-token code-token--function">clamp</span>(<span class="code-token code-token--number">2rem</span>, <span class="code-token code-token--number">4vw</span>, <span class="code-token code-token--number">4rem</span>);
 }</code></pre>
@@ -231,24 +281,49 @@
       </div>
       <div class="faq-list">
         <article class="faq-item">
-          <h3><button class="faq-question" id="clamp-faq-question-1" type="button" aria-expanded="false" aria-controls="clamp-faq-answer-1"><span>What does clamp() do in CSS?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
-          <div class="faq-answer" id="clamp-faq-answer-1" role="region" aria-labelledby="clamp-faq-question-1" hidden><p>CSS clamp() returns a value within a defined minimum and maximum. Its middle, preferred value can respond to the viewport or another calculation.</p></div>
+          <h3><button class="faq-question" id="clamp-faq-question-1" type="button" aria-expanded="false"
+              aria-controls="clamp-faq-answer-1"><span>What does clamp() do in CSS?</span><span class="faq-icon"
+                aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="clamp-faq-answer-1" role="region" aria-labelledby="clamp-faq-question-1" hidden>
+            <p>CSS clamp() returns a value within a defined minimum and maximum. Its middle, preferred value can respond
+              to the viewport or another calculation.</p>
+          </div>
         </article>
         <article class="faq-item">
-          <h3><button class="faq-question" id="clamp-faq-question-2" type="button" aria-expanded="false" aria-controls="clamp-faq-answer-2"><span>Is CSS clamp() responsive?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
-          <div class="faq-answer" id="clamp-faq-answer-2" role="region" aria-labelledby="clamp-faq-question-2" hidden><p>Yes. A fluid preferred value such as a calculation using vw changes with viewport width, while the minimum and maximum prevent it from becoming too small or too large.</p></div>
+          <h3><button class="faq-question" id="clamp-faq-question-2" type="button" aria-expanded="false"
+              aria-controls="clamp-faq-answer-2"><span>Is CSS clamp() responsive?</span><span class="faq-icon"
+                aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="clamp-faq-answer-2" role="region" aria-labelledby="clamp-faq-question-2" hidden>
+            <p>Yes. A fluid preferred value such as a calculation using vw changes with viewport width, while the
+              minimum and maximum prevent it from becoming too small or too large.</p>
+          </div>
         </article>
         <article class="faq-item">
-          <h3><button class="faq-question" id="clamp-faq-question-3" type="button" aria-expanded="false" aria-controls="clamp-faq-answer-3"><span>What is the difference between clamp() and media queries?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
-          <div class="faq-answer" id="clamp-faq-answer-3" role="region" aria-labelledby="clamp-faq-question-3" hidden><p>Clamp interpolates smoothly between bounds in one declaration. Media queries switch styles at chosen breakpoints, which is useful when a layout needs a distinct structural change.</p></div>
+          <h3><button class="faq-question" id="clamp-faq-question-3" type="button" aria-expanded="false"
+              aria-controls="clamp-faq-answer-3"><span>What is the difference between clamp() and media
+                queries?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="clamp-faq-answer-3" role="region" aria-labelledby="clamp-faq-question-3" hidden>
+            <p>Clamp interpolates smoothly between bounds in one declaration. Media queries switch styles at chosen
+              breakpoints, which is useful when a layout needs a distinct structural change.</p>
+          </div>
         </article>
         <article class="faq-item">
-          <h3><button class="faq-question" id="clamp-faq-question-4" type="button" aria-expanded="false" aria-controls="clamp-faq-answer-4"><span>Can I use clamp() for padding and margin?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
-          <div class="faq-answer" id="clamp-faq-answer-4" role="region" aria-labelledby="clamp-faq-question-4" hidden><p>Yes. Clamp can be used with many length-valued properties, including padding, margin, gap, width, height, and border-radius, provided the resulting values are valid for that property.</p></div>
+          <h3><button class="faq-question" id="clamp-faq-question-4" type="button" aria-expanded="false"
+              aria-controls="clamp-faq-answer-4"><span>Can I use clamp() for padding and margin?</span><span
+                class="faq-icon" aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="clamp-faq-answer-4" role="region" aria-labelledby="clamp-faq-question-4" hidden>
+            <p>Yes. Clamp can be used with many length-valued properties, including padding, margin, gap, width, height,
+              and border-radius, provided the resulting values are valid for that property.</p>
+          </div>
         </article>
         <article class="faq-item">
-          <h3><button class="faq-question" id="clamp-faq-question-5" type="button" aria-expanded="false" aria-controls="clamp-faq-answer-5"><span>How do I calculate CSS clamp() values?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
-          <div class="faq-answer" id="clamp-faq-answer-5" role="region" aria-labelledby="clamp-faq-question-5" hidden><p>Calculate the slope between your minimum and maximum sizes across the viewport range, then calculate the intercept. This generator does both and expresses the limits and intercept in rem.</p></div>
+          <h3><button class="faq-question" id="clamp-faq-question-5" type="button" aria-expanded="false"
+              aria-controls="clamp-faq-answer-5"><span>How do I calculate CSS clamp() values?</span><span
+                class="faq-icon" aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="clamp-faq-answer-5" role="region" aria-labelledby="clamp-faq-question-5" hidden>
+            <p>Calculate the slope between your minimum and maximum sizes across the viewport range, then calculate the
+              intercept. This generator does both and expresses the limits and intercept in rem.</p>
+          </div>
         </article>
       </div>
     </section>
@@ -256,5 +331,5 @@
 
   <div id="footer"></div>
 </body>
-</html>
 
+</html>

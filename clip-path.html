@@ -1,20 +1,44 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Create custom CSS clip-path shapes with a visual polygon editor, live preview, presets, and copyable CSS.">
+  <meta name="description"
+    content="Create custom CSS clip-path shapes with a visual polygon editor, live preview, presets, and copyable CSS.">
   <meta name="theme-color" content="#f8fafc">
   <title>CSS Clip-path Generator | Unitwise</title>
+  <link rel="canonical" href="https://adsite-ashen.vercel.app/clip-path.html">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://adsite-ashen.vercel.app/clip-path.html">
+  <meta property="og:title" content="CSS Clip-path Generator | Unitwise">
+  <meta property="og:description"
+    content="Create custom CSS clip-path shapes with a visual polygon editor, live preview, presets, and copyable CSS.">
+  <meta property="og:site_name" content="Unitwise">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://adsite-ashen.vercel.app/clip-path.html">
+  <meta name="twitter:title" content="CSS Clip-path Generator | Unitwise">
+  <meta name="twitter:description"
+    content="Create custom CSS clip-path shapes with a visual polygon editor, live preview, presets, and copyable CSS.">
+
   <link rel="stylesheet" href="assets/css/normalize.css">
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/commons.css?v=2">
   <link rel="stylesheet" href="assets/css/clip-path.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="assets/js/common.js?v=2"></script>
   <script src="assets/js/clip-path.js"></script>
+
+  <meta name="google-site-verification" content="XZpFfX3nSkuJwJqcZBJIZyjZYTVvXYMlZHfaFTL9WIM" />
+  <meta name="naver-site-verification" content="78222065720b46b00c994ca2ac2a4b5945cfe280" />
 </head>
+
 <body data-page="clip-path">
   <a class="skip-link" href="#main-content">Skip to content</a>
   <div id="header"></div>
@@ -23,34 +47,87 @@
       <span class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>VISUAL CSS EDITOR</span>
       <h1 id="hero-title">CSS Clip-path Generator</h1>
       <p class="hero__lead">Create custom CSS shapes visually.</p>
-      <p class="hero__description">Build and customize circles, ellipses, polygons, and inset shapes with an interactive editor. Generate clean CSS clip-path code instantly.</p>
+      <p class="hero__description">Build and customize circles, ellipses, polygons, and inset shapes with an interactive
+        editor. Generate clean CSS clip-path code instantly.</p>
     </section>
 
     <section class="clip-workspace container" aria-label="Clip-path shape settings and preview">
       <section class="clip-settings card" aria-labelledby="clip-settings-title">
-        <div class="clip-panel-heading"><div><span class="eyebrow">SHAPE SETTINGS</span><h2 id="clip-settings-title">Customize shape</h2></div><span class="clip-live-badge"><i aria-hidden="true"></i> Live</span></div>
-        <div class="field-group clip-shape-type"><label for="clip-shape-type">Shape type</label><select id="clip-shape-type"><option value="polygon" selected>Polygon</option><option value="circle">Circle</option><option value="ellipse">Ellipse</option><option value="inset">Inset</option></select></div>
+        <div class="clip-panel-heading">
+          <div><span class="eyebrow">SHAPE SETTINGS</span>
+            <h2 id="clip-settings-title">Customize shape</h2>
+          </div><span class="clip-live-badge"><i aria-hidden="true"></i> Live</span>
+        </div>
+        <div class="field-group clip-shape-type"><label for="clip-shape-type">Shape type</label><select
+            id="clip-shape-type">
+            <option value="polygon" selected>Polygon</option>
+            <option value="circle">Circle</option>
+            <option value="ellipse">Ellipse</option>
+            <option value="inset">Inset</option>
+          </select></div>
 
-        <fieldset class="clip-shape-fields" id="circle-fields" hidden><legend>Circle settings</legend>
-          <div class="clip-control"><label for="circle-radius">Radius <output id="circle-radius-value">50%</output></label><input class="clip-range" id="circle-radius" type="range" min="0" max="100" value="50"></div>
-          <div class="clip-xy-grid"><div class="field-group"><label for="circle-x">Center X (%)</label><input id="circle-x" type="number" min="0" max="100" value="50"></div><div class="field-group"><label for="circle-y">Center Y (%)</label><input id="circle-y" type="number" min="0" max="100" value="50"></div></div>
+        <fieldset class="clip-shape-fields" id="circle-fields" hidden>
+          <legend>Circle settings</legend>
+          <div class="clip-control"><label for="circle-radius">Radius <output
+                id="circle-radius-value">50%</output></label><input class="clip-range" id="circle-radius" type="range"
+              min="0" max="100" value="50"></div>
+          <div class="clip-xy-grid">
+            <div class="field-group"><label for="circle-x">Center X (%)</label><input id="circle-x" type="number"
+                min="0" max="100" value="50"></div>
+            <div class="field-group"><label for="circle-y">Center Y (%)</label><input id="circle-y" type="number"
+                min="0" max="100" value="50"></div>
+          </div>
         </fieldset>
-        <fieldset class="clip-shape-fields" id="ellipse-fields" hidden><legend>Ellipse settings</legend>
-          <div class="clip-control"><label for="ellipse-radius-x">Radius X <output id="ellipse-radius-x-value">50%</output></label><input class="clip-range" id="ellipse-radius-x" type="range" min="0" max="100" value="50"></div>
-          <div class="clip-control"><label for="ellipse-radius-y">Radius Y <output id="ellipse-radius-y-value">40%</output></label><input class="clip-range" id="ellipse-radius-y" type="range" min="0" max="100" value="40"></div>
-          <div class="clip-xy-grid"><div class="field-group"><label for="ellipse-x">Center X (%)</label><input id="ellipse-x" type="number" min="0" max="100" value="50"></div><div class="field-group"><label for="ellipse-y">Center Y (%)</label><input id="ellipse-y" type="number" min="0" max="100" value="50"></div></div>
+        <fieldset class="clip-shape-fields" id="ellipse-fields" hidden>
+          <legend>Ellipse settings</legend>
+          <div class="clip-control"><label for="ellipse-radius-x">Radius X <output
+                id="ellipse-radius-x-value">50%</output></label><input class="clip-range" id="ellipse-radius-x"
+              type="range" min="0" max="100" value="50"></div>
+          <div class="clip-control"><label for="ellipse-radius-y">Radius Y <output
+                id="ellipse-radius-y-value">40%</output></label><input class="clip-range" id="ellipse-radius-y"
+              type="range" min="0" max="100" value="40"></div>
+          <div class="clip-xy-grid">
+            <div class="field-group"><label for="ellipse-x">Center X (%)</label><input id="ellipse-x" type="number"
+                min="0" max="100" value="50"></div>
+            <div class="field-group"><label for="ellipse-y">Center Y (%)</label><input id="ellipse-y" type="number"
+                min="0" max="100" value="50"></div>
+          </div>
         </fieldset>
-        <fieldset class="clip-shape-fields" id="inset-fields" hidden><legend>Inset settings</legend>
-          <div class="clip-inset-grid"><div class="field-group"><label for="inset-top">Top (%)</label><input id="inset-top" type="number" min="0" max="100" value="10"></div><div class="field-group"><label for="inset-right">Right (%)</label><input id="inset-right" type="number" min="0" max="100" value="10"></div><div class="field-group"><label for="inset-bottom">Bottom (%)</label><input id="inset-bottom" type="number" min="0" max="100" value="10"></div><div class="field-group"><label for="inset-left">Left (%)</label><input id="inset-left" type="number" min="0" max="100" value="10"></div></div>
-          <div class="clip-control clip-inset-radius"><label for="inset-radius">Border radius <output id="inset-radius-value">0px</output></label><input class="clip-range" id="inset-radius" type="range" min="0" max="100" value="0"></div>
-          <p class="clip-empty-note" id="inset-empty-note" role="status" hidden>These inset values leave no visible shape.</p>
+        <fieldset class="clip-shape-fields" id="inset-fields" hidden>
+          <legend>Inset settings</legend>
+          <div class="clip-inset-grid">
+            <div class="field-group"><label for="inset-top">Top (%)</label><input id="inset-top" type="number" min="0"
+                max="100" value="10"></div>
+            <div class="field-group"><label for="inset-right">Right (%)</label><input id="inset-right" type="number"
+                min="0" max="100" value="10"></div>
+            <div class="field-group"><label for="inset-bottom">Bottom (%)</label><input id="inset-bottom" type="number"
+                min="0" max="100" value="10"></div>
+            <div class="field-group"><label for="inset-left">Left (%)</label><input id="inset-left" type="number"
+                min="0" max="100" value="10"></div>
+          </div>
+          <div class="clip-control clip-inset-radius"><label for="inset-radius">Border radius <output
+                id="inset-radius-value">0px</output></label><input class="clip-range" id="inset-radius" type="range"
+              min="0" max="100" value="0"></div>
+          <p class="clip-empty-note" id="inset-empty-note" role="status" hidden>These inset values leave no visible
+            shape.</p>
         </fieldset>
 
         <section class="clip-polygon-controls" id="polygon-controls" aria-labelledby="polygon-controls-title">
-          <div class="clip-subheading"><div><h3 id="polygon-controls-title">Polygon points <span id="clip-point-count">4</span></h3><p>Select or drag a point to edit its position.</p></div><button class="button button--secondary" id="add-clip-point" type="button">+ Add point</button></div>
+          <div class="clip-subheading">
+            <div>
+              <h3 id="polygon-controls-title">Polygon points <span id="clip-point-count">4</span></h3>
+              <p>Select or drag a point to edit its position.</p>
+            </div><button class="button button--secondary" id="add-clip-point" type="button">+ Add point</button>
+          </div>
           <div class="clip-selected-point" id="clip-selected-point">
-            <div class="clip-point-number"><span>Selected point</span><strong id="clip-point-number">Point 1</strong></div>
-            <div class="clip-xy-grid"><div class="field-group"><label for="clip-point-x">X position (%)</label><input id="clip-point-x" type="number" min="0" max="100" value="50"></div><div class="field-group"><label for="clip-point-y">Y position (%)</label><input id="clip-point-y" type="number" min="0" max="100" value="0"></div></div>
+            <div class="clip-point-number"><span>Selected point</span><strong id="clip-point-number">Point 1</strong>
+            </div>
+            <div class="clip-xy-grid">
+              <div class="field-group"><label for="clip-point-x">X position (%)</label><input id="clip-point-x"
+                  type="number" min="0" max="100" value="50"></div>
+              <div class="field-group"><label for="clip-point-y">Y position (%)</label><input id="clip-point-y"
+                  type="number" min="0" max="100" value="0"></div>
+            </div>
             <button class="text-button clip-remove-point" id="remove-clip-point" type="button">Remove point</button>
           </div>
           <div class="clip-point-list" id="clip-point-list" aria-label="Polygon point list"></div>
@@ -59,91 +136,250 @@
       </section>
 
       <section class="clip-editor-panel card" aria-labelledby="clip-editor-title">
-        <div class="clip-panel-heading clip-editor-heading"><div><span class="eyebrow">VISUAL SHAPE EDITOR</span><h2 id="clip-editor-title">Drag points to shape</h2></div><div class="clip-history-buttons"><button class="button button--secondary" id="clip-undo" type="button" aria-label="Undo" disabled>↶ Undo</button><button class="button button--secondary" id="clip-redo" type="button" aria-label="Redo" disabled>↷ Redo</button></div></div>
+        <div class="clip-panel-heading clip-editor-heading">
+          <div><span class="eyebrow">VISUAL SHAPE EDITOR</span>
+            <h2 id="clip-editor-title">Drag points to shape</h2>
+          </div>
+          <div class="clip-history-buttons"><button class="button button--secondary" id="clip-undo" type="button"
+              aria-label="Undo" disabled>↶ Undo</button><button class="button button--secondary" id="clip-redo"
+              type="button" aria-label="Redo" disabled>↷ Redo</button></div>
+        </div>
         <p class="clip-editor-hint">Click an edge to insert a point. Use arrow keys on a point handle to move it.</p>
         <div class="clip-editor-wrap">
           <div class="clip-editor-canvas" id="clip-editor-canvas">
             <div class="clip-editor-grid" id="clip-editor-grid" aria-hidden="true"></div>
             <div class="clip-editor-shape" id="clip-editor-shape" aria-hidden="true"></div>
-            <svg class="clip-editor-svg" id="clip-editor-svg" viewBox="0 0 100 100" role="group" aria-label="Polygon shape editor">
+            <svg class="clip-editor-svg" id="clip-editor-svg" viewBox="0 0 100 100" role="group"
+              aria-label="Polygon shape editor">
               <polyline id="clip-editor-outline" points="" role="presentation"></polyline>
               <g id="clip-editor-handles"></g>
             </svg>
-            <span class="clip-coordinate-readout" id="clip-coordinate-readout" aria-live="polite">Point 1 · X 50% · Y 0%</span>
+            <span class="clip-coordinate-readout" id="clip-coordinate-readout" aria-live="polite">Point 1 · X 50% · Y
+              0%</span>
           </div>
         </div>
         <div class="clip-editor-toolbar">
           <label class="clip-checkbox"><input type="checkbox" id="clip-show-grid" checked><span>Show grid</span></label>
-          <label class="clip-checkbox"><input type="checkbox" id="clip-show-points" checked><span>Show points</span></label>
-          <div class="field-group clip-snap-field"><label for="clip-snap">Snap to grid</label><select id="clip-snap"><option value="0">Off</option><option value="5">5%</option><option value="10">10%</option></select></div>
-          <button class="button--reset text-button" id="clip-reset-shape" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 2.64-6.36L3 8m0-5v5h5"/></svg>Reset shape</button>
+          <label class="clip-checkbox"><input type="checkbox" id="clip-show-points" checked><span>Show
+              points</span></label>
+          <div class="field-group clip-snap-field"><label for="clip-snap">Snap to grid</label><select id="clip-snap">
+              <option value="0">Off</option>
+              <option value="5">5%</option>
+              <option value="10">10%</option>
+            </select></div>
+          <button class="button--reset text-button" id="clip-reset-shape" type="button"><svg viewBox="0 0 24 24"
+              aria-hidden="true">
+              <path d="M3 12a9 9 0 1 0 2.64-6.36L3 8m0-5v5h5" />
+            </svg>Reset shape</button>
         </div>
 
         <section class="clip-live-preview" aria-labelledby="clip-live-title">
-          <div class="clip-subheading"><div><span class="eyebrow">LIVE PREVIEW</span><h3 id="clip-live-title">Preview your shape</h3></div><span class="clip-preview-status">CSS clip-path applied</span></div>
+          <div class="clip-subheading">
+            <div><span class="eyebrow">LIVE PREVIEW</span>
+              <h3 id="clip-live-title">Preview your shape</h3>
+            </div><span class="clip-preview-status">CSS clip-path applied</span>
+          </div>
           <div class="clip-preview-controls">
-            <div class="field-group"><label for="clip-bg-mode">Background</label><select id="clip-bg-mode"><option value="gradient">Gradient</option><option value="solid">Solid color</option><option value="image">Image</option></select></div>
-            <div class="field-group clip-solid-control" id="clip-solid-control" hidden><label for="clip-solid-color">Solid color</label><input type="color" id="clip-solid-color" value="#2563eb"></div>
-            <div class="field-group clip-image-control" id="clip-image-control" hidden><label for="clip-image-upload">Upload image <small>JPG, PNG, WEBP · max 5MB</small></label><input id="clip-image-upload" type="file" accept="image/jpeg,image/png,image/webp"></div>
-            <div class="field-group"><label for="clip-preview-size">Preview size</label><select id="clip-preview-size"><option value="small">Small</option><option value="medium">Medium</option><option value="large" selected>Large</option></select></div>
-            <div class="field-group"><label for="clip-preview-bg">Preview surface</label><select id="clip-preview-bg"><option value="light">Light</option><option value="dark">Dark</option><option value="checkerboard">Checkerboard</option></select></div>
+            <div class="field-group"><label for="clip-bg-mode">Background</label><select id="clip-bg-mode">
+                <option value="gradient">Gradient</option>
+                <option value="solid">Solid color</option>
+                <option value="image">Image</option>
+              </select></div>
+            <div class="field-group clip-solid-control" id="clip-solid-control" hidden><label
+                for="clip-solid-color">Solid color</label><input type="color" id="clip-solid-color" value="#2563eb">
+            </div>
+            <div class="field-group clip-image-control" id="clip-image-control" hidden><label
+                for="clip-image-upload">Upload image <small>JPG, PNG, WEBP · max 5MB</small></label><input
+                id="clip-image-upload" type="file" accept="image/jpeg,image/png,image/webp"></div>
+            <div class="field-group"><label for="clip-preview-size">Preview size</label><select id="clip-preview-size">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large" selected>Large</option>
+              </select></div>
+            <div class="field-group"><label for="clip-preview-bg">Preview surface</label><select id="clip-preview-bg">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+                <option value="checkerboard">Checkerboard</option>
+              </select></div>
           </div>
           <p class="clip-image-error" id="clip-image-error" role="alert" aria-live="polite"></p>
           <div class="clip-preview-stage clip-preview-stage--light" id="clip-preview-stage">
-            <div class="clip-preview-art clip-preview-art--large" id="clip-preview-art" role="img" aria-label="Clipped shape preview"></div>
+            <div class="clip-preview-art clip-preview-art--large" id="clip-preview-art" role="img"
+              aria-label="Clipped shape preview"></div>
           </div>
         </section>
       </section>
     </section>
 
     <section class="clip-code-section container" aria-labelledby="clip-code-title">
-      <div class="section-heading clip-code-heading"><div><span class="eyebrow">READY-TO-USE CODE</span><h2 id="clip-code-title">Generated CSS</h2><p>Preview backgrounds stay separate from the generated clip-path declaration.</p></div><div class="clip-code-actions"><label class="clip-checkbox clip-include-option"><input type="checkbox" id="clip-include-preview"><span>Include preview styles</span></label><button class="button button--secondary" id="copy-clip-value" type="button">Copy Value</button><button class="button button--copy" id="copy-clip-css" type="button">Copy CSS</button><button class="button--reset text-button" id="clip-reset-all" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 2.64-6.36L3 8m0-5v5h5"/></svg>Reset</button></div></div>
-      <div class="clip-code-window"><pre><code id="clip-generated-css" aria-live="polite" aria-atomic="true"></code></pre></div>
+      <div class="section-heading clip-code-heading">
+        <div><span class="eyebrow">READY-TO-USE CODE</span>
+          <h2 id="clip-code-title">Generated CSS</h2>
+          <p>Preview backgrounds stay separate from the generated clip-path declaration.</p>
+        </div>
+        <div class="clip-code-actions"><label class="clip-checkbox clip-include-option"><input type="checkbox"
+              id="clip-include-preview"><span>Include preview styles</span></label><button
+            class="button button--secondary" id="copy-clip-value" type="button">Copy Value</button><button
+            class="button button--copy" id="copy-clip-css" type="button">Copy CSS</button><button
+            class="button--reset text-button" id="clip-reset-all" type="button"><svg viewBox="0 0 24 24"
+              aria-hidden="true">
+              <path d="M3 12a9 9 0 1 0 2.64-6.36L3 8m0-5v5h5" />
+            </svg>Reset</button></div>
+      </div>
+      <div class="clip-code-window">
+        <pre><code id="clip-generated-css" aria-live="polite" aria-atomic="true"></code></pre>
+      </div>
       <p class="clip-copy-status" id="clip-copy-status" role="status" aria-live="polite"></p>
     </section>
 
     <section class="clip-presets-section container" aria-labelledby="clip-presets-title">
-      <div class="section-heading section-heading--center"><span class="eyebrow">SHAPE LIBRARY</span><h2 id="clip-presets-title">Shape presets</h2><p>Start with a shape and customize its points in the visual editor.</p></div>
+      <div class="section-heading section-heading--center"><span class="eyebrow">SHAPE LIBRARY</span>
+        <h2 id="clip-presets-title">Shape presets</h2>
+        <p>Start with a shape and customize its points in the visual editor.</p>
+      </div>
       <div class="clip-presets-grid" id="clip-presets"></div>
     </section>
 
     <section class="clip-guide-section" aria-labelledby="clip-guide-title">
-      <div class="container"><div class="section-heading section-heading--center"><span class="eyebrow">THE BASICS</span><h2 id="clip-guide-title">A guide to CSS clip-path</h2><p>Learn the shape functions and coordinates behind CSS clipping.</p></div>
+      <div class="container">
+        <div class="section-heading section-heading--center"><span class="eyebrow">THE BASICS</span>
+          <h2 id="clip-guide-title">A guide to CSS clip-path</h2>
+          <p>Learn the shape functions and coordinates behind CSS clipping.</p>
+        </div>
         <div class="clip-guide-grid">
-          <article class="clip-guide-card card"><span>01</span><h3>What is CSS Clip-path?</h3><p>clip-path defines a visible region for an element, clipping away the pixels outside the selected shape.</p><pre><code>.shape { clip-path: circle(50%); }</code></pre></article>
-          <article class="clip-guide-card card"><span>02</span><h3>Circle &amp; Ellipse</h3><p>Circle and ellipse define a rounded clipping region with a configurable center point.</p><pre><code>clip-path: circle(50% at 50% 50%);
-clip-path: ellipse(50% 40% at center);</code></pre></article>
-          <article class="clip-guide-card card"><span>03</span><h3>Inset</h3><p>Inset clips a rectangular region from each edge and optionally rounds its corners.</p><pre><code>clip-path: inset(10% 12% round 8px);</code></pre></article>
-          <article class="clip-guide-card card"><span>04</span><h3>Polygon</h3><p>Polygon joins three or more points, each described by x and y coordinates.</p><pre><code>clip-path: polygon(
+          <article class="clip-guide-card card"><span>01</span>
+            <h3>What is CSS Clip-path?</h3>
+            <p>clip-path defines a visible region for an element, clipping away the pixels outside the selected shape.
+            </p>
+            <pre><code>.shape { clip-path: circle(50%); }</code></pre>
+          </article>
+          <article class="clip-guide-card card"><span>02</span>
+            <h3>Circle &amp; Ellipse</h3>
+            <p>Circle and ellipse define a rounded clipping region with a configurable center point.</p>
+            <pre><code>clip-path: circle(50% at 50% 50%);
+clip-path: ellipse(50% 40% at center);</code></pre>
+          </article>
+          <article class="clip-guide-card card"><span>03</span>
+            <h3>Inset</h3>
+            <p>Inset clips a rectangular region from each edge and optionally rounds its corners.</p>
+            <pre><code>clip-path: inset(10% 12% round 8px);</code></pre>
+          </article>
+          <article class="clip-guide-card card"><span>04</span>
+            <h3>Polygon</h3>
+            <p>Polygon joins three or more points, each described by x and y coordinates.</p>
+            <pre><code>clip-path: polygon(
   50% 0%, 100% 100%, 0% 100%
-);</code></pre></article>
-          <article class="clip-guide-card card"><span>05</span><h3>Clip-path Coordinates</h3><p>Percentage polygon coordinates are relative to the element's reference box and scale with its dimensions.</p><pre><code>polygon(0 0, 100% 0,
-  50% 100%)</code></pre></article>
-          <article class="clip-guide-card card"><span>06</span><h3>Clip-path vs Border Radius</h3><p>Border-radius rounds box corners. clip-path supports arbitrary shapes but does not change the element's layout box.</p><pre><code>border-radius: 20px;
-clip-path: polygon(...);</code></pre></article>
-          <article class="clip-guide-card card clip-guide-card--wide"><span>07</span><h3>Creative Use Cases</h3><p>Use clip-path for image masks, angled cards, hero illustrations, badges, and decorative elements while retaining normal document flow.</p><pre><code>.hero-art img {
+);</code></pre>
+          </article>
+          <article class="clip-guide-card card"><span>05</span>
+            <h3>Clip-path Coordinates</h3>
+            <p>Percentage polygon coordinates are relative to the element's reference box and scale with its dimensions.
+            </p>
+            <pre><code>polygon(0 0, 100% 0,
+  50% 100%)</code></pre>
+          </article>
+          <article class="clip-guide-card card"><span>06</span>
+            <h3>Clip-path vs Border Radius</h3>
+            <p>Border-radius rounds box corners. clip-path supports arbitrary shapes but does not change the element's
+              layout box.</p>
+            <pre><code>border-radius: 20px;
+clip-path: polygon(...);</code></pre>
+          </article>
+          <article class="clip-guide-card card clip-guide-card--wide"><span>07</span>
+            <h3>Creative Use Cases</h3>
+            <p>Use clip-path for image masks, angled cards, hero illustrations, badges, and decorative elements while
+              retaining normal document flow.</p>
+            <pre><code>.hero-art img {
   clip-path: polygon(0 0, 100% 8%,
     92% 100%, 8% 92%);
-}</code></pre></article>
+}</code></pre>
+          </article>
         </div>
       </div>
     </section>
 
     <section class="faq-section clip-faq container" aria-labelledby="clip-faq-title">
-      <div class="section-heading section-heading--center"><span class="eyebrow">FAQ</span><h2 id="clip-faq-title">Frequently asked questions</h2><p>Quick answers about CSS clipping and custom shapes.</p></div>
+      <div class="section-heading section-heading--center"><span class="eyebrow">FAQ</span>
+        <h2 id="clip-faq-title">Frequently asked questions</h2>
+        <p>Quick answers about CSS clipping and custom shapes.</p>
+      </div>
       <div class="faq-list">
-        <article class="faq-item"><h3><button class="faq-question" id="clip-faq-q1" type="button" aria-expanded="false" aria-controls="clip-faq-a1"><span>What is CSS clip-path?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="clip-faq-a1" role="region" aria-labelledby="clip-faq-q1" hidden><p>CSS clip-path clips the visible portion of an element to a basic shape, polygon, or other supported geometry.</p></div></article>
-        <article class="faq-item"><h3><button class="faq-question" id="clip-faq-q2" type="button" aria-expanded="false" aria-controls="clip-faq-a2"><span>How do I create custom shapes with CSS?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="clip-faq-a2" role="region" aria-labelledby="clip-faq-q2" hidden><p>Use circle(), ellipse(), inset(), or polygon() with the clip-path property. This tool lets you adjust those values and generates the corresponding CSS.</p></div></article>
-        <article class="faq-item"><h3><button class="faq-question" id="clip-faq-q3" type="button" aria-expanded="false" aria-controls="clip-faq-a3"><span>What is the difference between clip-path and border-radius?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="clip-faq-a3" role="region" aria-labelledby="clip-faq-q3" hidden><p>Border-radius rounds an element's corners. clip-path can create arbitrary shapes and clips pixels outside the path; neither changes the element's normal layout box.</p></div></article>
-        <article class="faq-item"><h3><button class="faq-question" id="clip-faq-q4" type="button" aria-expanded="false" aria-controls="clip-faq-a4"><span>Can I use clip-path on images?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="clip-faq-a4" role="region" aria-labelledby="clip-faq-q4" hidden><p>Yes. Apply clip-path to an image element to mask its rendered pixels without editing the original image file.</p></div></article>
-        <article class="faq-item"><h3><button class="faq-question" id="clip-faq-q5" type="button" aria-expanded="false" aria-controls="clip-faq-a5"><span>How does polygon() work?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="clip-faq-a5" role="region" aria-labelledby="clip-faq-q5" hidden><p>polygon() connects coordinate pairs in order and closes the shape from the last point back to the first.</p></div></article>
-        <article class="faq-item"><h3><button class="faq-question" id="clip-faq-q6" type="button" aria-expanded="false" aria-controls="clip-faq-a6"><span>Can I animate CSS clip-path?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="clip-faq-a6" role="region" aria-labelledby="clip-faq-q6" hidden><p>Some clip-path shapes can be interpolated when compatible shapes use matching point structures. Check browser support and honor reduced-motion preferences.</p></div></article>
-        <article class="faq-item"><h3><button class="faq-question" id="clip-faq-q7" type="button" aria-expanded="false" aria-controls="clip-faq-a7"><span>Is CSS clip-path responsive?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="clip-faq-a7" role="region" aria-labelledby="clip-faq-q7" hidden><p>Percentage coordinates scale with the element's reference box, so shapes can adapt as the element changes size.</p></div></article>
-        <article class="faq-item"><h3><button class="faq-question" id="clip-faq-q8" type="button" aria-expanded="false" aria-controls="clip-faq-a8"><span>Does clip-path affect element layout?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-answer" id="clip-faq-a8" role="region" aria-labelledby="clip-faq-q8" hidden><p>No. Clipping changes which pixels are visible, but the element retains its original layout box and position in normal document flow.</p></div></article>
+        <article class="faq-item">
+          <h3><button class="faq-question" id="clip-faq-q1" type="button" aria-expanded="false"
+              aria-controls="clip-faq-a1"><span>What is CSS clip-path?</span><span class="faq-icon"
+                aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="clip-faq-a1" role="region" aria-labelledby="clip-faq-q1" hidden>
+            <p>CSS clip-path clips the visible portion of an element to a basic shape, polygon, or other supported
+              geometry.</p>
+          </div>
+        </article>
+        <article class="faq-item">
+          <h3><button class="faq-question" id="clip-faq-q2" type="button" aria-expanded="false"
+              aria-controls="clip-faq-a2"><span>How do I create custom shapes with CSS?</span><span class="faq-icon"
+                aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="clip-faq-a2" role="region" aria-labelledby="clip-faq-q2" hidden>
+            <p>Use circle(), ellipse(), inset(), or polygon() with the clip-path property. This tool lets you adjust
+              those values and generates the corresponding CSS.</p>
+          </div>
+        </article>
+        <article class="faq-item">
+          <h3><button class="faq-question" id="clip-faq-q3" type="button" aria-expanded="false"
+              aria-controls="clip-faq-a3"><span>What is the difference between clip-path and border-radius?</span><span
+                class="faq-icon" aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="clip-faq-a3" role="region" aria-labelledby="clip-faq-q3" hidden>
+            <p>Border-radius rounds an element's corners. clip-path can create arbitrary shapes and clips pixels outside
+              the path; neither changes the element's normal layout box.</p>
+          </div>
+        </article>
+        <article class="faq-item">
+          <h3><button class="faq-question" id="clip-faq-q4" type="button" aria-expanded="false"
+              aria-controls="clip-faq-a4"><span>Can I use clip-path on images?</span><span class="faq-icon"
+                aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="clip-faq-a4" role="region" aria-labelledby="clip-faq-q4" hidden>
+            <p>Yes. Apply clip-path to an image element to mask its rendered pixels without editing the original image
+              file.</p>
+          </div>
+        </article>
+        <article class="faq-item">
+          <h3><button class="faq-question" id="clip-faq-q5" type="button" aria-expanded="false"
+              aria-controls="clip-faq-a5"><span>How does polygon() work?</span><span class="faq-icon"
+                aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="clip-faq-a5" role="region" aria-labelledby="clip-faq-q5" hidden>
+            <p>polygon() connects coordinate pairs in order and closes the shape from the last point back to the first.
+            </p>
+          </div>
+        </article>
+        <article class="faq-item">
+          <h3><button class="faq-question" id="clip-faq-q6" type="button" aria-expanded="false"
+              aria-controls="clip-faq-a6"><span>Can I animate CSS clip-path?</span><span class="faq-icon"
+                aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="clip-faq-a6" role="region" aria-labelledby="clip-faq-q6" hidden>
+            <p>Some clip-path shapes can be interpolated when compatible shapes use matching point structures. Check
+              browser support and honor reduced-motion preferences.</p>
+          </div>
+        </article>
+        <article class="faq-item">
+          <h3><button class="faq-question" id="clip-faq-q7" type="button" aria-expanded="false"
+              aria-controls="clip-faq-a7"><span>Is CSS clip-path responsive?</span><span class="faq-icon"
+                aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="clip-faq-a7" role="region" aria-labelledby="clip-faq-q7" hidden>
+            <p>Percentage coordinates scale with the element's reference box, so shapes can adapt as the element changes
+              size.</p>
+          </div>
+        </article>
+        <article class="faq-item">
+          <h3><button class="faq-question" id="clip-faq-q8" type="button" aria-expanded="false"
+              aria-controls="clip-faq-a8"><span>Does clip-path affect element layout?</span><span class="faq-icon"
+                aria-hidden="true"></span></button></h3>
+          <div class="faq-answer" id="clip-faq-a8" role="region" aria-labelledby="clip-faq-q8" hidden>
+            <p>No. Clipping changes which pixels are visible, but the element retains its original layout box and
+              position in normal document flow.</p>
+          </div>
+        </article>
       </div>
     </section>
   </main>
   <div id="footer"></div>
 </body>
-</html>
 
+</html>
