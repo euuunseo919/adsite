@@ -708,3 +708,130 @@ select:focus-visible,
   color: var(--color-text-muted);
   font-size: 12px;
 }
+
+/* ==========================================================================
+   Coupang Partners Banner & Marquee
+   ========================================================================== */
+.coupang-banner-area {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 18px 0 14px;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.coupang-banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.coupang-banner-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 140px;
+}
+
+.coupang-banner {
+  width: 100%;
+  min-height: 140px;
+}
+
+.coupang-banner ins {
+  display: block !important;
+  margin: 0 auto !important;
+  text-align: center;
+}
+
+.coupang-banner iframe {
+  display: block !important;
+  margin: 0 auto !important;
+  border: none !important;
+  border-radius: var(--radius-small, 10px);
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+}
+
+/* PC 배너: 기본 표시, 모바일 숨김 */
+.coupang-banner--pc {
+  display: flex;
+  justify-content: center;
+}
+
+.coupang-banner--mobile {
+  display: none;
+  justify-content: center;
+}
+
+/* 모바일 분기 (768px 이하) */
+@media (max-width: 768px) {
+  .coupang-banner-area {
+    padding: 14px 0 10px;
+  }
+
+  .coupang-banner--pc {
+    display: none !important;
+  }
+
+  .coupang-banner--mobile {
+    display: flex !important;
+  }
+}
+
+/* 마퀴 (흐르는 문구) */
+.coupang-marquee {
+  width: 100%;
+  max-width: 680px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 10px;
+  padding: 4px 0;
+  user-select: none;
+  mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+}
+
+@media (max-width: 768px) {
+  .coupang-marquee {
+    max-width: 280px;
+  }
+}
+
+.coupang-marquee__track {
+  display: inline-flex;
+  white-space: nowrap;
+  will-change: transform;
+  animation: coupangNoticeMarquee 22s linear infinite;
+}
+
+.coupang-marquee:hover .coupang-marquee__track {
+  animation-play-state: paused;
+}
+
+.coupang-marquee__item {
+  display: inline-flex;
+  align-items: center;
+  font-size: 10px;
+  line-height: 1.4;
+  color: var(--color-text-muted, #94a3b8);
+  letter-spacing: -0.2px;
+  padding: 0 24px;
+}
+
+.coupang-marquee__item::after {
+  content: "•";
+  margin-left: 24px;
+  color: var(--color-border-strong, #cbd5e1);
+}
+
+@keyframes coupangNoticeMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

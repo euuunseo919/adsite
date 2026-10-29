@@ -1,0 +1,67 @@
+<!-- 쿠팡 파트너스 와이드 배너 및 마퀴 공지 공통 컴포넌트 -->
+<aside class="coupang-banner-area" aria-label="쿠팡 파트너스 추천 상품">
+  <div class="container coupang-banner-container">
+    <div class="coupang-banner-wrapper">
+      <!-- PC 버전 배너 (680x140) -->
+      <div class="coupang-banner coupang-banner--pc" id="coupang-banner-pc"></div>
+
+      <!-- 모바일 버전 배너 (280x140) -->
+      <div class="coupang-banner coupang-banner--mobile" id="coupang-banner-mobile"></div>
+    </div>
+
+    <!-- 배너 하단 흐르는 안내 문구 (Marquee) -->
+    <div class="coupang-marquee" title="이 사이트는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.">
+      <div class="coupang-marquee__track">
+        <span class="coupang-marquee__item">이 사이트는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</span>
+        <span class="coupang-marquee__item">이 사이트는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</span>
+        <span class="coupang-marquee__item">이 사이트는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</span>
+        <span class="coupang-marquee__item">이 사이트는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</span>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<script>
+  (function () {
+    function initCoupangBanners() {
+      if (typeof PartnersCoupang === "undefined" || !PartnersCoupang.G) return;
+
+      var pcMount = document.getElementById("coupang-banner-pc");
+      var mobileMount = document.getElementById("coupang-banner-mobile");
+
+      if (pcMount && !pcMount.querySelector("iframe")) {
+        new PartnersCoupang.G({
+          id: 1044381,
+          template: "carousel",
+          trackingCode: "AF5410189",
+          width: "680",
+          height: "140",
+          tsource: "",
+          container: "#coupang-banner-pc"
+        });
+      }
+
+      if (mobileMount && !mobileMount.querySelector("iframe")) {
+        new PartnersCoupang.G({
+          id: 1044384,
+          template: "carousel",
+          trackingCode: "AF5410189",
+          width: "280",
+          height: "140",
+          tsource: "",
+          container: "#coupang-banner-mobile"
+        });
+      }
+    }
+
+    if (typeof PartnersCoupang === "undefined") {
+      var script = document.createElement("script");
+      script.src = "https://ads-partners.coupang.com/g.js";
+      script.async = true;
+      script.onload = initCoupangBanners;
+      document.head.appendChild(script);
+    } else {
+      initCoupangBanners();
+    }
+  })();
+</script>

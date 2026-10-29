@@ -1,6 +1,7 @@
 $(function () {
   const componentPaths = {
     header: "components/header.html?v=" + Date.now(),
+    banner: "components/banner.html?v=" + Date.now(),
     footer: "components/footer.html?v=" + Date.now()
   };
 
@@ -145,7 +146,9 @@ $(function () {
   function loadComponent(name, fallback, onLoaded) {
     const $mount = $("#" + name);
     if (!$mount.length) {
-      console.error("Unitwise could not find the #" + name + " component mount.");
+      if (name !== "banner") {
+        console.error("Unitwise could not find the #" + name + " component mount.");
+      }
       return;
     }
 
@@ -189,5 +192,6 @@ $(function () {
     });
 
   loadComponent("header", "Navigation is temporarily unavailable.", initializeNavigation);
+  loadComponent("banner", "");
   loadComponent("footer", "Footer content is temporarily unavailable.");
 });
